@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\include",
-    "\\include\\geometry",
-    "\\include\\math",
+    "\\include\\collision",
+    "\\include\\core",
     "\\src",
     "\\src\\collision",
     "\\src\\core",
@@ -11,6 +11,6 @@
     "\\src\\geometry",
     "\\src\\math"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\src\\main.cpp",
   "PreviewInSolutionExplorer": false
 }
