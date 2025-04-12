@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\include",
+    "\\include\\collision",
+    "\\include\\core",
+    "\\include\\decomposition",
+    "\\include\\geometry",
+    "\\src",
+    "\\src\\decomposition",
+    "\\src\\geometry",
+    "\\src\\math"
+  ],
+  "SelectedNode": "\\include\\core\\CollisionManager.h",
+  "PreviewInSolutionExplorer": false
+}
