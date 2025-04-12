@@ -3,14 +3,14 @@
     "",
     "\\include",
     "\\include\\collision",
+    "\\include\\core",
+    "\\include\\decomposition",
     "\\include\\geometry",
     "\\src",
-    "\\src\\collision",
-    "\\src\\core",
     "\\src\\decomposition",
     "\\src\\geometry",
     "\\src\\math"
   ],
-  "SelectedNode": "\\src\\geometry\\AABB.cpp",
+  "SelectedNode": "\\include\\core\\CollisionManager.h",
   "PreviewInSolutionExplorer": false
 }

@@ -1,144 +1,292 @@
-// include/core/CollisionManager.h
-#ifndef COLLISION_MANAGER_H
-#define COLLISION_MANAGER_H
+#pragma once
 
-#include "../collision/BVH.h"
-#include "../core/Object3D.h"
 #include <vector>
 #include <memory>
 #include <unordered_map>
-#include <functional>
+#include "Object3D.h"
+#include "SweepAndPrune.h"
+#include "UniformGrid.h"
+#include "Octree.h"
+#include "BVH.h"
 
-// 충돌 정보 구조체
-struct CollisionInfo {
-    Object3D* objectA;
-    Object3D* objectB;
-    bool hasCollision;
-    // 여기에 충돌 지점, 충돌 법선 등 추가 정보를 확장할 수 있음
+enum class BroadPhaseType {
+    SWEEP_AND_PRUNE,
+    UNIFORM_GRID,
+    OCTREE,
+    BVH
 };
-
-// 충돌 단계 열거형
-enum class CollisionPhase {
-    BROAD_PHASE,    // 광역 단계 (AABB)
-    MID_PHASE,      // 중간 단계 (OBB)
-    NARROW_PHASE    // 협역 단계 (GJK 등)
-};
-
-// 충돌 콜백 함수 타입 정의
-using CollisionCallback = std::function<void(const CollisionInfo&)>;
 
 class CollisionManager {
 private:
-    BVH bvh;                                                    // 광역 단계 BVH
-    std::vector<Object3D*> objects;                             // 관리하는 객체들
-    std::unordered_map<std::string, CollisionCallback> callbacks; // 충돌 콜백
-    bool useMultithreading;                                     // 멀티스레딩 사용 여부
+    // Collision detection algorithms
+    std::unique_ptr<SweepAndPrune> sap;
+    std::unique_ptr<UniformGrid> grid;
+    std::unique_ptr<Octree> octree;
+    std::unique_ptr<BVH> bvh;
+
+    BroadPhaseType currentBroadPhase;
+    std::vector<Object3D*> objects;
+
+    // Collision state tracking
+    std::unordered_map<Object3D*, std::vector<Object3D*>> currentCollisions;
+
+    // Performance metrics
+    double lastBroadPhaseTime;
+    double lastNarrowPhaseTime;
+    int potentialCollisionCount;
+    int actualCollisionCount;
 
 public:
-    // 생성자
-    CollisionManager() : useMultithreading(false) {}
+    CollisionManager(BroadPhaseType broadPhaseType = BroadPhaseType::SWEEP_AND_PRUNE) {
+        // Initialize broadphase algorithms with default settings
+        sap = std::make_unique<SweepAndPrune>();
 
-    // 객체 추가
+        // Default grid size
+        Vector3 worldMin(-100, -100, -100);
+        Vector3 worldMax(100, 100, 100);
+        float cellSize = 10.0f;
+        grid = std::make_unique<UniformGrid>(cellSize, worldMin, worldMax);
+
+        // Default octree settings
+        AABB worldBounds(worldMin, worldMax);
+        octree = std::make_unique<Octree>(worldBounds);
+
+        // BVH will be built when objects are added
+        bvh = std::make_unique<BVH>();
+
+        currentBroadPhase = broadPhaseType;
+
+        // Initialize performance metrics
+        lastBroadPhaseTime = 0.0;
+        lastNarrowPhaseTime = 0.0;
+        potentialCollisionCount = 0;
+        actualCollisionCount = 0;
+    }
+
+    void setBroadPhaseType(BroadPhaseType type) {
+        currentBroadPhase = type;
+
+        // If changing to BVH, rebuild it
+        if (type == BroadPhaseType::BVH) {
+            bvh->build(objects);
+        }
+    }
+
     void addObject(Object3D* object) {
         objects.push_back(object);
-        bvh.addObject(object);
+
+        // Add to all broadphase algorithms
+        sap->addObject(object);
+        grid->addObject(object);
+        octree->addObject(object);
+
+        // Rebuild BVH when objects change
+        if (currentBroadPhase == BroadPhaseType::BVH) {
+            bvh->build(objects);
+        }
     }
 
-    // 객체 제거
     void removeObject(Object3D* object) {
-        auto it = std::find(objects.begin(), objects.end(), object);
+        // Remove from object list
+        auto it = std::remove(objects.begin(), objects.end(), object);
         if (it != objects.end()) {
-            objects.erase(it);
-            bvh.removeObject(object);
-        }
-    }
+            objects.erase(it, objects.end());
 
-    // 객체 업데이트
-    void updateObject(Object3D* object) {
-        if (object->isDirty) {
-            object->updateBoundingVolumes();
-            bvh.updateObject(object);
-        }
-    }
+            // Remove from all broadphase algorithms
+            sap->removeObject(object);
+            grid->removeObject(object);
+            octree->removeObject(object);
 
-    // 객체 전체 업데이트
-    void updateAllObjects() {
-        for (auto obj : objects) {
-            if (obj->isDirty) {
-                obj->updateBoundingVolumes();
+            // Clear collision state for this object
+            currentCollisions.erase(object);
+
+            // Remove this object from all other objects' collision lists
+            for (auto& entry : currentCollisions) {
+                auto& collisionList = entry.second;
+                auto colIt = std::remove(collisionList.begin(), collisionList.end(), object);
+                if (colIt != collisionList.end()) {
+                    collisionList.erase(colIt, collisionList.end());
+                }
+
+                // Also notify the object about this collision removal
+                entry.first->removeCollision(object);
+            }
+
+            // Rebuild BVH when objects change
+            if (currentBroadPhase == BroadPhaseType::BVH) {
+                bvh->build(objects);
             }
         }
-        bvh.rebuild();
     }
 
-    // 광역 단계 충돌 감지 (AABB)
-    std::vector<std::pair<Object3D*, Object3D*>> broadPhaseCollision() {
-        return bvh.findCollisionPairs();
+    void updateObject(Object3D* object) {
+        // Update object in all broadphase algorithms
+        sap->updateObject(object);
+        grid->updateObject(object);
+        octree->updateObject(object);
+
+        // For BVH, we need to rebuild or update the whole structure
+        if (currentBroadPhase == BroadPhaseType::BVH) {
+            bvh->update();
+        }
     }
 
-    // 중간 단계 충돌 감지 (OBB)
-    std::vector<std::pair<Object3D*, Object3D*>> midPhaseCollision(
-        const std::vector<std::pair<Object3D*, Object3D*>>& broadPhasePairs) {
-        std::vector<std::pair<Object3D*, Object3D*>> midPhasePairs;
+    void updateAllObjects() {
+        for (Object3D* obj : objects) {
+            obj->update();
+            updateObject(obj);
+        }
+    }
 
-        // OpenMP 병렬화 (옵션)
-#pragma omp parallel for if(useMultithreading)
-        for (size_t i = 0; i < broadPhasePairs.size(); i++) {
-            auto& pair = broadPhasePairs[i];
+    void detectCollisions() {
+        // Clear collision counts for metrics
+        potentialCollisionCount = 0;
+        actualCollisionCount = 0;
+
+        // Broad phase - find potential collisions
+        std::vector<std::pair<Object3D*, Object3D*>> potentialCollisions;
+
+        auto startBroadPhase = std::chrono::high_resolution_clock::now();
+
+        switch (currentBroadPhase) {
+        case BroadPhaseType::SWEEP_AND_PRUNE:
+            sap->update();
+            potentialCollisions = sap->getPotentialCollisions();
+            break;
+
+        case BroadPhaseType::UNIFORM_GRID:
+            grid->findPotentialCollisions();
+            potentialCollisions = grid->getPotentialCollisions();
+            break;
+
+        case BroadPhaseType::OCTREE:
+            octree->findPotentialCollisions();
+            potentialCollisions = octree->getPotentialCollisions();
+            break;
+
+        case BroadPhaseType::BVH:
+            bvh->findPotentialCollisions();
+            potentialCollisions = bvh->getPotentialCollisions();
+            break;
+        }
+
+        auto endBroadPhase = std::chrono::high_resolution_clock::now();
+        lastBroadPhaseTime = std::chrono::duration<double, std::milli>(endBroadPhase - startBroadPhase).count();
+
+        potentialCollisionCount = potentialCollisions.size();
+
+        // Store current collision state to detect exits
+        std::unordered_map<Object3D*, std::vector<Object3D*>> newCollisions;
+
+        // Narrow phase - Check actual collisions
+        auto startNarrowPhase = std::chrono::high_resolution_clock::now();
+
+        for (const auto& pair : potentialCollisions) {
             Object3D* objA = pair.first;
             Object3D* objB = pair.second;
 
-            // OBB 충돌 검사
-            if (objA->intersectsOBB(*objB)) {
-#pragma omp critical
-                {
-                    midPhasePairs.push_back(pair);
+            // Perform detailed collision test (placeholder for actual collision detection)
+            CollisionInfo collisionInfo;
+            bool isColliding = checkDetailedCollision(objA, objB, collisionInfo);
+
+            if (isColliding) {
+                // Record collision for both objects
+                newCollisions[objA].push_back(objB);
+                newCollisions[objB].push_back(objA);
+
+                // Update collision info for both objects
+                objA->addCollision(collisionInfo);
+
+                // Create reversed collision info for objB
+                CollisionInfo reversedInfo(objA, collisionInfo.contactPoint,
+                    collisionInfo.contactNormal * -1.0f,
+                    collisionInfo.penetrationDepth);
+                objB->addCollision(reversedInfo);
+
+                actualCollisionCount++;
+            }
+        }
+
+        auto endNarrowPhase = std::chrono::high_resolution_clock::now();
+        lastNarrowPhaseTime = std::chrono::duration<double, std::milli>(endNarrowPhase - startNarrowPhase).count();
+
+        // Check for collision exits
+        for (Object3D* obj : objects) {
+            if (currentCollisions.find(obj) != currentCollisions.end()) {
+                for (Object3D* other : currentCollisions[obj]) {
+                    // If obj no longer collides with other, trigger exit
+                    auto& newObjCollisions = newCollisions[obj];
+                    if (std::find(newObjCollisions.begin(), newObjCollisions.end(), other) == newObjCollisions.end()) {
+                        obj->removeCollision(other);
+                    }
                 }
             }
         }
 
-        return midPhasePairs;
+        // Update current collision state
+        currentCollisions = std::move(newCollisions);
     }
 
-    // 전체 충돌 감지 파이프라인 실행
-    void detectCollisions() {
-        // 모든 객체 업데이트
-        updateAllObjects();
+    // Performance metrics accessors
+    double getBroadPhaseTime() const { return lastBroadPhaseTime; }
+    double getNarrowPhaseTime() const { return lastNarrowPhaseTime; }
+    double getTotalTime() const { return lastBroadPhaseTime + lastNarrowPhaseTime; }
+    int getPotentialCollisionCount() const { return potentialCollisionCount; }
+    int getActualCollisionCount() const { return actualCollisionCount; }
 
-        // 1. 광역 단계 (Broad Phase) - AABB 기반 BVH
-        std::vector<std::pair<Object3D*, Object3D*>> broadPhasePairs = broadPhaseCollision();
+private:
+    // Detailed collision check - placeholder for actual implementation
+    bool checkDetailedCollision(Object3D* objA, Object3D* objB, CollisionInfo& outInfo) {
+        // This is where you would call into the narrowphase collision system
+        // For now we'll just use a simplified AABB test as a placeholder
 
-        // 2. 중간 단계 (Mid Phase) - OBB
-        std::vector<std::pair<Object3D*, Object3D*>> midPhasePairs = midPhaseCollision(broadPhasePairs);
+        const AABB& aabbA = objA->getAABB();
+        const AABB& aabbB = objB->getAABB();
 
-        // 3. 실제 충돌 정보 생성 및 콜백 호출
-        for (const auto& pair : midPhasePairs) {
-            CollisionInfo info;
-            info.objectA = pair.first;
-            info.objectB = pair.second;
-            info.hasCollision = true;
+        // Check if AABBs overlap
+        if (aabbA.min.x <= aabbB.max.x && aabbA.max.x >= aabbB.min.x &&
+            aabbA.min.y <= aabbB.max.y && aabbA.max.y >= aabbB.min.y &&
+            aabbA.min.z <= aabbB.max.z && aabbA.max.z >= aabbB.min.z) {
 
-            // 등록된 모든 콜백 호출
-            for (const auto& cb : callbacks) {
-                cb.second(info);
+            // Calculate penetration depth in each axis
+            float xPenetration = std::min(aabbA.max.x - aabbB.min.x, aabbB.max.x - aabbA.min.x);
+            float yPenetration = std::min(aabbA.max.y - aabbB.min.y, aabbB.max.y - aabbA.min.y);
+            float zPenetration = std::min(aabbA.max.z - aabbB.min.z, aabbB.max.z - aabbA.min.z);
+
+            // Find axis of minimum penetration
+            Vector3 normal;
+            float minPenetration;
+
+            if (xPenetration <= yPenetration && xPenetration <= zPenetration) {
+                minPenetration = xPenetration;
+                normal = (aabbA.min.x + aabbA.max.x > aabbB.min.x + aabbB.max.x) ?
+                    Vector3(1, 0, 0) : Vector3(-1, 0, 0);
             }
+            else if (yPenetration <= zPenetration) {
+                minPenetration = yPenetration;
+                normal = (aabbA.min.y + aabbA.max.y > aabbB.min.y + aabbB.max.y) ?
+                    Vector3(0, 1, 0) : Vector3(0, -1, 0);
+            }
+            else {
+                minPenetration = zPenetration;
+                normal = (aabbA.min.z + aabbA.max.z > aabbB.min.z + aabbB.max.z) ?
+                    Vector3(0, 0, 1) : Vector3(0, 0, -1);
+            }
+
+            // Calculate approximate contact point
+            Vector3 centerA = (aabbA.min + aabbA.max) * 0.5f;
+            Vector3 centerB = (aabbB.min + aabbB.max) * 0.5f;
+            Vector3 contactPoint = (centerA + centerB) * 0.5f;
+
+            // Fill collision info
+            outInfo.otherObject = objB;
+            outInfo.contactPoint = contactPoint;
+            outInfo.contactNormal = normal;
+            outInfo.penetrationDepth = minPenetration;
+
+            return true;
         }
-    }
 
-    // 충돌 콜백 등록
-    void registerCollisionCallback(const std::string& name, CollisionCallback callback) {
-        callbacks[name] = callback;
-    }
-
-    // 충돌 콜백 제거
-    void unregisterCollisionCallback(const std::string& name) {
-        callbacks.erase(name);
-    }
-
-    // 멀티스레딩 설정
-    void setMultithreading(bool enable) {
-        useMultithreading = enable;
+        return false;
     }
 };
-
-#endif // COLLISION_MANAGER_H
