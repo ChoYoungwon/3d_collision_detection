@@ -6,6 +6,8 @@ namespace Math {
         float m[3][3];
         
         Matrix3x3();
+        Matrix3x3(const Matrix3x3& other);
+        Matrix3x3& operator=(const Matrix3x3& other);
         Matrix3x3(const Vector3& col1, const Vector3& col2, const Vector3& col3);
         
         // 행렬 연산

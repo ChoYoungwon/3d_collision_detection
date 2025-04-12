@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\include",
+    "\\include\\geometry",
+    "\\include\\math",
+    "\\out",
+    "\\out\\build",
+    "\\src",
+    "\\src\\collision",
+    "\\src\\decomposition",
+    "\\src\\math"
+  ],
+  "SelectedNode": "\\include\\geometry\\OBB.h",
+  "PreviewInSolutionExplorer": false
+}

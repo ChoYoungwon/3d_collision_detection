@@ -1,3 +1,4 @@
+#include <cmath>
 #include "math/Vector3.h"
 
 namespace Math {
