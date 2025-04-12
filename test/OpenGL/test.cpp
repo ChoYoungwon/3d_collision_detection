@@ -1,182 +1,179 @@
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-#include <iostream>
-#include <vector>
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <algorithm>
-#include <cfloat>
-
-struct Mesh {
-    std::vector<Vertex> vertices;
-    std::vector<unsigned int> indices;
-    GLuint VAO, VBO, EBO;
-    glm::vec4 color;
-    float opacity;
+int main(int argc, char* argv[]) {
+    // GLFW 초기화
+    glfwInit();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     
-    Mesh(const glm::vec4& color = glm::vec4(1.0f), float opacity = 1.0f) 
-        : color(color), opacity(opacity) {}
+    // 창 생성
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "3D 객체 및 볼록화 시각화", NULL, NULL);
+    if (window == NULL) {
+        std::cerr << "GLFW 창 생성 실패" << std::endl;
+        glfwTerminate();
+        return -1;
+    }
+    glfwMakeContextCurrent(window);
+    glfwSetMouseButtonCallback(window, mouse_button_callback);
+    glfwSetCursorPosCallback(window, mouse_callback);
+    glfwSetScrollCallback(window, scroll_callback);
+    glfwSetWindowCloseCallback(window, window_close_callback);
     
-    void setupMesh() {
-        glGenVertexArrays(1, &VAO);
-        glGenBuffers(1, &VBO);
-        glGenBuffers(1, &EBO);
-  
-        glBindVertexArray(VAO);
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);  
-
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), &indices[0], GL_STATIC_DRAW);
-
-        // 정점 위치
-        glEnableVertexAttribArray(0);   
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
-        
-        // 정점 법선
-        glEnableVertexAttribArray(1);   
-        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, normal));
-
-        glBindVertexArray(0);
+    // 마우스 캡처
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+    
+    // GLEW 초기화
+    if (glewInit() != GLEW_OK) {
+        std::cerr << "GLEW 초기화 실패" << std::endl;
+        return -1;
     }
     
-    void draw(GLuint shaderProgram) {
-        glUniform4fv(glGetUniformLocation(shaderProgram, "meshColor"), 1, glm::value_ptr(color));
-        glUniform1f(glGetUniformLocation(shaderProgram, "opacity"), opacity);
-        
-        glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
-        glBindVertexArray(0);
+    // 깊이 테스트 및 블렌딩 활성화
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    
+    // 정점 셰이더 소스
+    const char* vertexShaderSource = "#version 330 core\n"
+        "layout (location = 0) in vec3 aPos;\n"
+        "layout (location = 1) in vec3 aNormal;\n"
+        "out vec3 Normal;\n"
+        "out vec3 FragPos;\n"
+        "uniform mat4 model;\n"
+        "uniform mat4 view;\n"
+        "uniform mat4 projection;\n"
+        "void main()\n"
+        "{\n"
+        "   FragPos = vec3(model * vec4(aPos, 1.0));\n"
+        "   Normal = mat3(transpose(inverse(model))) * aNormal;\n"
+        "   gl_Position = projection * view * vec4(FragPos, 1.0);\n"
+        "}\0";
+    
+    // 프래그먼트 셰이더 소스
+    const char* fragmentShaderSource = "#version 330 core\n"
+        "out vec4 FragColor;\n"
+        "in vec3 Normal;\n"
+        "in vec3 FragPos;\n"
+        "uniform vec4 meshColor;\n"
+        "uniform float opacity;\n"
+        "void main()\n"
+        "{\n"
+        "   vec3 lightPos = vec3(5.0, 5.0, 5.0);\n"
+        "   vec3 norm = normalize(Normal);\n"
+        "   vec3 lightDir = normalize(lightPos - FragPos);\n"
+        "   float diff = max(dot(norm, lightDir), 0.0);\n"
+        "   vec3 diffuse = diff * vec3(1.0, 1.0, 1.0);\n"
+        "   vec3 ambient = vec3(0.2, 0.2, 0.2);\n"
+        "   vec3 result = (ambient + diffuse) * vec3(meshColor);\n"
+        "   FragColor = vec4(result, opacity);\n"
+        "}\0";
+    
+    // 셰이더 프로그램 컴파일
+    GLuint shaderProgram = compileShader(vertexShaderSource, fragmentShaderSource);
+    
+    // 모델 로드 - 파일명
+    const char* ModelPath;
+    
+    // 명령줄 인수 확인
+    if (argc < 3) {
+        std::cout << "Usage : ./3d_viewer [num] [path]" << std::endl;
+        std::cout << "num(1) : original obj" << std::endl;
+        std::cout << "num(2) : decomp.obj" << std::endl;
+        glfwTerminate();
+        return -1;
     }
-};
-
-struct Vertex {
-    glm::vec3 position;
-    glm::vec3 normal;
-};
-
-// 여러 파트를 포함하는 OBJ 로드 함수
-std::vector<Mesh> loadOBJPart(const char* path) {
-    std::vector<Mesh> meshes;
     
-    std::vector<glm::vec3> temp_vertices;
-    std::vector<glm::vec3> temp_normals;
+    ModelPath = argv[2];
+    bool ObjLoaded = false;
+    bool convexObjLoaded = false;
+    Mesh ObjModel;
+    std::vector<Mesh> convexParts;
     
-    std::ifstream file(path);
-    if (!file) {
-        std::cerr << "파일을 열 수 없습니다: " << path << std::endl;
-        return meshes;
+    // 입력에 따라 다른 모델 로드
+    if (atoi(argv[1]) == 2) {
+        // 볼록화된 부분 로드
+        convexParts = loadOBJPart(ModelPath);
+        convexObjLoaded = !convexParts.empty();
+        
+        // 각 파트에 대해 처리
+        for (auto& mesh : convexParts) {
+            centerAndScaleModel(mesh);
+            mesh.setupMesh();
+        }
+    } else {
+        // 원본 모델 생성
+        ObjModel = Mesh(glm::vec4(1.0f, 0.0f, 0.0f, 0.5f)); // 반투명 빨간색
+        
+        // 모델 로드
+        ObjLoaded = loadOBJ(ModelPath, ObjModel);
+        
+        if (ObjLoaded) {
+            // 모델 중앙 정렬 및 크기 조정
+            centerAndScaleModel(ObjModel);
+            
+            // 모델 정보 출력
+            printModelInfo(ObjModel);
+            
+            // 메시 설정
+            ObjModel.setupMesh();
+        }
     }
     
-    Mesh currentMesh(glm::vec4(1.0f, 0.0f, 0.0f, 0.5f));  // 기본 빨간색 반투명
-    std::string line;
-    bool newObjectStarted = false;
-    
-    while (std::getline(file, line)) {
-        std::istringstream iss(line);
-        std::string prefix;
-        iss >> prefix;
+    // 렌더링 루프
+    while (!glfwWindowShouldClose(window)) {
+        // 델타 타임 계산
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
         
-        if (prefix == "o" || prefix == "g") {  // 새 객체/그룹 시작
-            if (newObjectStarted && !currentMesh.vertices.empty()) {
-                // 현재 메시를 목록에 추가하고 새 메시 시작
-                meshes.push_back(currentMesh);
-                currentMesh = Mesh(glm::vec4(
-                    rand() / (float)RAND_MAX,  // 랜덤 색상 부여
-                    rand() / (float)RAND_MAX,
-                    rand() / (float)RAND_MAX,
-                    0.5f
-                ));
+        // 궤도 카메라
+        updateCameraPosition();
+        
+        // 입력 처리
+        processInput(window);
+        
+        // 렌더링
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        
+        // 와이어프레임 모드 설정
+        if (wireframe) {
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        } else {
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        }
+        
+        // 셰이더 사용
+        glUseProgram(shaderProgram);
+        
+        // 투영 행렬 설정
+        glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
+        
+        // 뷰 행렬 설정
+        glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "view"), 1, GL_FALSE, glm::value_ptr(view));
+        
+        // 모델 행렬 설정
+        glm::mat4 model = glm::mat4(1.0f);
+        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        
+        // 모델 렌더링
+        if (convexObjLoaded) {
+            for (const auto& mesh : convexParts) {
+                mesh.draw(shaderProgram);
             }
-            newObjectStarted = true;
-            std::string name;
-            iss >> name;
-            std::cout << "새 파트 발견: " << name << std::endl;
         }
-        else if (prefix == "v") {  // 정점
-            glm::vec3 vertex;
-            iss >> vertex.x >> vertex.y >> vertex.z;
-            temp_vertices.push_back(vertex);
+        
+        if (ObjLoaded) {
+            ObjModel.draw(shaderProgram);
         }
-        else if (prefix == "vn") {  // 법선
-            glm::vec3 normal;
-            iss >> normal.x >> normal.y >> normal.z;
-            temp_normals.push_back(normal);
-        }
-        else if (prefix == "f") {  // 면
-            // 기존 면 처리 코드와 동일
-            std::string vertex1, vertex2, vertex3;
-            iss >> vertex1 >> vertex2 >> vertex3;
-            
-            // 정점/텍스처/법선 인덱스 파싱
-            std::replace(vertex1.begin(), vertex1.end(), '/', ' ');
-            std::replace(vertex2.begin(), vertex2.end(), '/', ' ');
-            std::replace(vertex3.begin(), vertex3.end(), '/', ' ');
-            
-            std::istringstream v1(vertex1), v2(vertex2), v3(vertex3);
-            unsigned int vertexIndex, normalIndex;
-            unsigned int temp;
-            
-            // 첫 번째 정점
-            v1 >> vertexIndex;
-            if (v1.peek() == ' ') v1 >> temp;
-            v1 >> normalIndex;
-            
-            Vertex meshVertex;
-            meshVertex.position = temp_vertices[vertexIndex-1];
-            if (normalIndex-1 < temp_normals.size())
-                meshVertex.normal = temp_normals[normalIndex-1];
-            else
-                meshVertex.normal = glm::vec3(0.0f, 0.0f, 1.0f);
-                
-            currentMesh.vertices.push_back(meshVertex);
-            currentMesh.indices.push_back(currentMesh.vertices.size()-1);
-            
-            // 두 번째 정점
-            v2 >> vertexIndex;
-            if (v2.peek() == ' ') v2 >> temp;
-            v2 >> normalIndex;
-            
-            meshVertex.position = temp_vertices[vertexIndex-1];
-            if (normalIndex-1 < temp_normals.size())
-                meshVertex.normal = temp_normals[normalIndex-1];
-            else
-                meshVertex.normal = glm::vec3(0.0f, 0.0f, 1.0f);
-                
-            currentMesh.vertices.push_back(meshVertex);
-            currentMesh.indices.push_back(currentMesh.vertices.size()-1);
-            
-            // 세 번째 정점
-            v3 >> vertexIndex;
-            if (v3.peek() == ' ') v3 >> temp;
-            v3 >> normalIndex;
-            
-            meshVertex.position = temp_vertices[vertexIndex-1];
-            if (normalIndex-1 < temp_normals.size())
-                meshVertex.normal = temp_normals[normalIndex-1];
-            else
-                meshVertex.normal = glm::vec3(0.0f, 0.0f, 1.0f);
-                
-            currentMesh.vertices.push_back(meshVertex);
-            currentMesh.indices.push_back(currentMesh.vertices.size()-1);
-        }
+        
+        // 버퍼 교체 및 이벤트 폴링
+        glfwSwapBuffers(window);
+        glfwPollEvents();
     }
     
-    // 마지막 메시 추가
-    if (!currentMesh.vertices.empty()) {
-        meshes.push_back(currentMesh);
-    }
-    
-    std::cout << "총 " << meshes.size() << "개의 볼록 파트를 로드했습니다." << std::endl;
-    
-    return meshes;
-}
-
-int main(){
-    const char* convexObjPath = "decomp.obj";
-    std::vector<Mesh> convexParts = loadOBJPart(convexObjPath);
+    // 정리
+    glfwTerminate();
+    return 0;
 }

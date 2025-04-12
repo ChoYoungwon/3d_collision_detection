@@ -30,6 +30,7 @@ float pitch = 0.0f;
 bool firstMouse = true;
 bool wireframe = false;
 bool mousePressed = false;
+float modelRotationY = 0.0f;    // 모델 y축 각도
 
 // 시간 관리
 float deltaTime = 0.0f;
@@ -84,7 +85,7 @@ struct Mesh {
     }
 };
 
-// 여러 파트를 포함하는 OBJ 로드 함수
+// 여러 파트를 포함하는 OBJ 로드 함수 - 전체 모델 구조 유지
 std::vector<Mesh> loadOBJPart(const char* path) {
     std::vector<Mesh> meshes;
     
@@ -101,6 +102,10 @@ std::vector<Mesh> loadOBJPart(const char* path) {
     std::string line;
     bool newObjectStarted = false;
     
+    // 모델 전체의 경계 상자를 계산하기 위한 변수
+    glm::vec3 globalMin(std::numeric_limits<float>::max());
+    glm::vec3 globalMax(std::numeric_limits<float>::lowest());
+    
     while (std::getline(file, line)) {
         std::istringstream iss(line);
         std::string prefix;
@@ -109,13 +114,31 @@ std::vector<Mesh> loadOBJPart(const char* path) {
         if (prefix == "o" || prefix == "g") {  // 새 객체/그룹 시작
             if (newObjectStarted && !currentMesh.vertices.empty()) {
                 // 현재 메시를 목록에 추가하고 새 메시 시작
+                // 색상 생성 - 더 뚜렷한 색상 차이를 위해 HSV 색상 공간 사용
+                float hue = meshes.size() * 0.618033988749895f; // 황금비를 이용한 색상 분포
+                hue = hue - std::floor(hue);
+                
+                // HSV에서 RGB로 간단한 변환
+                float h = hue * 6.0f;
+                int i = static_cast<int>(h);
+                float f = h - i;
+                float p = 0.0f;
+                float q = 1.0f - f;
+                float t = f;
+                
+                glm::vec3 rgb;
+                switch (i % 6) {
+                    case 0: rgb = glm::vec3(1.0f, t, p); break;
+                    case 1: rgb = glm::vec3(q, 1.0f, p); break;
+                    case 2: rgb = glm::vec3(p, 1.0f, t); break;
+                    case 3: rgb = glm::vec3(p, q, 1.0f); break;
+                    case 4: rgb = glm::vec3(t, p, 1.0f); break;
+                    case 5: rgb = glm::vec3(1.0f, p, q); break;
+                }
+                
+                currentMesh.color = glm::vec4(rgb, 0.7f); // 약간 투명도 적용
                 meshes.push_back(currentMesh);
-                currentMesh = Mesh(glm::vec4(
-                    rand() / (float)RAND_MAX,  // 랜덤 색상 부여
-                    rand() / (float)RAND_MAX,
-                    rand() / (float)RAND_MAX,
-                    0.5f
-                ));
+                currentMesh = Mesh();
             }
             newObjectStarted = true;
             std::string name;
@@ -126,6 +149,10 @@ std::vector<Mesh> loadOBJPart(const char* path) {
             glm::vec3 vertex;
             iss >> vertex.x >> vertex.y >> vertex.z;
             temp_vertices.push_back(vertex);
+            
+            // 전역 경계 상자 업데이트
+            globalMin = glm::min(globalMin, vertex);
+            globalMax = glm::max(globalMax, vertex);
         }
         else if (prefix == "vn") {  // 법선
             glm::vec3 normal;
@@ -138,7 +165,7 @@ std::vector<Mesh> loadOBJPart(const char* path) {
             
             std::vector<unsigned int> vertexIndices, normalIndices;
             
-            auto parseVertex = [&](std::string vertexStr) {  // 참조 제거, 값으로 전달
+            auto parseVertex = [&](std::string vertexStr) {
                 std::replace(vertexStr.begin(), vertexStr.end(), '/', ' ');
                 std::istringstream iss(vertexStr);
                 unsigned int vertexIndex = 0, normalIndex = 0;
@@ -151,7 +178,6 @@ std::vector<Mesh> loadOBJPart(const char* path) {
                 return std::make_pair(vertexIndex, normalIndex);
             };
             
-            // C++11 스타일로 구조 변경
             auto v1Result = parseVertex(vertex1);
             auto v2Result = parseVertex(vertex2);
             auto v3Result = parseVertex(vertex3);
@@ -160,7 +186,6 @@ std::vector<Mesh> loadOBJPart(const char* path) {
             unsigned int v2Index = v2Result.first, n2Index = v2Result.second;
             unsigned int v3Index = v3Result.first, n3Index = v3Result.second;
             
-            // 나머지 코드는 이전과 동일
             Vertex v1, v2, v3;
             v1.position = temp_vertices[v1Index-1];
             v2.position = temp_vertices[v2Index-1];
@@ -183,10 +208,50 @@ std::vector<Mesh> loadOBJPart(const char* path) {
     
     // 마지막 메시 추가
     if (!currentMesh.vertices.empty()) {
+        // 마지막 메시의 색상 설정
+        float hue = meshes.size() * 0.618033988749895f;
+        hue = hue - std::floor(hue);
+        
+        float h = hue * 6.0f;
+        int i = static_cast<int>(h);
+        float f = h - i;
+        float p = 0.0f;
+        float q = 1.0f - f;
+        float t = f;
+        
+        glm::vec3 rgb;
+        switch (i % 6) {
+            case 0: rgb = glm::vec3(1.0f, t, p); break;
+            case 1: rgb = glm::vec3(q, 1.0f, p); break;
+            case 2: rgb = glm::vec3(p, 1.0f, t); break;
+            case 3: rgb = glm::vec3(p, q, 1.0f); break;
+            case 4: rgb = glm::vec3(t, p, 1.0f); break;
+            case 5: rgb = glm::vec3(1.0f, p, q); break;
+        }
+        
+        currentMesh.color = glm::vec4(rgb, 0.7f);
         meshes.push_back(currentMesh);
     }
     
     std::cout << "총 " << meshes.size() << "개의 볼록 파트를 로드했습니다." << std::endl;
+    
+    // 전체 모델의 크기 및 중심 계산
+    glm::vec3 globalCenter = (globalMin + globalMax) * 0.5f;
+    float globalSize = glm::length(globalMax - globalMin);
+    
+    std::cout << "전체 모델 - 중심: (" << globalCenter.x << ", " 
+              << globalCenter.y << ", " << globalCenter.z 
+              << "), 크기: " << globalSize << std::endl;
+              
+    // 모든 파트를 전체 모델 기준으로 정규화 (개별 정규화는 하지 않음)
+    float scaleFactor = 2.0f / globalSize;
+    
+    for (auto& mesh : meshes) {
+        for (auto& vertex : mesh.vertices) {
+            // 중심을 원점으로 이동하고 전체 스케일 적용
+            vertex.position = (vertex.position - globalCenter) * scaleFactor;
+        }
+    }
     
     return meshes;
 }
@@ -592,6 +657,12 @@ void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
     
+    // 모델 회전 제어
+    if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+        modelRotationY += 1.0f * deltaTime * 60.0f;
+    if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
+        modelRotationY -= 1.0f * deltaTime * 60.0f;
+
     // 와이어프레임 모드 전환 (스페이스바)
     static bool spacePressed = false;
     if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
@@ -665,6 +736,30 @@ void printModelInfo(const Mesh& mesh) {
 }
 
 int main(int argc, char* argv[]) {
+    // 명령줄 인수 확인
+    if (argc < 3) {
+        std::cout << "Usage : ./3d_viewer [num] [path]" << std::endl;
+        std::cout << "num(1) : original obj" << std::endl;
+        std::cout << "num(2) : decomp.obj" << std::endl;
+        std::cout << "num(3) : both (requires original and decomp path)" << std::endl;
+        return -1;
+    }
+
+    // 모드에 따른 추가 인수 확인
+    int viewMode = atoi(argv[1]);
+    const char* ModelPath = argv[2];
+    const char* OriginalPath = nullptr;
+
+    // 모드 3에서는 추가 인수가 필요
+    if (viewMode == 3 && argc < 4) {
+        std::cout << "Mode 3 requires two file paths:" << std::endl;
+        std::cout << "Usage : ./3d_viewer 3 [decomp.obj] [original.obj]" << std::endl;
+        return -1;
+    } else if (viewMode == 3) {
+        // 두 번째 인수를 원본 파일 경로로 사용
+        OriginalPath = argv[3];
+    }
+
     // GLFW 초기화
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -730,55 +825,73 @@ int main(int argc, char* argv[]) {
         "   vec3 diffuse = diff * vec3(1.0, 1.0, 1.0);\n"
         "   vec3 ambient = vec3(0.2, 0.2, 0.2);\n"
         "   vec3 result = (ambient + diffuse) * vec3(meshColor);\n"
-        "   FragColor = vec4(result, opacity);\n"
+        "   FragColor = vec4(result, meshColor.a * opacity);\n"
         "}\0";
     
     // 셰이더 프로그램 컴파일
     GLuint shaderProgram = compileShader(vertexShaderSource, fragmentShaderSource);
     
-    // 모델 로드 - 파일명 기본값 설정
-    // const char* originalModelPath = "beshon.obj";
-    const char* convexObjPath = "decomp.obj";
-    // const char* convexStlPath = "decomp.stl";
+    bool ObjLoaded = false;
+    bool convexObjLoaded = false;
+    Mesh ObjModel;
+    std::vector<Mesh> convexParts;
     
-    // 명령줄 인수가 있으면 파일명 대체
-    // if (argc > 1) originalModelPath = argv[1];
-    // if (argc > 2) convexObjPath = argv[2];
-    // if (argc > 3) convexStlPath = argv[3];
-
-    std::vector<Mesh> convexParts = loadOBJPart(convexObjPath);
-    
-    // 각 파트에 대해 처리
-    for (auto& mesh : convexParts) {
-        centerAndScaleModel(mesh);
-        mesh.setupMesh();
+    if (viewMode == 2 || viewMode == 3) { // 볼록화된 모델
+        // 볼록화 모델 로드
+        convexParts = loadOBJPart(ModelPath);
+        convexObjLoaded = !convexParts.empty();
+        
+        if (convexObjLoaded) {
+            std::cout << "볼록화 모델 로드 성공: " << ModelPath << std::endl;
+            
+            // 각 파트에 대해 메시 설정
+            for (auto& mesh : convexParts) {
+                mesh.setupMesh();
+            }
+        } else {
+            std::cerr << "볼록화 모델 로드 실패: " << ModelPath << std::endl;
+        }
     }
-
-    // 모델 생성
-    // Mesh originalModel(glm::vec4(0.0f, 0.0f, 1.0f, 1.0f)); // 파란색
-    Mesh convexObjModel(glm::vec4(1.0f, 0.0f, 0.0f, 0.5f)); // 반투명 빨간색
-    // Mesh convexStlModel(glm::vec4(0.0f, 1.0f, 0.0f, 0.5f)); // 반투명 초록색
     
-    // 모델 로드
-    // bool originalLoaded = loadOBJ(originalModelPath, originalModel);
-    bool convexObjLoaded = loadOBJ(convexObjPath, convexObjModel);
-    // bool convexStlLoaded = loadSTL(convexStlPath, convexStlModel);
+    if (viewMode == 1 || viewMode == 3) { // 원본 모델
+        ObjModel = Mesh();
+        
+        if (viewMode == 3) {
+            // 모드 3에서는 반투명하게 설정
+            ObjModel.color = glm::vec4(1.0f, 0.0f, 0.0f, 0.3f); // 반투명 빨간색
+            ObjLoaded = loadOBJ(OriginalPath, ObjModel);
+        } else {
+            // 모드 1에서는 불투명하게 설정
+            ObjModel.color = glm::vec4(1.0f, 0.0f, 0.0f, 0.7f); // 불투명 빨간색
+            ObjLoaded = loadOBJ(ModelPath, ObjModel);
+        }
+        
+        if (ObjLoaded) {
+            std::cout << "원본 모델 로드 성공: " 
+                     << (viewMode == 3 ? OriginalPath : ModelPath) << std::endl;
+            
+            centerAndScaleModel(ObjModel);
+            printModelInfo(ObjModel);
+            ObjModel.setupMesh();
+        } else {
+            std::cerr << "원본 모델 로드 실패: " 
+                     << (viewMode == 3 ? OriginalPath : ModelPath) << std::endl;
+        }
+    }
     
-    // 모델 중앙 정렬 및 크기 조정
-    // if (originalLoaded) centerAndScaleModel(originalModel);
-    // if (convexObjLoaded) centerAndScaleModel(convexObjModel);
-    // if (convexStlLoaded) centerAndScaleModel(convexStlModel);
-
-    // 모델 정보 출력
-    // if (originalLoaded) printModelInfo(originalModel);
-    // if (convexObjLoaded) printModelInfo(convexObjModel);
-    // if (convexStlLoaded) printModelInfo(convexStlModel);
-
-    // 메시 설정
-    // if (originalLoaded) originalModel.setupMesh();
-    // if (convexObjLoaded) convexObjModel.setupMesh();
-    // if (convexStlLoaded) convexStlModel.setupMesh();
+    // 아무 모델도 로드되지 않았으면 종료
+    if (!ObjLoaded && !convexObjLoaded) {
+        std::cerr << "모델을 로드할 수 없습니다. 프로그램을 종료합니다." << std::endl;
+        glfwTerminate();
+        return -1;
+    }
     
+    // 카메라 초기 위치 설정
+    cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+    cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+    cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
+    
+    float modelRotationY = 0.0f; // 모델 Y축 회전 각도
     
     // 렌더링 루프
     while (!glfwWindowShouldClose(window)) {
@@ -789,12 +902,18 @@ int main(int argc, char* argv[]) {
         
         // 궤도 카메라
         updateCameraPosition();
-
+        
         // 입력 처리
         processInput(window);
         
+        // 모델 회전 제어
+        if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+            modelRotationY += 1.0f * deltaTime * 60.0f;
+        if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
+            modelRotationY -= 1.0f * deltaTime * 60.0f;
+        
         // 렌더링
-        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 배경색 변경
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         
         // 와이어프레임 모드 설정
@@ -817,24 +936,39 @@ int main(int argc, char* argv[]) {
         
         // 모델 행렬 설정
         glm::mat4 model = glm::mat4(1.0f);
+        model = glm::rotate(model, glm::radians(modelRotationY), glm::vec3(0.0f, 1.0f, 0.0f));
         glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "model"), 1, GL_FALSE, glm::value_ptr(model));
         
-        // 모델 렌더링
-        // if (originalLoaded) {
-        //     originalModel.draw(shaderProgram);
-        // }
+        // 모델 렌더링 순서: 먼저 불투명한 모델, 그 다음 반투명 모델
         
-        if (convexObjLoaded) {
-            // convexObjModel.draw(shaderProgram);
-            for (const auto& mesh : convexParts) {
-                mesh.draw(shaderProgram);
+        // 반투명 효과가 있는 경우 렌더링 순서가 중요
+        if (viewMode == 3) {
+            // 1. 먼저 볼록화 모델 렌더링 (더 불투명)
+            if (convexObjLoaded) {
+                for (const auto& mesh : convexParts) {
+                    mesh.draw(shaderProgram);
+                }
+            }
+            
+            // 2. 그 다음 원본 모델 (반투명)
+            if (ObjLoaded) {
+                // 반투명 모델은 깊이 테스트를 조정하여 렌더링
+                glDepthFunc(GL_LEQUAL);
+                ObjModel.draw(shaderProgram);
+                glDepthFunc(GL_LESS); // 기본 깊이 테스트로 복원
+            }
+        } else {
+            // 단일 모델 모드에서는 간단하게 렌더링
+            if (convexObjLoaded) {
+                for (const auto& mesh : convexParts) {
+                    mesh.draw(shaderProgram);
+                }
+            }
+            
+            if (ObjLoaded) {
+                ObjModel.draw(shaderProgram);
             }
         }
-        
-        
-        // if (convexStlLoaded) {
-        //     convexStlModel.draw(shaderProgram);
-        // }
         
         // 버퍼 교체 및 이벤트 폴링
         glfwSwapBuffers(window);
