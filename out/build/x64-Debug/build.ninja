@@ -139,6 +139,14 @@ build CMakeFiles\collision_detection.dir\src\math\Vector3.cpp.obj: CXX_COMPILER_
   TARGET_COMPILE_PDB = CMakeFiles\collision_detection.dir\
   TARGET_PDB = collision_detection.pdb
 
+build CMakeFiles\collision_detection.dir\src\math\Vector4.cpp.obj: CXX_COMPILER__collision_detection_Debug ..\..\..\src\math\Vector4.cpp || cmake_object_order_depends_target_collision_detection
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -openmp /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\include
+  OBJECT_DIR = CMakeFiles\collision_detection.dir
+  OBJECT_FILE_DIR = CMakeFiles\collision_detection.dir\src\math
+  TARGET_COMPILE_PDB = CMakeFiles\collision_detection.dir\
+  TARGET_PDB = collision_detection.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target collision_detection
@@ -147,7 +155,7 @@ build CMakeFiles\collision_detection.dir\src\math\Vector3.cpp.obj: CXX_COMPILER_
 #############################################
 # Link the executable collision_detection.exe
 
-build collision_detection.exe: CXX_EXECUTABLE_LINKER__collision_detection_Debug CMakeFiles\collision_detection.dir\src\collision\CollisionDetection.cpp.obj CMakeFiles\collision_detection.dir\src\collision\GJK.cpp.obj CMakeFiles\collision_detection.dir\src\core\CollisionManager.cpp.obj CMakeFiles\collision_detection.dir\src\core\Object3D.cpp.obj CMakeFiles\collision_detection.dir\src\decomposition\ConvexDecomposition.cpp.obj CMakeFiles\collision_detection.dir\src\geometry\AABB.cpp.obj CMakeFiles\collision_detection.dir\src\geometry\ConvexHull.cpp.obj CMakeFiles\collision_detection.dir\src\geometry\OBB.cpp.obj CMakeFiles\collision_detection.dir\src\main.cpp.obj CMakeFiles\collision_detection.dir\src\math\Matrix3x3.cpp.obj CMakeFiles\collision_detection.dir\src\math\Quaternion.cpp.obj CMakeFiles\collision_detection.dir\src\math\Vector3.cpp.obj
+build collision_detection.exe: CXX_EXECUTABLE_LINKER__collision_detection_Debug CMakeFiles\collision_detection.dir\src\collision\CollisionDetection.cpp.obj CMakeFiles\collision_detection.dir\src\collision\GJK.cpp.obj CMakeFiles\collision_detection.dir\src\core\CollisionManager.cpp.obj CMakeFiles\collision_detection.dir\src\core\Object3D.cpp.obj CMakeFiles\collision_detection.dir\src\decomposition\ConvexDecomposition.cpp.obj CMakeFiles\collision_detection.dir\src\geometry\AABB.cpp.obj CMakeFiles\collision_detection.dir\src\geometry\ConvexHull.cpp.obj CMakeFiles\collision_detection.dir\src\geometry\OBB.cpp.obj CMakeFiles\collision_detection.dir\src\main.cpp.obj CMakeFiles\collision_detection.dir\src\math\Matrix3x3.cpp.obj CMakeFiles\collision_detection.dir\src\math\Quaternion.cpp.obj CMakeFiles\collision_detection.dir\src\math\Vector3.cpp.obj CMakeFiles\collision_detection.dir\src\math\Vector4.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc -openmp /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

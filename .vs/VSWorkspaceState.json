@@ -4,13 +4,13 @@
     "\\include",
     "\\include\\geometry",
     "\\include\\math",
-    "\\out",
-    "\\out\\build",
     "\\src",
     "\\src\\collision",
+    "\\src\\core",
     "\\src\\decomposition",
+    "\\src\\geometry",
     "\\src\\math"
   ],
-  "SelectedNode": "\\include\\geometry\\OBB.h",
+  "SelectedNode": "\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }

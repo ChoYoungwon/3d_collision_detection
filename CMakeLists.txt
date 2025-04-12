@@ -22,7 +22,7 @@ include_directories(include)
 # include_directories(lib/v-hacd/include)
 
 # 실행 파일 빌드
-add_executable(collision_detection ${SOURCES})
+add_executable(collision_detection ${SOURCES} "src/collision/BVH.cpp" "src/collision/BVH.h" "src/math/Vector4.cpp")
 
 # 라이브러리 링크
 # target_link_libraries(collision_detection vhacd)
