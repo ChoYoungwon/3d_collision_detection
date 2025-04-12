@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\include",
-    "\\include\\core",
-    "\\include\\math",
+    "\\include\\collision",
+    "\\include\\geometry",
     "\\src",
     "\\src\\collision",
     "\\src\\core",
@@ -11,6 +11,6 @@
     "\\src\\geometry",
     "\\src\\math"
   ],
-  "SelectedNode": "\\src\\math\\Quaternion.cpp",
+  "SelectedNode": "\\src\\geometry\\AABB.cpp",
   "PreviewInSolutionExplorer": false
 }
