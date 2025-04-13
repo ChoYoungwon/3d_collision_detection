@@ -1,4 +1,5 @@
-#pragma once
+#ifndef OBJECT3D_H
+#define OBJECT3D_H
 
 #include <vector>
 #include <string>
@@ -7,6 +8,7 @@
 #include "Matrix3x3.h"
 #include "Quaternion.h"
 #include "AABB.h"
+#include "ConvexDecomposition.h"
 
 class Object3D;
 
@@ -17,10 +19,8 @@ public:
     Vector3 contactNormal;
     float penetrationDepth;
 
-    CollisionInfo() : otherObject(nullptr), penetrationDepth(0.0f) {}
-
-    CollisionInfo(Object3D* other, const Vector3& point, const Vector3& normal, float depth)
-        : otherObject(other), contactPoint(point), contactNormal(normal), penetrationDepth(depth) {}
+    CollisionInfo();
+    CollisionInfo(Object3D* other, const Vector3& point, const Vector3& normal, float depth);
 };
 
 class Object3D {
@@ -40,6 +40,15 @@ private:
     bool isInCollision;
     std::vector<CollisionInfo> collisions;
 
+    // 메시 데이터
+    std::vector<Vector3> vertices;
+    std::vector<Vector3> normals;
+    std::vector<int> indices;
+
+    // 볼록 분해 결과
+    std::vector<ConvexHull> convexHulls;
+    bool isConvexDecomposed;
+
     // Callback function type for collision events
     using CollisionCallback = std::function<void(const CollisionInfo&)>;
     CollisionCallback onCollisionEnter;
@@ -47,284 +56,78 @@ private:
     CollisionCallback onCollisionExit;
 
 public:
-    Object3D(const std::string& _name = "Object")
-        : name(_name),
-        position(Vector3(0, 0, 0)),
-        rotation(Quaternion::identity()),
-        scale(Vector3(1, 1, 1)),
-        transformDirty(true),
-        aabbDirty(true),
-        isInCollision(false) {
-
-        // Default local AABB (unit cube centered at origin)
-        localAABB.min = Vector3(-0.5f, -0.5f, -0.5f);
-        localAABB.max = Vector3(0.5f, 0.5f, 0.5f);
-
-        updateTransformMatrix();
-        updateWorldAABB();
-    }
+    Object3D(const std::string& _name = "Object");
+    ~Object3D();
 
     // Position methods
-    const Vector3& getPosition() const {
-        return position;
-    }
-
-    void setPosition(const Vector3& pos) {
-        position = pos;
-        transformDirty = true;
-        aabbDirty = true;
-    }
-
-    void translate(const Vector3& offset) {
-        position += offset;
-        transformDirty = true;
-        aabbDirty = true;
-    }
+    const Vector3& getPosition() const;
+    void setPosition(const Vector3& pos);
+    void translate(const Vector3& offset);
 
     // Rotation methods
-    const Quaternion& getRotation() const {
-        return rotation;
-    }
-
-    void setRotation(const Quaternion& rot) {
-        rotation = rot;
-        transformDirty = true;
-        aabbDirty = true;
-    }
-
-    void rotate(const Quaternion& rot) {
-        rotation = rotation * rot;
-        transformDirty = true;
-        aabbDirty = true;
-    }
-
-    void rotateAxis(const Vector3& axis, float angleRadians) {
-        Quaternion q = Quaternion::fromAxisAngle(axis, angleRadians);
-        rotate(q);
-    }
+    const Quaternion& getRotation() const;
+    void setRotation(const Quaternion& rot);
+    void rotate(const Quaternion& rot);
+    void rotateAxis(const Vector3& axis, float angleRadians);
 
     // Scale methods
-    const Vector3& getScale() const {
-        return scale;
-    }
-
-    void setScale(const Vector3& s) {
-        scale = s;
-        transformDirty = true;
-        aabbDirty = true;
-    }
-
-    void setScale(float uniformScale) {
-        scale = Vector3(uniformScale, uniformScale, uniformScale);
-        transformDirty = true;
-        aabbDirty = true;
-    }
+    const Vector3& getScale() const;
+    void setScale(const Vector3& s);
+    void setScale(float uniformScale);
 
     // Transform matrix operations
-    const Matrix3x3& getTransformMatrix() {
-        if (transformDirty) {
-            updateTransformMatrix();
-        }
-        return transformMatrix;
-    }
-
-    void updateTransformMatrix() {
-        // Create rotation matrix from quaternion
-        Matrix3x3 rotMat = rotation.toMatrix3x3();
-
-        // Apply scale
-        rotMat[0][0] *= scale.x;
-        rotMat[1][0] *= scale.x;
-        rotMat[2][0] *= scale.x;
-
-        rotMat[0][1] *= scale.y;
-        rotMat[1][1] *= scale.y;
-        rotMat[2][1] *= scale.y;
-
-        rotMat[0][2] *= scale.z;
-        rotMat[1][2] *= scale.z;
-        rotMat[2][2] *= scale.z;
-
-        // Set translation components
-        rotMat[0][3] = position.x;
-        rotMat[1][3] = position.y;
-        rotMat[2][3] = position.z;
-
-        transformMatrix = rotMat;
-        transformDirty = false;
-    }
+    const Matrix3x3& getTransformMatrix();
+    void updateTransformMatrix();
 
     // AABB operations
-    void setLocalAABB(const AABB& aabb) {
-        localAABB = aabb;
-        aabbDirty = true;
-    }
+    void setLocalAABB(const AABB& aabb);
+    const AABB& getLocalAABB() const;
+    const AABB& getAABB();
+    void updateWorldAABB();
 
-    const AABB& getLocalAABB() const {
-        return localAABB;
-    }
-
-    const AABB& getAABB() {
-        if (aabbDirty) {
-            updateWorldAABB();
-        }
-        return worldAABB;
-    }
-
-    void updateWorldAABB() {
-        if (transformDirty) {
-            updateTransformMatrix();
-        }
-
-        // Initialize with transformed corners
-        Vector3 corners[8];
-        corners[0] = transformPoint(Vector3(localAABB.min.x, localAABB.min.y, localAABB.min.z));
-        corners[1] = transformPoint(Vector3(localAABB.max.x, localAABB.min.y, localAABB.min.z));
-        corners[2] = transformPoint(Vector3(localAABB.min.x, localAABB.max.y, localAABB.min.z));
-        corners[3] = transformPoint(Vector3(localAABB.max.x, localAABB.max.y, localAABB.min.z));
-        corners[4] = transformPoint(Vector3(localAABB.min.x, localAABB.min.y, localAABB.max.z));
-        corners[5] = transformPoint(Vector3(localAABB.max.x, localAABB.min.y, localAABB.max.z));
-        corners[6] = transformPoint(Vector3(localAABB.min.x, localAABB.max.y, localAABB.max.z));
-        corners[7] = transformPoint(Vector3(localAABB.max.x, localAABB.max.y, localAABB.max.z));
-
-        // Find min and max points
-        worldAABB.min = corners[0];
-        worldAABB.max = corners[0];
-
-        for (int i = 1; i < 8; ++i) {
-            worldAABB.min.x = std::min(worldAABB.min.x, corners[i].x);
-            worldAABB.min.y = std::min(worldAABB.min.y, corners[i].y);
-            worldAABB.min.z = std::min(worldAABB.min.z, corners[i].z);
-
-            worldAABB.max.x = std::max(worldAABB.max.x, corners[i].x);
-            worldAABB.max.y = std::max(worldAABB.max.y, corners[i].y);
-            worldAABB.max.z = std::max(worldAABB.max.z, corners[i].z);
-        }
-
-        aabbDirty = false;
-    }
-
-    Vector3 transformPoint(const Vector3& point) {
-        if (transformDirty) {
-            updateTransformMatrix();
-        }
-
-        Vector3 result;
-        result.x = transformMatrix[0][0] * point.x + transformMatrix[0][1] * point.y +
-            transformMatrix[0][2] * point.z + transformMatrix[0][3];
-        result.y = transformMatrix[1][0] * point.x + transformMatrix[1][1] * point.y +
-            transformMatrix[1][2] * point.z + transformMatrix[1][3];
-        result.z = transformMatrix[2][0] * point.x + transformMatrix[2][1] * point.y +
-            transformMatrix[2][2] * point.z + transformMatrix[2][3];
-        return result;
-    }
-
-    Vector3 transformDirection(const Vector3& dir) {
-        if (transformDirty) {
-            updateTransformMatrix();
-        }
-
-        Vector3 result;
-        result.x = transformMatrix[0][0] * dir.x + transformMatrix[0][1] * dir.y + transformMatrix[0][2] * dir.z;
-        result.y = transformMatrix[1][0] * dir.x + transformMatrix[1][1] * dir.y + transformMatrix[1][2] * dir.z;
-        result.z = transformMatrix[2][0] * dir.x + transformMatrix[2][1] * dir.y + transformMatrix[2][2] * dir.z;
-        return result;
-    }
+    // Transform operations
+    Vector3 transformPoint(const Vector3& point);
+    Vector3 transformDirection(const Vector3& dir);
 
     // Collision management
-    bool isColliding() const {
-        return isInCollision;
-    }
-
-    const std::vector<CollisionInfo>& getCollisions() const {
-        return collisions;
-    }
-
-    void addCollision(const CollisionInfo& collision) {
-        // Check if already colliding with this object
-        for (const auto& existing : collisions) {
-            if (existing.otherObject == collision.otherObject) {
-                return; // Already colliding with this object
-            }
-        }
-
-        // Add new collision
-        collisions.push_back(collision);
-
-        // If this is the first collision, trigger onCollisionEnter
-        if (!isInCollision) {
-            isInCollision = true;
-            if (onCollisionEnter) {
-                onCollisionEnter(collision);
-            }
-        }
-        else {
-            // Otherwise trigger onCollisionStay
-            if (onCollisionStay) {
-                onCollisionStay(collision);
-            }
-        }
-    }
-
-    void removeCollision(Object3D* other) {
-        auto it = std::find_if(collisions.begin(), collisions.end(),
-            [other](const CollisionInfo& info) { return info.otherObject == other; });
-
-        if (it != collisions.end()) {
-            // Trigger onCollisionExit callback
-            if (onCollisionExit) {
-                onCollisionExit(*it);
-            }
-
-            // Remove the collision
-            collisions.erase(it);
-
-            // Update collision state
-            isInCollision = !collisions.empty();
-        }
-    }
-
-    void clearCollisions() {
-        // Trigger onCollisionExit for all active collisions
-        if (onCollisionExit) {
-            for (const auto& collision : collisions) {
-                onCollisionExit(collision);
-            }
-        }
-
-        collisions.clear();
-        isInCollision = false;
-    }
+    bool isColliding() const;
+    const std::vector<CollisionInfo>& getCollisions() const;
+    void addCollision(const CollisionInfo& collision);
+    void removeCollision(Object3D* other);
+    void clearCollisions();
 
     // Collision event callbacks
-    void setOnCollisionEnter(const CollisionCallback& callback) {
-        onCollisionEnter = callback;
-    }
+    void setOnCollisionEnter(const CollisionCallback& callback);
+    void setOnCollisionStay(const CollisionCallback& callback);
+    void setOnCollisionExit(const CollisionCallback& callback);
 
-    void setOnCollisionStay(const CollisionCallback& callback) {
-        onCollisionStay = callback;
-    }
+    // Mesh data operations
+    void setMeshData(const std::vector<Vector3>& verts, 
+                    const std::vector<Vector3>& norms,
+                    const std::vector<int>& inds);
 
-    void setOnCollisionExit(const CollisionCallback& callback) {
-        onCollisionExit = callback;
-    }
+    // File loading operations
+    bool loadFromObjFile(const std::string& filepa th);
 
-    // Basic accessors
-    const std::string& getName() const {
-        return name;
-    }
+    // 볼록 분해 관련 메서드 (추가됨)
+    bool computeConvexDecomposition(const VHACDParameters& params = VHACDParameters());
+    bool loadConvexDecomposition(const std::string& filepath);
+    void setConvexHulls(const std::vector<ConvexHull>& hulls);
 
-    void setName(const std::string& _name) {
-        name = _name;
-    }
+    // GJK support function
+    Vector3 getSupportPoint(const Vector3& direction) const;
 
-    void update() {
-        if (transformDirty) {
-            updateTransformMatrix();
-        }
+    // Accessors
+    bool isDecomposed() const;
+    const std::vector<ConvexHull>& getConvexHulls() const;
+    const std::vector<Vector3>& getVertices() const;
+    const std::vector<Vector3>& getNormals() const;
+    const std::vector<int>& getIndices() const;
+    const std::string& getName() const;
+    void setName(const std::string& _name);
 
-        if (aabbDirty) {
-            updateWorldAABB();
-        }
-    }
+    // Update method
+    void update();
 };
+
+#endif
