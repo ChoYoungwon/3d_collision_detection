@@ -2,15 +2,17 @@
   "ExpandedNodes": [
     "",
     "\\include",
-    "\\include\\collision",
-    "\\include\\core",
-    "\\include\\decomposition",
-    "\\include\\geometry",
+    "\\include\\math",
     "\\src",
-    "\\src\\decomposition",
-    "\\src\\geometry",
-    "\\src\\math"
+    "\\src\\collision",
+    "\\src\\core",
+    "\\test1",
+    "\\test1\\OpenGL",
+    "\\test1\\OpenGL\\build",
+    "\\test1\\v-hacd1",
+    "\\test1\\v-hacd1\\app",
+    "\\test1\\v-hacd1\\app\\meshes"
   ],
-  "SelectedNode": "\\include\\core\\CollisionManager.h",
+  "SelectedNode": "\\src\\collision\\GJK.cpp",
   "PreviewInSolutionExplorer": false
 }
