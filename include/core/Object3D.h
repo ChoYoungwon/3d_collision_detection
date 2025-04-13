@@ -25,9 +25,11 @@ public:
 
 class Object3D {
 public:
+    std::string name;
+
     // 변환 상태 (위치, 회전, 스케일)
     Vector3 position;
-    Vector3 rotation; // 간단히 Euler 각도로 가정 (또는 필요에 따라 Quaternion 사용)
+    Quaternion rotation; // 간단히 Euler 각도로 가정 (또는 필요에 따라 Quaternion 사용)
     Vector3 scale;
   
     Matrix3x3 transformMatrix;
@@ -107,15 +109,13 @@ public:
                     const std::vector<int>& inds);
 
     // File loading operations
-    bool loadFromObjFile(const std::string& filepa th);
+    bool loadFromObjFile(const std::string& filepath);
+    bool loadVHACDResult(const std::string& filepath); // 이 메서드 추가
 
     // 볼록 분해 관련 메서드 (추가됨)
     bool computeConvexDecomposition(const VHACDParameters& params = VHACDParameters());
     bool loadConvexDecomposition(const std::string& filepath);
     void setConvexHulls(const std::vector<ConvexHull>& hulls);
-
-    // GJK support function
-    Vector3 getSupportPoint(const Vector3& direction) const;
 
     // Accessors
     bool isDecomposed() const;
@@ -125,6 +125,8 @@ public:
     const std::vector<int>& getIndices() const;
     const std::string& getName() const;
     void setName(const std::string& _name);
+
+    Vector3 Object3D::getSupportPoint(const Vector3& direction) const;
 
     // Update method
     void update();

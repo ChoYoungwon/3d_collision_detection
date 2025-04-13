@@ -3,11 +3,10 @@
 #include <sstream>
 #include <iomanip>
 
-// 생성자
 Matrix3x3::Matrix3x3() {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            m[i][j] = (i == j) ? 1.0f : 0.0f; // 단위 행렬로 초기화
+            m[i][j] = (i == j) ? 1.0f : 0.0f; // 占쏙옙占쏙옙 占쏙옙캠占� 占십깍옙화
         }
     }
 }
@@ -30,7 +29,6 @@ Matrix3x3::Matrix3x3(const Matrix3x3& other) {
     }
 }
 
-// 요소 접근
 float& Matrix3x3::operator()(int row, int col) {
     return m[row][col];
 }
@@ -39,7 +37,6 @@ float Matrix3x3::operator()(int row, int col) const {
     return m[row][col];
 }
 
-// 행렬 연산
 Matrix3x3 Matrix3x3::operator+(const Matrix3x3& other) const {
     Matrix3x3 result;
     for (int i = 0; i < 3; i++) {
@@ -91,7 +88,6 @@ Vector3 Matrix3x3::operator*(const Vector3& v) const {
     );
 }
 
-// 전치 행렬
 Matrix3x3 Matrix3x3::transpose() const {
     Matrix3x3 result;
     for (int i = 0; i < 3; i++) {
@@ -102,18 +98,16 @@ Matrix3x3 Matrix3x3::transpose() const {
     return result;
 }
 
-// 행렬식
 float Matrix3x3::determinant() const {
     return m[0][0] * (m[1][1] * m[2][2] - m[1][2] * m[2][1])
         - m[0][1] * (m[1][0] * m[2][2] - m[1][2] * m[2][0])
         + m[0][2] * (m[1][0] * m[2][1] - m[1][1] * m[2][0]);
 }
 
-// 역행렬
 Matrix3x3 Matrix3x3::inverse() const {
     float det = determinant();
     if (std::abs(det) < 1e-6f) {
-        return identity(); // 역행렬이 존재하지 않을 경우 단위 행렬 반환
+        return identity(); 
     }
 
     float invDet = 1.0f / det;
@@ -132,7 +126,6 @@ Matrix3x3 Matrix3x3::inverse() const {
     return result;
 }
 
-// 정적 메소드
 Matrix3x3 Matrix3x3::identity() {
     return Matrix3x3(
         1.0f, 0.0f, 0.0f,
@@ -203,7 +196,6 @@ Matrix3x3 Matrix3x3::scale(const Vector3& s) {
     return scale(s.x, s.y, s.z);
 }
 
-// 문자열 변환
 std::string Matrix3x3::toString() const {
     std::stringstream ss;
     ss << std::fixed << std::setprecision(4);
@@ -220,7 +212,6 @@ std::string Matrix3x3::toString() const {
     return ss.str();
 }
 
-// 비-멤버 연산자 오버로딩
 Matrix3x3 operator*(float scalar, const Matrix3x3& m) {
     return m * scalar;
 }

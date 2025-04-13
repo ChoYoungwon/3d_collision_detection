@@ -6,10 +6,8 @@
 #include <string>
 
 class Matrix3x3 {
-private:
-    std::array<std::array<float, 3>, 3> m;
-
 public:
+    std::array<std::array<float, 3>, 3> m;
     // 생성자
     Matrix3x3();
     Matrix3x3(

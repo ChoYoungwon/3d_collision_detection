@@ -1,10 +1,10 @@
-
 // Object3D.cpp
 #include "Object3D.h"
 #include <fstream>
 #include <sstream>
 #include <algorithm>
 #include <limits>
+#include <iostream> // std::cerr를 위한 포함
 
 #include "VHACD.h"
 
@@ -14,36 +14,18 @@ CollisionInfo::CollisionInfo() : otherObject(nullptr), penetrationDepth(0.0f) {}
 CollisionInfo::CollisionInfo(Object3D* other, const Vector3& point, const Vector3& normal, float depth)
     : otherObject(other), contactPoint(point), contactNormal(normal), penetrationDepth(depth) {}
 
-// ConvexHull 구현
-Vector3 ConvexHull::getSupportPoint(const Vector3& direction) const {
-    if (vertices.empty()) return Vector3(0, 0, 0);
-    
-    Vector3 furthestPoint = vertices[0];
-    float maxDistance = Vector3::dot(direction, vertices[0]);
-    
-    for (size_t i = 1; i < vertices.size(); i++) {
-        float distance = Vector3::dot(direction, vertices[i]);
-        if (distance > maxDistance) {
-            maxDistance = distance;
-            furthestPoint = vertices[i];
-        }
-    }
-    
-    return furthestPoint;
-}
-
 // Object3D 구현
 Object3D::Object3D(const std::string& _name)
     : name(_name),
     position(Vector3(0, 0, 0)),
-    rotation(Quaternion::identity()),
+    rotation(Quaternion::identity()), // Quaternion으로 초기화
     scale(Vector3(1, 1, 1)),
     transformDirty(true),
     aabbDirty(true),
     isInCollision(false),
     isConvexDecomposed(false) {
 
-    // Default local AABB (unit cube centered at origin)
+    // 기본 로컬 AABB(원점 중심의 단위 큐브)
     localAABB.min = Vector3(-0.5f, -0.5f, -0.5f);
     localAABB.max = Vector3(0.5f, 0.5f, 0.5f);
 
@@ -51,15 +33,15 @@ Object3D::Object3D(const std::string& _name)
     updateWorldAABB();
 }
 
-// Position methods
+// 위치 관련 메소드
 const Vector3& Object3D::getPosition() const {
     return position;
 }
 
 void Object3D::setPosition(const Vector3& pos) {
     position = pos;
-    transformDirty = true;
-    aabbDirty = true;
+    transformDirty = true; // 변환 행렬 갱신 필요
+    aabbDirty = true;      // AABB 갱신 필요
 }
 
 void Object3D::translate(const Vector3& offset) {
@@ -68,7 +50,7 @@ void Object3D::translate(const Vector3& offset) {
     aabbDirty = true;
 }
 
-// Rotation methods
+// 회전 관련 메소드
 const Quaternion& Object3D::getRotation() const {
     return rotation;
 }
@@ -80,7 +62,7 @@ void Object3D::setRotation(const Quaternion& rot) {
 }
 
 void Object3D::rotate(const Quaternion& rot) {
-    rotation = rotation * rot;
+    rotation = rotation * rot; // 쿼터니언 곱으로 회전 누적
     transformDirty = true;
     aabbDirty = true;
 }
@@ -90,7 +72,7 @@ void Object3D::rotateAxis(const Vector3& axis, float angleRadians) {
     rotate(q);
 }
 
-// Scale methods
+// 스케일 관련 메소드
 const Vector3& Object3D::getScale() const {
     return scale;
 }
@@ -107,7 +89,7 @@ void Object3D::setScale(float uniformScale) {
     aabbDirty = true;
 }
 
-// Transform matrix operations
+// 변환 행렬 연산
 const Matrix3x3& Object3D::getTransformMatrix() {
     if (transformDirty) {
         updateTransformMatrix();
@@ -116,32 +98,32 @@ const Matrix3x3& Object3D::getTransformMatrix() {
 }
 
 void Object3D::updateTransformMatrix() {
-    // Create rotation matrix from quaternion
-    Matrix3x3 rotMat = rotation.toMatrix3x3();
+    // 쿼터니언에서 회전 행렬 생성
+    Matrix3x3 rotMat = rotation.toRotationMatrix();
 
-    // Apply scale
-    rotMat[0][0] *= scale.x;
-    rotMat[1][0] *= scale.x;
-    rotMat[2][0] *= scale.x;
+    // 스케일 적용
+    // 수정됨: operator[] 대신 Matrix3x3의 operator() 사용
+    rotMat(0, 0) *= scale.x;
+    rotMat(1, 0) *= scale.x;
+    rotMat(2, 0) *= scale.x;
 
-    rotMat[0][1] *= scale.y;
-    rotMat[1][1] *= scale.y;
-    rotMat[2][1] *= scale.y;
+    rotMat(0, 1) *= scale.y;
+    rotMat(1, 1) *= scale.y;
+    rotMat(2, 1) *= scale.y;
 
-    rotMat[0][2] *= scale.z;
-    rotMat[1][2] *= scale.z;
-    rotMat[2][2] *= scale.z;
+    rotMat(0, 2) *= scale.z;
+    rotMat(1, 2) *= scale.z;
+    rotMat(2, 2) *= scale.z;
 
-    // Set translation components
-    rotMat[0][3] = position.x;
-    rotMat[1][3] = position.y;
-    rotMat[2][3] = position.z;
+    // 주의: Matrix3x3는 3x3 행렬이므로 이동 요소를 직접 저장할 수 없음
+    // 이상적으로는 Matrix4x4를 사용하거나 이동 벡터를 별도로 관리해야 함
+    // 현재는 모든 이동 연산에서 position을 직접 사용해야 함
 
     transformMatrix = rotMat;
     transformDirty = false;
 }
 
-// AABB operations
+// AABB 연산
 void Object3D::setLocalAABB(const AABB& aabb) {
     localAABB = aabb;
     aabbDirty = true;
@@ -163,7 +145,7 @@ void Object3D::updateWorldAABB() {
         updateTransformMatrix();
     }
 
-    // Initialize with transformed corners
+    // 변환된 8개의 모서리 점으로 초기화
     Vector3 corners[8];
     corners[0] = transformPoint(Vector3(localAABB.min.x, localAABB.min.y, localAABB.min.z));
     corners[1] = transformPoint(Vector3(localAABB.max.x, localAABB.min.y, localAABB.min.z));
@@ -174,7 +156,7 @@ void Object3D::updateWorldAABB() {
     corners[6] = transformPoint(Vector3(localAABB.min.x, localAABB.max.y, localAABB.max.z));
     corners[7] = transformPoint(Vector3(localAABB.max.x, localAABB.max.y, localAABB.max.z));
 
-    // Find min and max points
+    // 최소 및 최대 점 찾기
     worldAABB.min = corners[0];
     worldAABB.max = corners[0];
 
@@ -197,12 +179,14 @@ Vector3 Object3D::transformPoint(const Vector3& point) {
     }
 
     Vector3 result;
-    result.x = transformMatrix[0][0] * point.x + transformMatrix[0][1] * point.y +
-        transformMatrix[0][2] * point.z + transformMatrix[0][3];
-    result.y = transformMatrix[1][0] * point.x + transformMatrix[1][1] * point.y +
-        transformMatrix[1][2] * point.z + transformMatrix[1][3];
-    result.z = transformMatrix[2][0] * point.x + transformMatrix[2][1] * point.y +
-        transformMatrix[2][2] * point.z + transformMatrix[2][3];
+    // 수정됨: Matrix3x3의 operator() 사용
+    // 회전과 스케일 적용 후 위치 더하기
+    result.x = transformMatrix(0, 0) * point.x + transformMatrix(0, 1) * point.y +
+        transformMatrix(0, 2) * point.z + position.x;
+    result.y = transformMatrix(1, 0) * point.x + transformMatrix(1, 1) * point.y +
+        transformMatrix(1, 2) * point.z + position.y;
+    result.z = transformMatrix(2, 0) * point.x + transformMatrix(2, 1) * point.y +
+        transformMatrix(2, 2) * point.z + position.z;
     return result;
 }
 
@@ -212,13 +196,14 @@ Vector3 Object3D::transformDirection(const Vector3& dir) {
     }
 
     Vector3 result;
-    result.x = transformMatrix[0][0] * dir.x + transformMatrix[0][1] * dir.y + transformMatrix[0][2] * dir.z;
-    result.y = transformMatrix[1][0] * dir.x + transformMatrix[1][1] * dir.y + transformMatrix[1][2] * dir.z;
-    result.z = transformMatrix[2][0] * dir.x + transformMatrix[2][1] * dir.y + transformMatrix[2][2] * dir.z;
+    // 방향 벡터에는 위치 변환 적용하지 않음 (회전과 스케일만 적용)
+    result.x = transformMatrix(0, 0) * dir.x + transformMatrix(0, 1) * dir.y + transformMatrix(0, 2) * dir.z;
+    result.y = transformMatrix(1, 0) * dir.x + transformMatrix(1, 1) * dir.y + transformMatrix(1, 2) * dir.z;
+    result.z = transformMatrix(2, 0) * dir.x + transformMatrix(2, 1) * dir.y + transformMatrix(2, 2) * dir.z;
     return result;
 }
 
-// Collision management
+// 충돌 관리
 bool Object3D::isColliding() const {
     return isInCollision;
 }
@@ -228,17 +213,17 @@ const std::vector<CollisionInfo>& Object3D::getCollisions() const {
 }
 
 void Object3D::addCollision(const CollisionInfo& collision) {
-    // Check if already colliding with this object
+    // 이미 이 객체와 충돌 중인지 확인
     for (const auto& existing : collisions) {
         if (existing.otherObject == collision.otherObject) {
-            return; // Already colliding with this object
+            return; // 이미 이 객체와 충돌 중
         }
     }
 
-    // Add new collision
+    // 새 충돌 추가
     collisions.push_back(collision);
 
-    // If this is the first collision, trigger onCollisionEnter
+    // 이것이 첫 번째 충돌이면 onCollisionEnter 트리거
     if (!isInCollision) {
         isInCollision = true;
         if (onCollisionEnter) {
@@ -246,7 +231,7 @@ void Object3D::addCollision(const CollisionInfo& collision) {
         }
     }
     else {
-        // Otherwise trigger onCollisionStay
+        // 그렇지 않으면 onCollisionStay 트리거
         if (onCollisionStay) {
             onCollisionStay(collision);
         }
@@ -258,21 +243,21 @@ void Object3D::removeCollision(Object3D* other) {
         [other](const CollisionInfo& info) { return info.otherObject == other; });
 
     if (it != collisions.end()) {
-        // Trigger onCollisionExit callback
+        // onCollisionExit 콜백 트리거
         if (onCollisionExit) {
             onCollisionExit(*it);
         }
 
-        // Remove the collision
+        // 충돌 제거
         collisions.erase(it);
 
-        // Update collision state
+        // 충돌 상태 업데이트
         isInCollision = !collisions.empty();
     }
 }
 
 void Object3D::clearCollisions() {
-    // Trigger onCollisionExit for all active collisions
+    // 모든 활성 충돌에 대해 onCollisionExit 트리거
     if (onCollisionExit) {
         for (const auto& collision : collisions) {
             onCollisionExit(collision);
@@ -283,7 +268,7 @@ void Object3D::clearCollisions() {
     isInCollision = false;
 }
 
-// Collision event callbacks
+// 충돌 이벤트 콜백
 void Object3D::setOnCollisionEnter(const CollisionCallback& callback) {
     onCollisionEnter = callback;
 }
@@ -296,7 +281,7 @@ void Object3D::setOnCollisionExit(const CollisionCallback& callback) {
     onCollisionExit = callback;
 }
 
-// Mesh data operations
+// 메시 데이터 연산
 void Object3D::setMeshData(const std::vector<Vector3>& verts, 
                            const std::vector<Vector3>& norms,
                            const std::vector<int>& inds) {
@@ -311,7 +296,7 @@ void Object3D::setMeshData(const std::vector<Vector3>& verts,
     }
 }
 
-// File loading operations
+// 파일 로드 연산
 bool Object3D::loadFromObjFile(const std::string& filepath) {
     std::vector<Vector3> loadedVertices;
     std::vector<Vector3> loadedNormals;
@@ -390,7 +375,7 @@ bool Object3D::loadFromObjFile(const std::string& filepath) {
             
             Vector3 edge1 = v2 - v1;
             Vector3 edge2 = v3 - v1;
-            Vector3 normal = Vector3::cross(edge1, edge2).normalized();
+            Vector3 normal = edge1.cross(edge2).normalized();
             
             // 법선 누적 (나중에 정규화)
             loadedNormals[loadedIndices[i]] += normal;
@@ -499,23 +484,18 @@ bool Object3D::loadVHACDResult(const std::string& filepath) {
 }
 
 Vector3 Object3D::getSupportPoint(const Vector3& direction) const {
-    if (isConvexDecomposed) {
-        // 모든 볼록 껍질 중에서 가장 먼 점 찾기
-        Vector3 furthestPoint = Vector3(0, 0, 0);
+    if (this->isConvexDecomposed) {
+        Vector3 furthestPoint(0, 0, 0);
         float maxDistance = -std::numeric_limits<float>::max();
         
-        for (const auto& hull : convexHulls) {
-            // 방향 벡터를 로컬 좌표계로 변환
-            Vector3 localDir = rotation.inverse() * direction;
-            
-            // 로컬 좌표계에서 지원점 찾기
+        // 회전된 방향을 구하기 위해, rotation.inverse() 및 rotate()를 사용 (Quaternion 타입에 해당 메서드가 정의되어 있어야 함)
+        Quaternion invRot = this->rotation.inverse();
+        Vector3 localDir = invRot.rotate(direction);
+        
+        for (const auto& hull : this->convexHulls) {
             Vector3 localSupport = hull.getSupportPoint(localDir);
-            
-            // 월드 좌표계로 변환
-            Vector3 worldSupport = rotation * localSupport + position;
-            
-            float distance = Vector3::dot(direction, worldSupport);
-            
+            Vector3 worldSupport = this->rotation.rotate(localSupport) + this->position;
+            float distance = direction.dot(worldSupport);
             if (distance > maxDistance) {
                 maxDistance = distance;
                 furthestPoint = worldSupport;
@@ -523,33 +503,27 @@ Vector3 Object3D::getSupportPoint(const Vector3& direction) const {
         }
         
         return furthestPoint;
-    }
-    else {
-        // 볼록 분해가 없으면 원본 메시 사용
-        if (vertices.empty()) return position;
+    } else {
+        if (this->vertices.empty())
+            return this->position;
         
-        Vector3 furthestPoint = position;
+        Vector3 furthestPoint = this->position;
         float maxDistance = -std::numeric_limits<float>::max();
-        
-        // 방향 벡터를 로컬 좌표계로 변환
-        Vector3 localDir = rotation.inverse() * direction;
-        
-        for (const auto& vertex : vertices) {
-            // 정점을 월드 좌표계로 변환
-            Vector3 worldVertex = rotation * vertex + position;
-            float distance = Vector3::dot(direction, worldVertex);
-            
+        Quaternion invRot = this->rotation.inverse();
+        Vector3 localDir = invRot.rotate(direction);
+        for (const auto& vertex : this->vertices) {
+            Vector3 worldVertex = this->rotation.rotate(vertex) + this->position;
+            float distance = direction.dot(worldVertex);
             if (distance > maxDistance) {
                 maxDistance = distance;
                 furthestPoint = worldVertex;
             }
         }
-        
         return furthestPoint;
     }
 }
 
-// Accessors
+// 접근자(Accessors)
 bool Object3D::isDecomposed() const { 
     return isConvexDecomposed; 
 }
@@ -589,19 +563,17 @@ void Object3D::update() {
 }
 
 bool Object3D::computeConvexDecomposition(const VHACDParameters& params) {
-    if (vertices.empty() || indices.empty()) {
+    if (this->vertices.empty() || this->indices.empty()) {
         std::cerr << "Cannot compute convex decomposition: No mesh data loaded." << std::endl;
         return false;
     }
     
-    // ConvexDecomposition 클래스를 통해 V-HACD API 호출
-    convexHulls = ConvexDecomposition::ComputeConvexDecomposition(vertices, indices, params);
-    isConvexDecomposed = !convexHulls.empty();
+    this->convexHulls = ConvexDecomposition::ComputeConvexDecomposition(this->vertices, this->indices, params);
+    this->isConvexDecomposed = !this->convexHulls.empty();
     
-    if (isConvexDecomposed) {
-        // 모든 볼록 껍질의 정점을 합쳐서 전체 AABB 계산
+    if (this->isConvexDecomposed) {
         std::vector<Vector3> allVertices;
-        for (const auto& hull : convexHulls) {
+        for (const auto& hull : this->convexHulls) {
             allVertices.insert(allVertices.end(), hull.vertices.begin(), hull.vertices.end());
         }
         
@@ -611,18 +583,16 @@ bool Object3D::computeConvexDecomposition(const VHACDParameters& params) {
         }
     }
     
-    return isConvexDecomposed;
+    return this->isConvexDecomposed;
 }
 
 bool Object3D::loadConvexDecomposition(const std::string& filepath) {
-    // 볼록 분해 결과 로드
-    convexHulls = ConvexDecomposition::LoadConvexHulls(filepath);
-    isConvexDecomposed = !convexHulls.empty();
+    this->convexHulls = ConvexDecomposition::LoadConvexHulls(filepath);
+    this->isConvexDecomposed = !this->convexHulls.empty();
     
-    if (isConvexDecomposed) {
-        // 모든 볼록 껍질의 정점을 합쳐서 전체 AABB 계산
+    if (this->isConvexDecomposed) {
         std::vector<Vector3> allVertices;
-        for (const auto& hull : convexHulls) {
+        for (const auto& hull : this->convexHulls) {
             allVertices.insert(allVertices.end(), hull.vertices.begin(), hull.vertices.end());
         }
         
@@ -632,7 +602,7 @@ bool Object3D::loadConvexDecomposition(const std::string& filepath) {
         }
     }
     
-    return isConvexDecomposed;
+    return this->isConvexDecomposed;
 }
 
 void Object3D::setConvexHulls(const std::vector<ConvexHull>& hulls) {
@@ -652,6 +622,3 @@ void Object3D::setConvexHulls(const std::vector<ConvexHull>& hulls) {
         }
     }
 }
-
-
-
