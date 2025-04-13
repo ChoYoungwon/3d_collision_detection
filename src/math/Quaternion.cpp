@@ -1,14 +1,21 @@
 #include "../../include/math/Quaternion.h"
 #include <cmath>
+#include <sstream>
+#include <iomanip>
 
-// 생성자
+// Define M_PI if not already defined
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
+// Constructors
 Quaternion::Quaternion() : w(1.0f), x(0.0f), y(0.0f), z(0.0f) {}
 
 Quaternion::Quaternion(float w, float x, float y, float z) : w(w), x(x), y(y), z(z) {}
 
 Quaternion::Quaternion(const Quaternion& other) : w(other.w), x(other.x), y(other.y), z(other.z) {}
 
-// 연산자 오버로딩
+// Operator overloading
 Quaternion Quaternion::operator+(const Quaternion& other) const {
     return Quaternion(w + other.w, x + other.x, y + other.y, z + other.z);
 }
@@ -47,7 +54,12 @@ bool Quaternion::operator!=(const Quaternion& other) const {
     return !(*this == other);
 }
 
-// 정규화
+// Non-member operator
+Quaternion operator*(float scalar, const Quaternion& q) {
+    return q * scalar;
+}
+
+// Normalization
 float Quaternion::magnitudeSquared() const {
     return w * w + x * x + y * y + z * z;
 }
@@ -78,7 +90,7 @@ void Quaternion::normalize() {
     z *= invMag;
 }
 
-// 켤레 및 역원
+// Conjugate and inverse
 Quaternion Quaternion::conjugate() const {
     return Quaternion(w, -x, -y, -z);
 }
@@ -91,10 +103,10 @@ Quaternion Quaternion::inverse() const {
     return conjugate() / magSq;
 }
 
-// 회전
+// Rotation
 Vector3 Quaternion::rotate(const Vector3& v) const {
     // v' = q * v * q^-1
-    // 최적화된 구현
+    // Normalized quaternion
     Vector3 u(x, y, z);
     Vector3 uv = u.cross(v);
     Vector3 uuv = u.cross(uv);
@@ -105,7 +117,7 @@ Quaternion Quaternion::rotateBy(const Quaternion& rotation) const {
     return rotation * (*this) * rotation.inverse();
 }
 
-// 변환
+// Transformations
 Matrix3x3 Quaternion::toRotationMatrix() const {
     Quaternion q = normalized();
     float xx = q.x * q.x;
@@ -125,7 +137,7 @@ Matrix3x3 Quaternion::toRotationMatrix() const {
     );
 }
 
-// 정적 메소드
+// Static methods
 Quaternion Quaternion::identity() {
     return Quaternion(1.0f, 0.0f, 0.0f, 0.0f);
 }
@@ -144,7 +156,7 @@ Quaternion Quaternion::fromAxisAngle(const Vector3& axis, float angle) {
 }
 
 Quaternion Quaternion::fromEulerAngles(float x, float y, float z) {
-    // ZYX 순서로 회전 (z->y->x)
+    // ZYX order rotation (z->y->x)
     float cx = std::cos(x * 0.5f);
     float cy = std::cos(y * 0.5f);
     float cz = std::cos(z * 0.5f);
@@ -158,6 +170,11 @@ Quaternion Quaternion::fromEulerAngles(float x, float y, float z) {
         cx * sy * cz + sx * cy * sz,
         cx * cy * sz - sx * sy * cz
     );
+}
+
+Quaternion Quaternion::fromEulerAngles(const Vector3& euler) {
+    // Call the other overload with the euler components
+    return fromEulerAngles(euler.x, euler.y, euler.z);
 }
 
 Quaternion Quaternion::fromRotationMatrix(const Matrix3x3& m) {
@@ -196,27 +213,27 @@ Quaternion Quaternion::fromRotationMatrix(const Matrix3x3& m) {
     return q.normalized();
 }
 
-// 구면 선형 보간 (SLERP)
+// Spherical Linear Interpolation (SLERP)
 Quaternion Quaternion::slerp(const Quaternion& q1, const Quaternion& q2, float t) {
-    // q1과 q2가 정규화되어 있다고 가정
+    // Assuming q1 and q2 are normalized
     Quaternion q2Temp = q2;
 
-    // 내적 계산
+    // Compute dot product
     float dot = q1.w * q2.w + q1.x * q2.x + q1.y * q2.y + q1.z * q2.z;
 
-    // 최단 경로를 보장하기 위해 필요한 경우 방향 반전
+    // If necessary, flip sign to get shortest path
     if (dot < 0.0f) {
         q2Temp = q2Temp * -1.0f;
         dot = -dot;
     }
 
-    // 두 쿼터니언이 거의 같은 경우 선형 보간 사용
+    // If quaternions are very close, use linear interpolation
     if (dot > 0.9995f) {
         Quaternion result = q1 * (1.0f - t) + q2Temp * t;
         return result.normalized();
     }
 
-    // 구면 선형 보간
+    // Perform spherical interpolation
     float theta = std::acos(dot);
     float sinTheta = std::sin(theta);
     float ratioA = std::sin((1.0f - t) * theta) / sinTheta;
@@ -225,21 +242,21 @@ Quaternion Quaternion::slerp(const Quaternion& q1, const Quaternion& q2, float t
     return (q1 * ratioA + q2Temp * ratioB).normalized();
 }
 
-// 룩앤 로테이션
+// Look rotation
 Quaternion Quaternion::lookRotation(const Vector3& forward, const Vector3& up) {
     Vector3 normalizedForward = forward.normalized();
     Vector3 normalizedUp = up.normalized();
 
-    // 정방향 벡터가 0이면 항등 쿼터니언 반환
+    // If forward vector is zero, return identity
     if (normalizedForward.magnitudeSquared() < 1e-6f) {
         return Quaternion::identity();
     }
 
-    // 직교 기저 구축
+    // Compute orthogonal basis
     Vector3 right = normalizedUp.cross(normalizedForward).normalized();
     Vector3 orthogonalUp = normalizedForward.cross(right);
 
-    // 회전 행렬 생성
+    // Create rotation matrix
     Matrix3x3 m(
         right.x, orthogonalUp.x, normalizedForward.x,
         right.y, orthogonalUp.y, normalizedForward.y,
@@ -249,7 +266,7 @@ Quaternion Quaternion::lookRotation(const Vector3& forward, const Vector3& up) {
     return fromRotationMatrix(m);
 }
 
-// 유틸리티 함수
+// Utility functions
 float Quaternion::dot(const Quaternion& other) const {
     return w * other.w + x * other.x + y * other.y + z * other.z;
 }
@@ -261,33 +278,46 @@ float Quaternion::angle() const {
 Vector3 Quaternion::axis() const {
     const float s = std::sqrt(1.0f - w * w);
     if (s < 1e-6f) {
-        return Vector3(1.0f, 0.0f, 0.0f);  // 임의의 축 반환
+        return Vector3(1.0f, 0.0f, 0.0f);  // Default axis if angle is zero
     }
     return Vector3(x / s, y / s, z / s);
 }
 
 Vector3 Quaternion::toEulerAngles() const {
-    // 쿼터니언에서 오일러 각도(XYZ 순서) 추출
+    // Convert quaternion to Euler angles (XYZ order)
     Vector3 angles;
 
-    // X 회전 (Roll)
+    // X rotation (Roll)
     float sinr_cosp = 2.0f * (w * x + y * z);
     float cosr_cosp = 1.0f - 2.0f * (x * x + y * y);
     angles.x = std::atan2(sinr_cosp, cosr_cosp);
 
-    // Y 회전 (Pitch)
+    // Y rotation (Pitch)
     float sinp = 2.0f * (w * y - z * x);
     if (std::abs(sinp) >= 1.0f) {
-        angles.y = std::copysign(M_PI / 2.0f, sinp);  // 90도로 제한 (짐벌락 지점)
+        angles.y = std::copysign(M_PI / 2.0f, sinp);  // 90 degrees if at poles
     }
     else {
         angles.y = std::asin(sinp);
     }
 
-    // Z 회전 (Yaw)
+    // Z rotation (Yaw)
     float siny_cosp = 2.0f * (w * z + x * y);
     float cosy_cosp = 1.0f - 2.0f * (y * y + z * z);
     angles.z = std::atan2(siny_cosp, cosy_cosp);
 
     return angles;
+}
+
+// Static version of toEulerAngles
+Vector3 Quaternion::toEulerAngles(const Quaternion& q) {
+    return q.toEulerAngles();
+}
+
+// Convert to string
+std::string Quaternion::toString() const {
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(4);
+    oss << "[w:" << w << ", x:" << x << ", y:" << y << ", z:" << z << "]";
+    return oss.str();
 }

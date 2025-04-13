@@ -1,4 +1,3 @@
-// include/geometry/OBB.h
 #ifndef OBB_H
 #define OBB_H
 
@@ -8,38 +7,33 @@
 #include "AABB.h"
 #include <vector>
 #include <array>
+#include <cmath>  // std::abs
 
 class OBB {
 public:
-    Vector3 center;      // Áß½ÉÁ¡
-    Vector3 halfExtents; // °¢ Ãà ¹æÇâÀ¸·ÎÀÇ Àı¹İ Å©±â
-    Matrix3x3 orientation; // ¹æÇâ (È¸Àü Çà·Ä)
+    Vector3 center;       // ì¤‘ì‹¬ ì¢Œí‘œ
+    Vector3 halfExtents;  // ê° ì¶•ì— ëŒ€í•œ ë°˜ í¬ê¸°
+    Matrix3x3 orientation; // íšŒì „ í–‰ë ¬
 
-    // »ı¼ºÀÚ
-    OBB() : center(0, 0, 0), halfExtents(1, 1, 1) {
-        // ±âº» ¹æÇâÀº Ç×µî Çà·Ä (Ãà Á¤·Ä)
-        orientation = Matrix3x3();
-    }
+    // ê¸°ë³¸ ìƒì„±ì: ì¤‘ì‹¬ (0,0,0), ë°˜ í¬ê¸° (1,1,1), ë‹¨ìœ„ í–‰ë ¬
+    OBB() : center(0, 0, 0), halfExtents(1, 1, 1), orientation() {}
 
+    // ì¤‘ì‹¬ê³¼ ë°˜ í¬ê¸°ë§Œ ì§€ì • (íšŒì „ì€ ë‹¨ìœ„ í–‰ë ¬)
     OBB(const Vector3& center, const Vector3& halfExtents)
-        : center(center), halfExtents(halfExtents) {
-        // ±âº» ¹æÇâÀº Ç×µî Çà·Ä (Ãà Á¤·Ä)
-        orientation = Matrix3x3();
-    }
+        : center(center), halfExtents(halfExtents), orientation() {}
 
+    // ì¤‘ì‹¬, ë°˜ í¬ê¸°, íšŒì „ í–‰ë ¬ì„ ì§€ì •
     OBB(const Vector3& center, const Vector3& halfExtents, const Matrix3x3& orientation)
-        : center(center), halfExtents(halfExtents), orientation(orientation) {
-    }
+        : center(center), halfExtents(halfExtents), orientation(orientation) {}
 
-    // AABB·ÎºÎÅÍ OBB »ı¼º
+    // AABBë¡œë¶€í„° OBB ìƒì„±
     OBB(const AABB& aabb) {
         center = aabb.getCenter();
         halfExtents = aabb.getSize() * 0.5f;
-        orientation = Matrix3x3(); // Ç×µî Çà·Ä (Ãà Á¤·Ä)
+        orientation = Matrix3x3(); // ë‹¨ìœ„ í–‰ë ¬
     }
 
-    // Á¡µéÀÇ ÁıÇÕÀ¸·ÎºÎÅÍ OBB »ı¼º (ÁÖ¼ººĞ ºĞ¼® ¹æ¹ı)
-    // °£´ÜÇÑ ±¸ÇöÀ» À§ÇØ Ãà Á¤·Ä ¹æ½Ä »ç¿ë
+    // ì ë“¤ì˜ ì§‘í•©ìœ¼ë¡œë¶€í„° OBB ìƒì„± (ë¨¼ì € AABBë¡œ ê°ì‹¸ê³  ì‚¬ìš©)
     OBB(const std::vector<Vector3>& points) {
         if (points.empty()) {
             center = Vector3(0, 0, 0);
@@ -47,133 +41,105 @@ public:
             orientation = Matrix3x3();
             return;
         }
-
-        // ÁÖ¼ººĞ ºĞ¼®Àº º¹ÀâÇÏ¹Ç·Î ¿©±â¼­´Â °£´ÜÈ÷ AABB·Î º¯È¯
         AABB aabb(points);
         center = aabb.getCenter();
         halfExtents = aabb.getSize() * 0.5f;
-        orientation = Matrix3x3(); // Ç×µî Çà·Ä (Ãà Á¤·Ä)
+        orientation = Matrix3x3();
     }
 
-    // OBBÀÇ 8°³ ²ÀÁşÁ¡ ±¸ÇÏ±â
+    // OBBì˜ 8ê°œ ëª¨ì„œë¦¬(ì›”ë“œ ì¢Œí‘œ) ë°˜í™˜
     std::array<Vector3, 8> getCorners() const {
         std::array<Vector3, 8> corners;
-
-        // ·ÎÄÃ °ø°£ÀÇ ²ÀÁşÁ¡ °è»ê
         corners[0] = Vector3(-halfExtents.x, -halfExtents.y, -halfExtents.z);
-        corners[1] = Vector3(halfExtents.x, -halfExtents.y, -halfExtents.z);
-        corners[2] = Vector3(halfExtents.x, halfExtents.y, -halfExtents.z);
-        corners[3] = Vector3(-halfExtents.x, halfExtents.y, -halfExtents.z);
-        corners[4] = Vector3(-halfExtents.x, -halfExtents.y, halfExtents.z);
-        corners[5] = Vector3(halfExtents.x, -halfExtents.y, halfExtents.z);
-        corners[6] = Vector3(halfExtents.x, halfExtents.y, halfExtents.z);
-        corners[7] = Vector3(-halfExtents.x, halfExtents.y, halfExtents.z);
-
-        // ¿ùµå °ø°£À¸·Î º¯È¯
+        corners[1] = Vector3( halfExtents.x, -halfExtents.y, -halfExtents.z);
+        corners[2] = Vector3( halfExtents.x,  halfExtents.y, -halfExtents.z);
+        corners[3] = Vector3(-halfExtents.x,  halfExtents.y, -halfExtents.z);
+        corners[4] = Vector3(-halfExtents.x, -halfExtents.y,  halfExtents.z);
+        corners[5] = Vector3( halfExtents.x, -halfExtents.y,  halfExtents.z);
+        corners[6] = Vector3( halfExtents.x,  halfExtents.y,  halfExtents.z);
+        corners[7] = Vector3(-halfExtents.x,  halfExtents.y,  halfExtents.z);
+        
         for (auto& corner : corners) {
             corner = orientation * corner + center;
         }
-
         return corners;
     }
 
-    // OBBÀÇ Ãà ±¸ÇÏ±â
+    // OBBì˜ ë¡œì»¬ ì¢Œí‘œê³„ ì¶•(íšŒì „ í–‰ë ¬ì˜ ì—´ ë²¡í„°) ë°˜í™˜
     std::array<Vector3, 3> getAxes() const {
         std::array<Vector3, 3> axes;
-
-        // °¢ ÇàÀÌ ÃàÀ» ³ªÅ¸³¿
-        axes[0] = Vector3(orientation(0, 0), orientation(0, 1), orientation(0, 2));
-        axes[1] = Vector3(orientation(1, 0), orientation(1, 1), orientation(1, 2));
-        axes[2] = Vector3(orientation(2, 0), orientation(2, 1), orientation(2, 2));
-
+        axes[0] = Vector3(orientation(0, 0), orientation(1, 0), orientation(2, 0));
+        axes[1] = Vector3(orientation(0, 1), orientation(1, 1), orientation(2, 1));
+        axes[2] = Vector3(orientation(0, 2), orientation(1, 2), orientation(2, 2));
         return axes;
     }
 
-    // OBB¸¦ AABB·Î º¯È¯ (°æ°è¸¦ Æ÷ÇÔÇÏ´Â °¡Àå ÀÛÀº AABB)
+    // í¸ì˜ í•¨ìˆ˜: ië²ˆì§¸ ì¶• ë°˜í™˜ (i = 0, 1, 2)
+    Vector3 getAxis(int i) const;
+
+    // OBBë¥¼ ê°ì‹¸ëŠ” AABB ë°˜í™˜
     AABB toAABB() const {
         std::array<Vector3, 8> corners = getCorners();
         return AABB(std::vector<Vector3>(corners.begin(), corners.end()));
     }
 
-    // Á¡ÀÌ OBB ³»ºÎ¿¡ ÀÖ´ÂÁö È®ÀÎ
+    // ì£¼ì–´ì§„ ì ì´ OBB ë‚´ë¶€ì— ìˆëŠ”ì§€ ê²€ì‚¬ (OBB ì¢Œí‘œê³„ë¡œ ë³€í™˜ í›„ ë¹„êµ)
     bool contains(const Vector3& point) const {
-        // Á¡À» OBBÀÇ ·ÎÄÃ °ø°£À¸·Î º¯È¯
         Vector3 localPoint = orientation.transpose() * (point - center);
-
-        // ·ÎÄÃ °ø°£¿¡¼­ ¹üÀ§ È®ÀÎ
-        return std::abs(localPoint.x) <= halfExtents.x &&
-            std::abs(localPoint.y) <= halfExtents.y &&
-            std::abs(localPoint.z) <= halfExtents.z;
+        return (std::abs(localPoint.x) <= halfExtents.x &&
+                std::abs(localPoint.y) <= halfExtents.y &&
+                std::abs(localPoint.z) <= halfExtents.z);
     }
 
-    // OBB Ãæµ¹ °Ë»ç (ºĞ¸®Ãà Á¤¸® »ç¿ë)
+    // ë¶„ë¦¬ ì¶• ì •ë¦¬(SAT)ì„ í†µí•´ ë‘ OBBê°€ êµì°¨í•˜ëŠ”ì§€ ê²€ì‚¬
     bool intersects(const OBB& other) const {
-        // 15°³ÀÇ ºĞ¸®Ãà Å×½ºÆ® ÇÊ¿ä
-        // - µÎ OBBÀÇ °¢ 3°³ Ãà (ÃÑ 6°³)
-        // - µÎ OBB ÃàÀÇ ¿ÜÀû (ÃÑ 9°³)
-
-        // OBB AÀÇ Ãà
         std::array<Vector3, 3> axesA = getAxes();
-        // OBB BÀÇ Ãà
         std::array<Vector3, 3> axesB = other.getAxes();
-
-        // OBBÀÇ Áß½É °£ º¤ÅÍ
         Vector3 t = other.center - center;
-
-        // °¢ OBBÀÇ ÃàÀ¸·Î Å×½ºÆ®
+        
+        // Aì˜ ì¶•ì— ëŒ€í•´ ê²€ì‚¬
         for (int i = 0; i < 3; i++) {
-            if (!overlapOnAxis(other, axesA[i], t)) {
+            if (!overlapOnAxis(other, axesA[i], t))
                 return false;
-            }
         }
-
+        // Bì˜ ì¶•ì— ëŒ€í•´ ê²€ì‚¬
         for (int i = 0; i < 3; i++) {
-            if (!overlapOnAxis(other, axesB[i], t)) {
+            if (!overlapOnAxis(other, axesB[i], t))
                 return false;
-            }
         }
-
-        // µÎ OBBÀÇ Ãà °£ ¿ÜÀûÀ¸·Î Å×½ºÆ®
+        // ë‘ ì¶•ì˜ ì™¸ì ìœ¼ë¡œ ë§Œë“¤ì–´ì§„ ë¶„ë¦¬ ì¶•ì— ëŒ€í•´ ê²€ì‚¬
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                Vector3 axis = Vector3::cross(axesA[i], axesB[j]);
-                // ¿ÜÀûÀÌ 0ÀÌ¸é ÃàÀÌ ÆòÇàÇÏ¹Ç·Î ¹«½Ã
-                if (axis.lengthSquared() < 1e-6f) {
+                Vector3 axis = axesA[i].cross(axesB[j]);
+                if (axis.dot(axis) < 1e-6f)  // ë²¡í„°ì˜ ê¸¸ì´ ì œê³± ê²€ì‚¬
                     continue;
-                }
                 axis.normalize();
-
-                if (!overlapOnAxis(other, axis, t)) {
+                if (!overlapOnAxis(other, axis, t))
                     return false;
-                }
             }
         }
-
-        // ¸ğµç Ãà¿¡¼­ °ãÄ§ÀÌ ÀÖÀ¸¸é Ãæµ¹
         return true;
     }
 
+    // ì •ì  í•¨ìˆ˜: ìµœì†Œ ì¢Œí‘œì™€ ìµœëŒ€ ì¢Œí‘œë¡œë¶€í„° AABBë¥¼ ë§Œë“¤ê³ , ì´ë¥¼ ì´ìš©í•´ OBB ìƒì„±
+    static OBB fromAABB(const Vector3& min, const Vector3& max);
+
 private:
-    // Æ¯Á¤ Ãà¿¡ ´ëÇÑ OBB Åõ¿µ °ãÄ§ °Ë»ç
+    // ì£¼ì–´ì§„ ì¶•(axis)ì— ëŒ€í•´ í˜„ì¬ OBBì™€ ë‹¤ë¥¸ OBBê°€ ê²¹ì¹˜ëŠ”ì§€ ê²€ì‚¬
     bool overlapOnAxis(const OBB& other, const Vector3& axis, const Vector3& t) const {
-        // °¢ OBBÀÇ Ãà¿¡ ´ëÇÑ ¹İÅõ¿µ±æÀÌ °è»ê
         float ra = projectExtent(axis);
         float rb = other.projectExtent(axis);
-
-        // Áß½É °£ °Å¸®ÀÇ Åõ¿µ °è»ê
-        float t_projection = std::abs(Vector3::dot(t, axis));
-
-        // Ãà¿¡ ´ëÇÑ °ãÄ§ °Ë»ç
+        float t_projection = std::abs(t.dot(axis));
         return t_projection <= (ra + rb);
     }
 
-    // OBBÀÇ ¹İÅõ¿µ±æÀÌ °è»ê
+    // ì£¼ì–´ì§„ ì¶•(axis)ì— ëŒ€í•´, í˜„ì¬ OBBì˜ íˆ¬ì˜(ë°˜ ê¸¸ì´) í•©ì‚°
     float projectExtent(const Vector3& axis) const {
-        // °¢ ·ÎÄÃ Ãà¿¡ ´ëÇÑ Åõ¿µ ÇÕ»ê
-        std::array<Vector3, 3> obb_axes = getAxes();
-        return std::abs(Vector3::dot(halfExtents.x * obb_axes[0], axis)) +
-            std::abs(Vector3::dot(halfExtents.y * obb_axes[1], axis)) +
-            std::abs(Vector3::dot(halfExtents.z * obb_axes[2], axis));
+        std::array<Vector3, 3> axes = getAxes();
+        // halfExtentsì˜ ê° ì¶•ê°’ê³¼ í•´ë‹¹ ë°©í–¥ ë²¡í„°ë¥¼ ê³±í•´ dot ì—°ì‚°ìœ¼ë¡œ íˆ¬ì˜ ê¸¸ì´ ê³„ì‚°
+        return std::abs((this->halfExtents.x * axes[0]).dot(axis)) +
+               std::abs((this->halfExtents.y * axes[1]).dot(axis)) +
+               std::abs((this->halfExtents.z * axes[2]).dot(axis));
     }
 };
 

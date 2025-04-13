@@ -5,5 +5,5 @@
 class BoundingVolume {
 public:
     virtual ~BoundingVolume() = default;
-    virtual bool contains(const Math::Vector3& point) const = 0;
+    virtual bool contains(const Vector3& point) const = 0;
 };

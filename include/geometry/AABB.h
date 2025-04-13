@@ -51,6 +51,9 @@ public:
         return (min + max) * 0.5f;
     }
 
+    Vector3 getExtents() const;
+
+
     // AABB 확장
     void expand(const Vector3& point) {
         min.x = std::min(min.x, point.x);

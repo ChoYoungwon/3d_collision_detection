@@ -1,218 +1,73 @@
-// include/collision/BVH.h
 #ifndef BVH_H
 #define BVH_H
 
-#include "../core/Object3D.h"
-#include "../geometry/AABB.h"
+#include "../core/Object3D.h"      // Core::Object3D
+#include "../geometry/AABB.h"       // Geometry::AABB
+#include "../math/Vector3.h"        // Math::Vector3
 #include <vector>
 #include <memory>
 #include <algorithm>
 
-// BVH ³ëµå Å¬·¡½º
+namespace Collision {
+
+// BVH ë…¸ë“œ í´ë˜ìŠ¤
 class BVHNode {
 public:
-    AABB aabb;                      // ³ëµåÀÇ AABB
-    std::shared_ptr<BVHNode> left;  // ¿ŞÂÊ ÀÚ½Ä ³ëµå
-    std::shared_ptr<BVHNode> right; // ¿À¸¥ÂÊ ÀÚ½Ä ³ëµå
-    Object3D* object;               // ¸®ÇÁ ³ëµå¿¡ ÀúÀåµÈ °´Ã¼ (³»ºÎ ³ëµå´Â nullptr)
+    AABB aabb;                      // ë…¸ë“œê°€ ê°ì‹¸ëŠ” AABB
+    std::shared_ptr<BVHNode> left;            // ì™¼ìª½ ìì‹
+    std::shared_ptr<BVHNode> right;           // ì˜¤ë¥¸ìª½ ìì‹
+    Core::Object3D* object;                   // ë¦¬í”„ ë…¸ë“œì¼ ë•Œ í•´ë‹¹ ê°ì²´ (ì—†ìœ¼ë©´ nullptr)
 
-    // »ı¼ºÀÚ
     BVHNode() : object(nullptr) {}
 
-    // ¸®ÇÁ ³ëµåÀÎÁö È®ÀÎ
     bool isLeaf() const {
         return !left && !right;
     }
 };
 
-// BVH Å¬·¡½º
+// BVH í´ë˜ìŠ¤ (ì¶©ëŒ íƒìƒ‰ êµ¬ì¡°)
 class BVH {
 private:
-    std::shared_ptr<BVHNode> root;  // ·çÆ® ³ëµå
-    std::vector<Object3D*> objects; // °ü¸®ÇÏ´Â °´Ã¼µé
+    std::shared_ptr<BVHNode> root;           // BVH ë£¨íŠ¸ ë…¸ë“œ
+    std::vector<Core::Object3D*> objects;      // ê´€ë¦¬í•˜ëŠ” ê°ì²´ë“¤
+
+    // ì¬ê·€ì ìœ¼ë¡œ ë…¸ë“œ ìƒì„± (start ~ end ë²”ìœ„ì˜ ê°ì²´ë“¤ì„ ì´ìš©)
+    std::shared_ptr<BVHNode> buildNode(std::vector<Core::Object3D*>& nodeObjects, int depth);
+
+    // ë‘ ë…¸ë“œ ê°„ ì¶©ëŒ ê°€ëŠ¥ì„±ì´ ìˆëŠ” ìŒì„ ì°¾ìŒ
+    void findCollisions(std::shared_ptr<BVHNode> nodeA, std::shared_ptr<BVHNode> nodeB,
+        std::vector<std::pair<Core::Object3D*, Core::Object3D*>>& collisionPairs);
 
 public:
-    // »ı¼ºÀÚ
     BVH() : root(nullptr) {}
 
-    // °´Ã¼ Ãß°¡
-    void addObject(Object3D* object) {
+    // ê°ì²´ ì¶”ê°€ ì‹œ BVH ì¬êµ¬ì¶•
+    void addObject(Core::Object3D* object) {
         objects.push_back(object);
-        rebuild(); // Æ®¸® Àç±¸¼º
-    }
-
-    // °´Ã¼ Á¦°Å
-    void removeObject(Object3D* object) {
-        auto it = std::find(objects.begin(), objects.end(), object);
-        if (it != objects.end()) {
-            objects.erase(it);
-            rebuild(); // Æ®¸® Àç±¸¼º
-        }
-    }
-
-    // °´Ã¼ ¾÷µ¥ÀÌÆ® (À§Ä¡ µîÀÌ º¯°æµÈ °æ¿ì)
-    void updateObject(Object3D* object) {
-        // °£´ÜÈ÷ Æ®¸®¸¦ Àç±¸¼º
-        // ÃÖÀûÈ­: ºÎºĞÀûÀ¸·Î Àç±¸¼ºÇÏ´Â ¹æ¹ıµµ ÀÖÀ½
         rebuild();
     }
 
-    // BVH Æ®¸® Àç±¸¼º
-    void rebuild() {
-        if (objects.empty()) {
-            root = nullptr;
-            return;
+    // ê°ì²´ ì œê±° ì‹œ BVH ì¬êµ¬ì¶•
+    void removeObject(Core::Object3D* object) {
+        auto it = std::find(objects.begin(), objects.end(), object);
+        if (it != objects.end()) {
+            objects.erase(it);
+            rebuild();
         }
-
-        // °¢ °´Ã¼ÀÇ AABB ¾÷µ¥ÀÌÆ®
-        for (auto obj : objects) {
-            if (obj->isDirty) {
-                obj->updateBoundingVolumes();
-            }
-        }
-
-        // °´Ã¼ º¹»çº»À¸·Î ÀÛ¾÷ (ºĞÇÒ °úÁ¤¿¡¼­ »ç¿ë)
-        std::vector<Object3D*> objectsCopy = objects;
-
-        // ·çÆ® ³ëµå »ı¼º ¹× Àç±ÍÀû ±¸¼º
-        root = buildNode(objectsCopy, 0);
     }
 
-    // Ãæµ¹ ½Ö Ã£±â
-    std::vector<std::pair<Object3D*, Object3D*>> findCollisionPairs() {
-        std::vector<std::pair<Object3D*, Object3D*>> collisionPairs;
-
-        if (!root || objects.size() < 2) {
-            return collisionPairs;
-        }
-
-        // °¢ °´Ã¼ÀÇ AABB ¾÷µ¥ÀÌÆ®
-        for (auto obj : objects) {
-            if (obj->isDirty) {
-                obj->updateBoundingVolumes();
-            }
-        }
-
-        // Àç±ÍÀûÀ¸·Î Ãæµ¹ ½Ö Ã£±â
-        findCollisions(root, root, collisionPairs);
-
-        return collisionPairs;
+    // ê°ì²´ ì—…ë°ì´íŠ¸ ì‹œ(ë³€ê²½ëœ AABB ë“±ì„ ë°˜ì˜) BVH ì¬êµ¬ì¶•
+    void updateObject(Core::Object3D* object) {
+        rebuild();
     }
 
-private:
-    // BVH ³ëµå Àç±ÍÀû »ı¼º
-    std::shared_ptr<BVHNode> buildNode(std::vector<Object3D*>& nodeObjects, int depth) {
-        std::shared_ptr<BVHNode> node = std::make_shared<BVHNode>();
+    // BVH ì¬êµ¬ì¶• (ê°ì²´ë“¤ì˜ AABB ì—…ë°ì´íŠ¸ í›„)
+    void rebuild();
 
-        // ¸ğµç °´Ã¼ÀÇ ÅëÇÕ AABB °è»ê
-        node->aabb = AABB();
-        for (auto obj : nodeObjects) {
-            node->aabb.expand(obj->aabb);
-        }
-
-        // Á¾·á Á¶°Ç: °´Ã¼°¡ ÇÏ³ªÀÌ°Å³ª ÃÖ´ë ±íÀÌ¿¡ µµ´Ş
-        const int MAX_DEPTH = 20;
-        if (nodeObjects.size() == 1 || depth >= MAX_DEPTH) {
-            // ¸®ÇÁ ³ëµå »ı¼º
-            if (!nodeObjects.empty()) {
-                node->object = nodeObjects[0];
-            }
-            return node;
-        }
-
-        // °´Ã¼µéÀ» ºĞÇÒÇÒ Ãà °áÁ¤ (°¡Àå ±ä Ãà »ç¿ë)
-        Vector3 size = node->aabb.getSize();
-        int axis = 0; // xÃà ±âº»°ª
-
-        if (size.y > size.x && size.y > size.z) {
-            axis = 1; // yÃà
-        }
-        else if (size.z > size.x && size.z > size.y) {
-            axis = 2; // zÃà
-        }
-
-        // Áß¾Ó°ªÀ¸·Î ºĞÇÒ
-        Vector3 center = node->aabb.getCenter();
-        float splitPos = (axis == 0) ? center.x : ((axis == 1) ? center.y : center.z);
-
-        // °´Ã¼µéÀ» ÃàÀ» ±âÁØÀ¸·Î Á¤·Ä
-        std::vector<Object3D*> leftObjects, rightObjects;
-
-        for (auto obj : nodeObjects) {
-            Vector3 objCenter = obj->aabb.getCenter();
-            float objPos = (axis == 0) ? objCenter.x : ((axis == 1) ? objCenter.y : objCenter.z);
-
-            if (objPos < splitPos) {
-                leftObjects.push_back(obj);
-            }
-            else {
-                rightObjects.push_back(obj);
-            }
-        }
-
-        // ¸ğµç °´Ã¼°¡ ÇÑÂÊÀ¸·Î ºĞ·ùµÈ °æ¿ì, Áß°£Á¡À¸·Î ºĞÇÒ
-        if (leftObjects.empty() || rightObjects.empty()) {
-            size_t mid = nodeObjects.size() / 2;
-            leftObjects.clear();
-            rightObjects.clear();
-
-            for (size_t i = 0; i < nodeObjects.size(); i++) {
-                if (i < mid) {
-                    leftObjects.push_back(nodeObjects[i]);
-                }
-                else {
-                    rightObjects.push_back(nodeObjects[i]);
-                }
-            }
-        }
-
-        // ÀÚ½Ä ³ëµå Àç±ÍÀû »ı¼º
-        node->left = buildNode(leftObjects, depth + 1);
-        node->right = buildNode(rightObjects, depth + 1);
-
-        return node;
-    }
-
-    // Àç±ÍÀûÀ¸·Î Ãæµ¹ ½Ö Ã£±â
-    void findCollisions(std::shared_ptr<BVHNode> nodeA, std::shared_ptr<BVHNode> nodeB,
-        std::vector<std::pair<Object3D*, Object3D*>>& collisionPairs) {
-        // µÎ ³ëµåÀÇ AABB°¡ °ãÄ¡Áö ¾ÊÀ¸¸é Á¾·á
-        if (!nodeA->aabb.intersects(nodeB->aabb)) {
-            return;
-        }
-
-        // µÎ ³ëµå°¡ ¸ğµÎ ¸®ÇÁ ³ëµåÀÎ °æ¿ì
-        if (nodeA->isLeaf() && nodeB->isLeaf()) {
-            // °°Àº °´Ã¼ÀÎ °æ¿ì ¹«½Ã
-            if (nodeA->object == nodeB->object) {
-                return;
-            }
-
-            // Ãæµ¹ ½Ö Ãß°¡
-            collisionPairs.push_back(std::make_pair(nodeA->object, nodeB->object));
-            return;
-        }
-
-        // nodeA°¡ ¸®ÇÁ ³ëµåÀÌ°í nodeB°¡ ³»ºÎ ³ëµåÀÎ °æ¿ì
-        if (nodeA->isLeaf()) {
-            findCollisions(nodeA, nodeB->left, collisionPairs);
-            findCollisions(nodeA, nodeB->right, collisionPairs);
-            return;
-        }
-
-        // nodeB°¡ ¸®ÇÁ ³ëµåÀÌ°í nodeA°¡ ³»ºÎ ³ëµåÀÎ °æ¿ì
-        if (nodeB->isLeaf()) {
-            findCollisions(nodeA->left, nodeB, collisionPairs);
-            findCollisions(nodeA->right, nodeB, collisionPairs);
-            return;
-        }
-
-        // µÎ ³ëµå ¸ğµÎ ³»ºÎ ³ëµåÀÎ °æ¿ì
-        findCollisions(nodeA->left, nodeB->left, collisionPairs);
-        findCollisions(nodeA->left, nodeB->right, collisionPairs);
-        findCollisions(nodeA->right, nodeB->left, collisionPairs);
-        findCollisions(nodeA->right, nodeB->right, collisionPairs);
-    }
+    // ì¶©ëŒ ê°€ëŠ¥ì„± ìˆëŠ” ê°ì²´ ìŒë“¤ì„ ë°˜í™˜
+    std::vector<std::pair<Core::Object3D*, Core::Object3D*>> findCollisionPairs();
 };
+
+} // namespace Collision
 
 #endif // BVH_H
