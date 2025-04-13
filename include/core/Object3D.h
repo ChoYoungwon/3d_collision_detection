@@ -24,12 +24,12 @@ public:
 };
 
 class Object3D {
-private:
-    std::string name;
+public:
+    // 변환 상태 (위치, 회전, 스케일)
     Vector3 position;
-    Quaternion rotation;
+    Vector3 rotation; // 간단히 Euler 각도로 가정 (또는 필요에 따라 Quaternion 사용)
     Vector3 scale;
-
+  
     Matrix3x3 transformMatrix;
     bool transformDirty;
 

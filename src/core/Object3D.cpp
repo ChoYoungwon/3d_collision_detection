@@ -1,3 +1,4 @@
+
 // Object3D.cpp
 #include "Object3D.h"
 #include <fstream>
@@ -651,7 +652,6 @@ void Object3D::setConvexHulls(const std::vector<ConvexHull>& hulls) {
         }
     }
 }
-
 
 
 
