@@ -1,18 +1,17 @@
 {
   "ExpandedNodes": [
     "",
-    "\\include",
-    "\\include\\math",
-    "\\src",
-    "\\src\\collision",
-    "\\src\\core",
-    "\\test1",
+    "\\include\\core",
+    "\\include\\decomposition",
+    "\\src\\decomposition",
+    "\\src\\geometry",
+    "\\src\\math",
     "\\test1\\OpenGL",
     "\\test1\\OpenGL\\build",
     "\\test1\\v-hacd1",
     "\\test1\\v-hacd1\\app",
     "\\test1\\v-hacd1\\app\\meshes"
   ],
-  "SelectedNode": "\\src\\collision\\GJK.cpp",
+  "SelectedNode": "\\include",
   "PreviewInSolutionExplorer": false
 }

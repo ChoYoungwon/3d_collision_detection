@@ -1,58 +1,61 @@
-#ifndef VECTOR3_H
-#define VECTOR3_H
+#pragma once
 
-#include <string>
+#include <cmath>
 
-class Vector3 {
-public:
-    float x, y, z;
+namespace collision_detection {
+    class Vector3 {
+    public:
+        float x, y, z;
 
-    // 생성자
-    Vector3();
-    Vector3(float x, float y, float z);
-    Vector3(const Vector3& other);
+        // 생성자
+        Vector3() : x(0.0f), y(0.0f), z(0.0f) {}
+        Vector3(float x, float y, float z) : x(x), y(y), z(z) {}
+        Vector3(const Vector3& other) : x(other.x), y(other.y), z(other.z) {}
 
-    // 연산자 오버로딩
-    Vector3 operator+(const Vector3& other) const;
-    Vector3 operator-(const Vector3& other) const;
-    Vector3 operator*(float scalar) const;
-    Vector3 operator/(float scalar) const;
-    Vector3& operator+=(const Vector3& other);
-    Vector3& operator-=(const Vector3& other);
-    Vector3& operator*=(float scalar);
-    Vector3& operator/=(float scalar);
-    Vector3 operator-() const;
-    bool operator==(const Vector3& other) const;
-    bool operator!=(const Vector3& other) const;
+        // 연산자 오버로딩
+        Vector3 operator+(const Vector3& other) const {
+            return Vector3(x + other.x, y + other.y, z + other.z);
+        }
 
-    // 정적 메소드
-    static Vector3 zero();
-    static Vector3 one();
-    static Vector3 up();
-    static Vector3 down();
-    static Vector3 left();
-    static Vector3 right();
-    static Vector3 forward();
-    static Vector3 back();
-    static Vector3 randomUnit();
+        Vector3 operator-(const Vector3& other) const {
+            return Vector3(x - other.x, y - other.y, z - other.z);
+        }
 
-    // 벡터 연산
-    float dot(const Vector3& other) const;
-    Vector3 cross(const Vector3& other) const;
-    float magnitudeSquared() const;
-    float magnitude() const;
-    Vector3 normalized() const;
-    void normalize();
-    float distance(const Vector3& other) const;
-    float distanceSquared(const Vector3& other) const;
-    Vector3 reflect(const Vector3& normal) const;
-    Vector3 project(const Vector3& onto) const;
+        Vector3 operator*(float scalar) const {
+            return Vector3(x * scalar, y * scalar, z * scalar);
+        }
 
-    // 문자열 변환
-    std::string toString() const;
-};
+        Vector3 operator/(float scalar) const {
+            return Vector3(x / scalar, y / scalar, z / scalar);
+        }
 
-// 비-멤버 연산자 오버로딩
-Vector3 operator*(float scalar, const Vector3& v);
+        // 벡터 길이 관련 메소드
+        float Length() const {
+            return std::sqrt(x * x + y * y + z * z);
+        }
 
-#endif // VECTOR3_H
+        float LengthSq() const {
+            return x * x + y * y + z * z;
+        }
+
+        Vector3 Normalize() const {
+            float length = Length();
+            if (length > 0)
+                return Vector3(x / length, y / length, z / length);
+            return *this;
+        }
+
+        // 내적, 외적
+        float Dot(const Vector3& other) const {
+            return x * other.x + y * other.y + z * other.z;
+        }
+
+        Vector3 Cross(const Vector3& other) const {
+            return Vector3(
+                y * other.z - z * other.y, 
+                z * other.x - x * other.z, 
+                x * other.y - y * other.x
+            );
+        }
+    };
+}
