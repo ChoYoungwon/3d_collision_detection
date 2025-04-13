@@ -4,60 +4,58 @@
 
 namespace Collision {
 
-    // Áö¿ø ÇÔ¼ö: µÎ °´Ã¼¿¡¼­ °¢°¢ ÁÖ¾îÁø ¹æÇâ°ú ¹İ´ë ¹æÇâÀÇ ÃÖ´ë °Å¸®¸¦ °¡Áø Á¡À» ±¸ÇÑ ÈÄ, µÎ Á¡ÀÇ Â÷(= Minkowski Â÷)¸¦ ¹İÈ¯
+    // shapeAì™€ shapeBì˜ support í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ Minkowski ì°¨ ì§‘í•©ì˜ ì ì„ ë°˜í™˜í•©ë‹ˆë‹¤.
     Vector3 GJK::Support(const ConvexHull& shapeA, const ConvexHull& shapeB, const Vector3& dir) {
-        // shapeA¿¡¼­ ¹æÇâ dir·Î °¡Àå ¸Õ Á¡
-        Vector3 pointA = shapeA.GetFurthestPoint(dir);
-        // shapeB¿¡¼­´Â -dir ¹æÇâÀ¸·Î °¡Àå ¸Õ Á¡ (Áï, ¹İ´ëÂÊ)
-        Vector3 pointB = shapeB.GetFurthestPoint(-dir);
+        // shapeAì˜ dir ë°©í–¥ ìµœëŒ€ë¡œ ë©€ë¦¬ ìˆëŠ” ì 
+        Vector3 pointA = shapeA.support(dir);
+        // shapeBì˜ -dir ë°©í–¥ ìµœëŒ€ë¡œ ë©€ë¦¬ ìˆëŠ” ì 
+        Vector3 pointB = shapeB.support(-dir);
         return pointA - pointB;
     }
 
     bool GJK::Intersect(const ConvexHull& shapeA, const ConvexHull& shapeB) {
-        // 1. ÃÊ±â ¹æÇâ ¼±ÅÃ (ÀÓÀÇÀÇ º¤ÅÍ)
+        // ì´ˆê¸° ë°©í–¥: (1, 0, 0)
         Vector3 direction(1, 0, 0);
-        // 2. ÃÖÃÊÀÇ Áö¿ø Á¡À» ´Ü¼øÃ¼¿¡ Ãß°¡
         std::vector<Vector3> simplex;
         simplex.push_back(Support(shapeA, shapeB, direction));
-        // 3. ¿øÁ¡À» ÇâÇÏ´Â °Ë»ö ¹æÇâ: ´Ü¼øÃ¼ÀÇ Ã¹ Á¡ÀÇ ¹İ´ë ¹æÇâ
+        // ìƒˆë¡œìš´ ê²€ìƒ‰ ë°©í–¥: ì›ì  ë°˜ëŒ€ ë°©í–¥
         direction = -simplex[0];
 
-        // 4. ¹İº¹ ·çÇÁ: »õ·Î¿î Áö¿ø Á¡À» °è»êÇØ ´Ü¼øÃ¼¿¡ Ãß°¡ÇÏ¸é¼­ ¿øÁ¡ Æ÷ÇÔ ¿©ºÎ¸¦ ÆÇ´Ü
+        // ë°˜ë³µì ìœ¼ë¡œ ë‹¨ìˆœì²´(simplex)ë¥¼ í™•ì¥í•˜ë©´ì„œ ì›ì ì„ í¬í•¨í•˜ëŠ”ì§€ ê²€ì‚¬í•©ë‹ˆë‹¤.
         while (true) {
             Vector3 newPoint = Support(shapeA, shapeB, direction);
-            // ¸¸¾à »õ Áö¿ø Á¡ÀÌ ÁøÇà ¹æÇâ¿¡¼­ ¿øÁ¡À» ³Ñ¾î°¡Áö ¸øÇÏ¸é Ãæµ¹ÇÏÁö ¾Ê´Â °ÍÀ¸·Î ÆÇ´Ü
-            if (newPoint.Dot(direction) <= 0) {
+            // ìƒˆ ì ì´ í˜„ì¬ ë°©í–¥ìœ¼ë¡œ ì›ì ì„ í–¥í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´ ì¶©ëŒì´ ì—†ìŒ
+            if (newPoint.dot(direction) <= 0) {
                 return false;
             }
-            // ´Ü¼øÃ¼¿¡ »õ Á¡ Ãß°¡
             simplex.push_back(newPoint);
-            // ´Ü¼øÃ¼¸¦ ºĞ¼®ÇÏ¿© (¾÷µ¥ÀÌÆ®) ¿øÁ¡ÀÌ Æ÷ÇÔµÇ¾ú´ÂÁö È®ÀÎ
             if (HandleSimplex(simplex, direction)) {
                 return true;
             }
         }
     }
 
-    // HandleSimplex ÇÔ¼ö: ´Ü¼øÃ¼ÀÇ Á¡ °³¼ö¿¡ µû¶ó ¼¼ °¡Áö °æ¿ì(line, triangle, tetrahedron)¸¦ Ã³¸®
+    // HandleSimplex í•¨ìˆ˜: í˜„ì¬ ë‹¨ìˆœì²´ì˜ ëª¨ì–‘(line, triangle, tetrahedron)ì— ë”°ë¼
+    // ì›ì  í¬í•¨ ì—¬ë¶€ë¥¼ ê²€ì‚¬í•˜ê³ , ê·¸ë ‡ì§€ ì•Šìœ¼ë©´ ìƒˆë¡œìš´ íƒìƒ‰ ë°©í–¥ì„ ê²°ì •í•©ë‹ˆë‹¤.
     bool GJK::HandleSimplex(std::vector<Vector3>& simplex, Vector3& direction) {
         if (simplex.size() == 2) {
-            // ---------- ¼±ºĞ(simplex = {A, B}) Ã³¸® ----------
-            // ´Ü¼øÃ¼ÀÇ ¸¶Áö¸·¿¡ Ãß°¡µÈ Á¡À» A, ±× ÀÌÀü Á¡À» B·Î °£ÁÖÇÕ´Ï´Ù.
+            // ---------- ì„ ë¶„(simplex = {A, B}) ----------
+            // A: ë§ˆì§€ë§‰ì— ì¶”ê°€ëœ ì , B: ì²˜ìŒ ì¶”ê°€ëœ ì 
             Vector3 A = simplex.back();
             Vector3 B = simplex.front();
             Vector3 AB = B - A;
-            Vector3 AO = -A; // ¿øÁ¡À¸·Î ÇâÇÏ´Â º¤ÅÍ
+            Vector3 AO = -A; // Aì—ì„œ ì›ì ê¹Œì§€ì˜ ë²¡í„°
 
-            // A¿Í AB ¼±ºĞ¿¡ ¼öÁ÷ÀÎ(¿øÁ¡À» ÇâÇÏ´Â) º¤ÅÍ¸¦ Ã£À½
-            direction = AB.Cross(AO).Cross(AB);
-            // ¸¸¾à directionÀÌ 0 º¤ÅÍ¶ó¸é, AB¿¡ ¼öÁ÷ÀÎ ÀÓÀÇÀÇ º¤ÅÍ¸¦ ¼±ÅÃ
-            if (direction.LengthSquared() < 1e-6f) {
+            // ABì™€ AOì˜ í‰ë©´ì— ìˆ˜ì§ì¸ ë°©í–¥(AB cross (AO cross AB))ë¥¼ ìƒˆë¡œìš´ íƒìƒ‰ ë°©í–¥ìœ¼ë¡œ ì„¤ì •
+            direction = AB.cross(AO).cross(AB);
+            if (direction.magnitudeSquared() < 1e-6f) {
                 direction = Vector3(-AB.y, AB.x, 0);
             }
+            return false;
         }
         else if (simplex.size() == 3) {
-            // ---------- »ï°¢Çü(simplex = {A, B, C}) Ã³¸® ----------
-            // A: °¡Àå ÃÖ±Ù Ãß°¡µÈ Á¡
+            // ---------- ì‚¼ê°í˜•(simplex = {C, B, A}) ----------
+            // A: ë§ˆì§€ë§‰ì— ì¶”ê°€ëœ ì , Bì™€ CëŠ” ìˆœì„œëŒ€ë¡œ ì´ì „ ì ë“¤
             Vector3 A = simplex[2];
             Vector3 B = simplex[1];
             Vector3 C = simplex[0];
@@ -65,73 +63,70 @@ namespace Collision {
             Vector3 AC = C - A;
             Vector3 AO = -A;
 
-            // »ï°¢ÇüÀÇ Æò¸éÀÇ ¹ı¼± (Á¤±ÔÈ­ Àü)
-            Vector3 ABC = AB.Cross(AC);
+            // ì‚¼ê°í˜•ì˜ ë²•ì„ 
+            Vector3 ABC = AB.cross(AC);
 
-            // Edge AB¿¡ ´ëÇÑ ¿ÜÃø ¹ı¼± (»ï°¢ÇüÀÇ Æò¸é ³»¿¡¼­, ¿øÁ¡ ¹æÇâÀ» ÇâÇÔ)
-            Vector3 ABPerp = ABC.Cross(AB);
-            if (ABPerp.Dot(AO) > 0) {
-                // ¿øÁ¡ÀÌ edge AB ÂÊ¿¡ ÀÖ´Ù¸é, C´Â ´Ü¼øÃ¼¿¡¼­ Á¦°ÅÇÏ°í
-                simplex.erase(simplex.begin()); // C Á¦°Å (º¤ÅÍ ¸Ç ¾Õ)
-                direction = AB.Cross(AO).Cross(AB);
+            // Edge ABì— ìˆ˜ì§ì¸ í‰ë©´ (ABC cross AB)
+            Vector3 ABPerp = ABC.cross(AB);
+            if (ABPerp.dot(AO) > 0) {
+                // Cë¥¼ ë‹¨ìˆœì²´ì—ì„œ ì œê±°í•˜ê³ , ìƒˆë¡œìš´ ë°©í–¥ìœ¼ë¡œ ABì˜ ë°©í–¥ ì„¤ì •
+                simplex.erase(simplex.begin()); // C ì œê±°
+                direction = AB.cross(AO).cross(AB);
                 return false;
             }
 
-            // Edge AC¿¡ ´ëÇÑ ¿ÜÃø ¹ı¼±
-            Vector3 ACPerp = AC.Cross(ABC);
-            if (ACPerp.Dot(AO) > 0) {
-                // ¿øÁ¡ÀÌ edge AC ÂÊ¿¡ ÀÖ´Ù¸é, B´Â ´Ü¼øÃ¼¿¡¼­ Á¦°ÅÇÕ´Ï´Ù.
-                simplex.erase(simplex.begin() + 1); // B Á¦°Å
-                direction = AC.Cross(AO).Cross(AC);
+            // Edge ACì— ìˆ˜ì§ì¸ í‰ë©´ (AC cross ABC)
+            Vector3 ACPerp = AC.cross(ABC);
+            if (ACPerp.dot(AO) > 0) {
+                // Bë¥¼ ë‹¨ìˆœì²´ì—ì„œ ì œê±°í•˜ê³ , ìƒˆë¡œìš´ ë°©í–¥ìœ¼ë¡œ ACì˜ ë°©í–¥ ì„¤ì •
+                simplex.erase(simplex.begin() + 1); // B ì œê±°
+                direction = AC.cross(AO).cross(AC);
                 return false;
             }
 
-            // ¿øÁ¡ÀÌ »ï°¢Çü ³»ºÎ¿¡ ÀÖ°Å³ª »ï°¢Çü Æò¸é »ó¿¡ ÀÖÀ¸¸é, °Ë»ö ¹æÇâÀº »ï°¢ÇüÀÇ ¹ı¼± ÂÊÀ¸·Î ¼³Á¤ÇÕ´Ï´Ù.
-            if (ABC.Dot(AO) > 0) {
+            // ë§Œì•½ ìœ„ ë‘ ê²½ìš°ê°€ ì•„ë‹ˆë¼ë©´,
+            // ì›ì ì´ ì‚¼ê°í˜• ë‚´ë¶€ì˜ ì˜ì—­ì— ìˆìœ¼ë©´ ì‚¼ê°í˜•ì˜ ë²•ì„  ë°©í–¥ì„ íƒìƒ‰ ë°©í–¥ìœ¼ë¡œ ì„¤ì •
+            if (ABC.dot(AO) > 0) {
                 direction = ABC;
             }
             else {
-                // ¹æÇâ ¹İÀüÀ» ÅëÇØ ¿Ã¹Ù¸¥ ¹æÇâÀ» ÃëÇÔ
+                // ê·¸ë ‡ì§€ ì•Šìœ¼ë©´ ë²•ì„ ì˜ ë°˜ëŒ€ ë°©í–¥ì„ íƒìƒ‰ ë°©í–¥ìœ¼ë¡œ ì‚¬ìš©í•˜ê³ ,
+                // simplexì˜ ìˆœì„œë¥¼ êµí™˜í•˜ì—¬ ì¼ê´€ì„±ì„ ìœ ì§€í•©ë‹ˆë‹¤.
                 direction = -ABC;
-                // ´Ü¼øÃ¼ÀÇ ¼ø¼­¸¦ µÚ¹Ù²ã¼­ µ¿ÀÏÇÑ °á°ú¸¦ ¾òµµ·Ï ÇÔ
                 std::swap(simplex[0], simplex[1]);
             }
+            return false;
         }
         else if (simplex.size() == 4) {
-            // ---------- »ç¸éÃ¼(simplex = {A, B, C, D}) Ã³¸® ----------
-            // A: °¡Àå ÃÖ±Ù Ãß°¡µÈ Á¡
+            // ---------- ì‚¬ë©´ì²´(simplex = {D, C, B, A}) ----------
+            // A: ë§ˆì§€ë§‰ì— ì¶”ê°€ëœ ì , B, C, DëŠ” ìˆœì„œëŒ€ë¡œ ì´ì „ ì ë“¤
             Vector3 A = simplex[3];
             Vector3 B = simplex[2];
             Vector3 C = simplex[1];
             Vector3 D = simplex[0];
             Vector3 AO = -A;
 
-            // °¢ ¸éÀÇ ¹ı¼± °è»ê (A¸¦ ±âÁØÀ¸·Î ÇÑ ¸é)
-            Vector3 ABC = (B - A).Cross(C - A);
-            Vector3 ACD = (C - A).Cross(D - A);
-            Vector3 ADB = (D - A).Cross(B - A);
+            Vector3 ABC = (B - A).cross(C - A);
+            Vector3 ACD = (C - A).cross(D - A);
+            Vector3 ADB = (D - A).cross(B - A);
 
-            // ¿øÁ¡ÀÌ ÇØ´ç ¸éÀÇ ¿ÜÃø¿¡ ÀÖÀ¸¸é, ´Ü¼øÃ¼¸¦ ÇØ´ç ¸éÀÇ Á¡µé·Î ÁÙÀÌ°í
-            // °Ë»ö ¹æÇâÀ» ±× ¸éÀÇ ¹ı¼±À¸·Î ¼³Á¤ÇÕ´Ï´Ù.
-            if (ABC.Dot(AO) > 0) {
-                // D´Â ±â°¢ÇÕ´Ï´Ù.
-                simplex.erase(simplex.begin()); // D Á¦°Å
+            // ê°ê°ì˜ ë©´ì— ëŒ€í•´ ì›ì ì´ ê°™ì€ ìª½ì— ìˆëŠ”ì§€ ê²€ì‚¬í•©ë‹ˆë‹¤.
+            if (ABC.dot(AO) > 0) {
+                simplex.erase(simplex.begin()); // D ì œê±°
                 direction = ABC;
                 return false;
             }
-            if (ACD.Dot(AO) > 0) {
-                // B´Â ±â°¢ÇÕ´Ï´Ù.
-                simplex.erase(simplex.begin() + 2); // B Á¦°Å
+            if (ACD.dot(AO) > 0) {
+                simplex.erase(simplex.begin() + 2); // B ì œê±°
                 direction = ACD;
                 return false;
             }
-            if (ADB.Dot(AO) > 0) {
-                // C´Â ±â°¢ÇÕ´Ï´Ù.
-                simplex.erase(simplex.begin() + 1); // C Á¦°Å
+            if (ADB.dot(AO) > 0) {
+                simplex.erase(simplex.begin() + 1); // C ì œê±°
                 direction = ADB;
                 return false;
             }
-            // ¿øÁ¡ÀÌ ¸ğµç ¸éÀÇ ³»ºÎ¿¡ ÀÖ´Ù¸é, µÎ °´Ã¼´Â Ãæµ¹ ÁßÀÔ´Ï´Ù.
+            // ëª¨ë“  ë©´ì— ëŒ€í•´ ì›ì ì´ ë‚´ë¶€ì— ìˆë‹¤ë©´ ë‘ ë¬¼ì²´ëŠ” ì¶©ëŒ ì¤‘ì…ë‹ˆë‹¤.
             return true;
         }
         return false;

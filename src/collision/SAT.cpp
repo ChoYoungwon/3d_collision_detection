@@ -5,16 +5,18 @@
 
 namespace Collision {
 
-    // OverlapOnAxis: ÁÖ¾îÁø Ãà(axis)¿¡ ´ëÇØ OBBÀÇ ¸ğµç Á¤Á¡(vertex)À» Åõ¿µÇÏ¿© ÃÖ¼Ò/ÃÖ´ë °ªÀ» °è»êÇÏ°í, µÎ ±¸°£ÀÌ °ãÄ¡´ÂÁö Ã¼Å©
+    // OverlapOnAxis: ì£¼ì–´ì§„ ì¶•(axis)ì— ëŒ€í•´, OBBì˜ ëª¨ë“  ì •ì (projection)ì„ êµ¬í•œ í›„ ê²¹ì¹¨ ì—¬ë¶€ë¥¼ íŒë‹¨
     bool SAT::OverlapOnAxis(const OBB& obbA, const OBB& obbB, const Vector3& axis) {
-        Vector3 axisNorm = axis.Normalized();
+        // ì£¼ì–´ì§„ ì¶•ì„ ë‹¨ìœ„ ë²¡í„°ë¡œ ë§Œë“­ë‹ˆë‹¤.
+        Vector3 axisNorm = axis.normalized();
 
-        // ¶÷´Ù ÇÔ¼ö: OBBÀÇ ¸ğµç Á¤Á¡À» Åõ¿µÇÏ¿© [min, max] ±¸°£À» ¹İÈ¯
+        // ëŒë‹¤ í•¨ìˆ˜: í•´ë‹¹ OBBì˜ ëª¨ë“  ì •ì ì„ ì£¼ì–´ì§„ ì¶•ì— íˆ¬ì˜í•˜ì—¬ [min, max] ë²”ìœ„ë¥¼ ë°˜í™˜
         auto getProjection = [&](const OBB& obb) -> std::pair<float, float> {
             float minProj = std::numeric_limits<float>::infinity();
             float maxProj = -std::numeric_limits<float>::infinity();
-            for (const Vector3& vertex : obb.GetVertices()) { // OBB Å¬·¡½º´Â 8°³ÀÇ vertex¸¦ ¹İÈ¯
-                float proj = vertex.Dot(axisNorm);
+            // OBBì˜ ì •ì ì€ getCorners() í•¨ìˆ˜ë¡œ êµ¬í•©ë‹ˆë‹¤.
+            for (const Vector3& vertex : obb.getCorners()) {
+                float proj = vertex.dot(axisNorm);
                 minProj = std::min(minProj, proj);
                 maxProj = std::max(maxProj, proj);
             }
@@ -24,39 +26,39 @@ namespace Collision {
         auto [minA, maxA] = getProjection(obbA);
         auto [minB, maxB] = getProjection(obbB);
 
-        // ±¸°£ÀÌ °ãÄ¡´ÂÁö È®ÀÎ (ÇÑÂÊ ³¡ÀÌ ´Ù¸¥ ±¸°£ÀÇ ½ÃÀÛº¸´Ù µÚ¿¡ ÀÖ´ÂÁö È®ÀÎ)
+        // ë‘ í”„ë¡œì ì…˜ êµ¬ê°„ì´ ê²¹ì¹˜ëŠ”ì§€ ê²€ì‚¬
         return (maxA >= minB) && (maxB >= minA);
     }
 
+    // TestOBBCollision: ë¶„ë¦¬ ì¶• ì •ë¦¬(SAT)ë¥¼ ì‚¬ìš©í•˜ì—¬ ë‘ OBBì˜ ì¶©ëŒ ì—¬ë¶€ë¥¼ ê²€ì‚¬í•©ë‹ˆë‹¤.
     bool SAT::TestOBBCollision(const OBB& obbA, const OBB& obbB) {
         std::vector<Vector3> axes;
-        // OBB°¡ Á¦°øÇÏ´Â Áö¿ª ÁÂÇ¥°èÀÇ Ãà (º¸Åë 3°³: X, Y, Z)
-        const auto& axesA = obbA.GetAxes(); // ¿¹: std::array<Vector3, 3>
-        const auto& axesB = obbB.GetAxes();
+        // ê° OBBì˜ ë¡œì»¬ ì¶•(íšŒì „ í–‰ë ¬ì˜ ì—´ ë²¡í„°)ì„ êµ¬í•©ë‹ˆë‹¤.
+        const auto& axesA = obbA.getAxes();
+        const auto& axesB = obbB.getAxes();
 
-        // 1. °¢ OBBÀÇ ¸éÀÇ ¹ı¼±(Ãà)À» ÈÄº¸ Ãà¿¡ Ãß°¡
+        // ë‘ OBBì˜ ì¶•ë“¤ì„ ì¶• ëª©ë¡ì— ì¶”ê°€í•©ë‹ˆë‹¤.
         axes.insert(axes.end(), axesA.begin(), axesA.end());
         axes.insert(axes.end(), axesB.begin(), axesB.end());
 
-        // 2. °¢ OBBÀÇ ¿¡Áöµé »çÀÌÀÇ ±³Â÷ º¤ÅÍ °è»ê (¿¹: 3x3 = 9°³ÀÇ ÈÄº¸ Ãà)
+        // ë‘ OBBì˜ ì¶•ë“¤ì˜ ì™¸ì ì— ì˜í•´ ìƒì„±ë˜ëŠ” ë¶„ë¦¬ ì¶•ë“¤ì„ ì¶”ê°€ (0 ë²¡í„°ëŠ” ê±´ë„ˆëœë‹ˆë‹¤.)
         for (const auto& a : axesA) {
             for (const auto& b : axesB) {
-                Vector3 crossAxis = a.Cross(b);
-                // º¤ÅÍ°¡ °ÅÀÇ 0ÀÌ¸é(ÆòÇàÇÑ °æ¿ì) ¹«½Ã
-                if (crossAxis.LengthSquared() < 1e-6) continue;
-                axes.push_back(crossAxis.Normalized());
+                Vector3 crossAxis = a.cross(b);
+                if (crossAxis.magnitudeSquared() < 1e-6f) continue;
+                axes.push_back(crossAxis.normalized());
             }
         }
 
-        // ¸ğµç ÈÄº¸ Ãà¿¡ ´ëÇØ µÎ OBBÀÇ Åõ¿µ ±¸°£À» °Ë»ç
+        // ê° ì¶•ì— ëŒ€í•´ ë‘ OBBì˜ íˆ¬ì˜ êµ¬ê°„ì´ ê²¹ì¹˜ëŠ”ì§€ ê²€ì‚¬
         for (const auto& axis : axes) {
             if (!OverlapOnAxis(obbA, obbB, axis)) {
-                // ÇÑ Ãà¿¡¼­¶óµµ ºĞ¸®µÊÀÌ È®ÀÎµÇ¸é Ãæµ¹ÇÏÁö ¾ÊÀ½
+                // ì–´ëŠ í•œ ì¶•ì´ë¼ë„ ë¶„ë¦¬ ì¶•ì´ ì¡´ì¬í•˜ë©´ ì¶©ëŒí•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
                 return false;
             }
         }
 
-        // ¸ğµç Ãà¿¡¼­ Åõ¿µÀÌ °ãÄ¡¸é Ãæµ¹·Î ÆÇ´Ü
+        // ëª¨ë“  ì¶•ì—ì„œ íˆ¬ì˜ êµ¬ê°„ì´ ê²¹ì¹˜ë©´ ë‘ OBBëŠ” ì¶©ëŒí•©ë‹ˆë‹¤.
         return true;
     }
 
