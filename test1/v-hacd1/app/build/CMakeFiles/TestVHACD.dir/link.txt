@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/TestVHACD.dir/TestVHACD.cpp.o CMakeFiles/TestVHACD.dir/FloatMath.cpp.o CMakeFiles/TestVHACD.dir/InParser.cpp.o CMakeFiles/TestVHACD.dir/wavefront.cpp.o CMakeFiles/TestVHACD.dir/SaveUSDA.cpp.o -o TestVHACD  -lpthread 

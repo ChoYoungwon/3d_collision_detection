@@ -1,0 +1,3 @@
+/home/youngwon/3d_collision_detection/test/v-hacd/app/build/CMakeFiles/TestVHACD.dir
+/home/youngwon/3d_collision_detection/test/v-hacd/app/build/CMakeFiles/edit_cache.dir
+/home/youngwon/3d_collision_detection/test/v-hacd/app/build/CMakeFiles/rebuild_cache.dir
