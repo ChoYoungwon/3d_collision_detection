@@ -1,10 +1,27 @@
 #ifndef OBJECT3D_H
 #define OBJECT3D_H
 
-#include "../math/Vector3.h"
-#include "../geometry/AABB.h"  // AABB가 Geometry 네임스페이스에 포함되어 있다고 가정
+#include <vector>
+#include <string>
+#include <functional>
+#include "Vector3.h"
+#include "Matrix3x3.h"
+#include "Quaternion.h"
+#include "AABB.h"
+#include "ConvexDecomposition.h"
 
-namespace Core {
+class Object3D;
+
+class CollisionInfo {
+public:
+    Object3D* otherObject;
+    Vector3 contactPoint;
+    Vector3 contactNormal;
+    float penetrationDepth;
+
+    CollisionInfo();
+    CollisionInfo(Object3D* other, const Vector3& point, const Vector3& normal, float depth);
+};
 
 class Object3D {
 public:
@@ -12,39 +29,105 @@ public:
     Vector3 position;
     Vector3 rotation; // 간단히 Euler 각도로 가정 (또는 필요에 따라 Quaternion 사용)
     Vector3 scale;
+  
+    Matrix3x3 transformMatrix;
+    bool transformDirty;
 
-    // 충돌 판정을 위한 경계 부피 (AABB)
-    AABB aabb;
+    AABB localAABB;
+    AABB worldAABB;
+    bool aabbDirty;
 
-    // 상태 플래그 : true면 변환 혹은 속성이 변경되어 현재 경계 부피가 오래되었음을 의미
-    bool isDirty;
+    bool isInCollision;
+    std::vector<CollisionInfo> collisions;
 
-    Object3D()
-        : position(0, 0, 0),
-          rotation(0, 0, 0),
-          scale(1, 1, 1),
-          isDirty(true),
-          aabb() // AABB의 기본 생성자 호출 (최대/최소값 초기화)
-    {
-    }
+    // 메시 데이터
+    std::vector<Vector3> vertices;
+    std::vector<Vector3> normals;
+    std::vector<int> indices;
 
-    virtual ~Object3D() {}
+    // 볼록 분해 결과
+    std::vector<ConvexHull> convexHulls;
+    bool isConvexDecomposed;
 
-    // 현재 객체의 변환 상태를 반영하여 경계 부피(AABB)를 업데이트합니다.
-    // 실제 구현에서는 로컬 기하학 데이터를 변환행렬에 따라 변환한 후 AABB를 재계산해야 합니다.
-    virtual void updateBoundingVolumes() {
-        // 예시: 간단히 aabb를 재설정하고, isDirty를 false로 변경합니다.
-        aabb = AABB();
-        // 실제 코드에서는 Object3D가 보유한 로컬 정점들에 대해 변환을 적용한 후 AABB를 계산해야 합니다.
-        isDirty = false;
-    }
+    // Callback function type for collision events
+    using CollisionCallback = std::function<void(const CollisionInfo&)>;
+    CollisionCallback onCollisionEnter;
+    CollisionCallback onCollisionStay;
+    CollisionCallback onCollisionExit;
 
-    // 경계 부피 AABB를 반환합니다.
-    virtual const AABB& getAABB() const {
-        return aabb;
-    }
+public:
+    Object3D(const std::string& _name = "Object");
+    ~Object3D();
+
+    // Position methods
+    const Vector3& getPosition() const;
+    void setPosition(const Vector3& pos);
+    void translate(const Vector3& offset);
+
+    // Rotation methods
+    const Quaternion& getRotation() const;
+    void setRotation(const Quaternion& rot);
+    void rotate(const Quaternion& rot);
+    void rotateAxis(const Vector3& axis, float angleRadians);
+
+    // Scale methods
+    const Vector3& getScale() const;
+    void setScale(const Vector3& s);
+    void setScale(float uniformScale);
+
+    // Transform matrix operations
+    const Matrix3x3& getTransformMatrix();
+    void updateTransformMatrix();
+
+    // AABB operations
+    void setLocalAABB(const AABB& aabb);
+    const AABB& getLocalAABB() const;
+    const AABB& getAABB();
+    void updateWorldAABB();
+
+    // Transform operations
+    Vector3 transformPoint(const Vector3& point);
+    Vector3 transformDirection(const Vector3& dir);
+
+    // Collision management
+    bool isColliding() const;
+    const std::vector<CollisionInfo>& getCollisions() const;
+    void addCollision(const CollisionInfo& collision);
+    void removeCollision(Object3D* other);
+    void clearCollisions();
+
+    // Collision event callbacks
+    void setOnCollisionEnter(const CollisionCallback& callback);
+    void setOnCollisionStay(const CollisionCallback& callback);
+    void setOnCollisionExit(const CollisionCallback& callback);
+
+    // Mesh data operations
+    void setMeshData(const std::vector<Vector3>& verts, 
+                    const std::vector<Vector3>& norms,
+                    const std::vector<int>& inds);
+
+    // File loading operations
+    bool loadFromObjFile(const std::string& filepa th);
+
+    // 볼록 분해 관련 메서드 (추가됨)
+    bool computeConvexDecomposition(const VHACDParameters& params = VHACDParameters());
+    bool loadConvexDecomposition(const std::string& filepath);
+    void setConvexHulls(const std::vector<ConvexHull>& hulls);
+
+    // GJK support function
+    Vector3 getSupportPoint(const Vector3& direction) const;
+
+    // Accessors
+    bool isDecomposed() const;
+    const std::vector<ConvexHull>& getConvexHulls() const;
+    const std::vector<Vector3>& getVertices() const;
+    const std::vector<Vector3>& getNormals() const;
+    const std::vector<int>& getIndices() const;
+    const std::string& getName() const;
+    void setName(const std::string& _name);
+
+    // Update method
+    void update();
 };
 
-} // namespace Core
-
-#endif // OBJECT3D_H
+#endif
