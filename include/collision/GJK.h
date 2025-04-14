@@ -2,7 +2,7 @@
 #define GJK_H
 
 #include "../math/Vector3.h"
-#include "../geometry/ConvexHull.h"
+#include "../decomposition/ConvexHull.h"
 #include <vector>
 
 namespace Collision {

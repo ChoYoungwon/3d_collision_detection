@@ -5,14 +5,19 @@
 #include <cstdlib>
 #include "../../vhacd/include/VHACD.h"
 
-bool ConvexDecomposition::RunVHACD(const std::string& inputObjPath, 
-                                const std::string& outputObjPath, const VHACDParameters& params) 
-{
-    // 외부 V-HACD 프로세스 실행
+// V-HACD 프로세스를 실행하고 결과를 OBJ 파일로 저장
+bool ConvexDecomposition::RunVHACD(
+    const std::string& inputObjPath, 
+    const std::string& outputObjPath,
+    const VHACDParameters& params
+) { // 외부 V-HACD 프로세스 실행
     return ExecuteVHACDProcess(inputObjPath, outputObjPath, params);
 }
 
-std::vector<ConvexHull> ConvexDecomposition::LoadConvexHulls(const std::string& decomposedObjPath) {
+// 분해된 OBJ 파일에서 볼록 껍질 객체들을 로드
+std::vector<ConvexHull> ConvexDecomposition::LoadConvexHulls(
+    const std::string& decomposedObjPath
+) {
     std::vector<ConvexHull> convexHulls;
     
     std::ifstream file(decomposedObjPath);
@@ -84,135 +89,15 @@ std::vector<ConvexHull> ConvexDecomposition::LoadConvexHulls(const std::string& 
     return convexHulls;
 }
 
-std::vector<ConvexHull> ConvexDecomposition::ComputeConvexDecomposition(
-    const std::vector<Vector3>& vertices,
-    const std::vector<int>& indices,
-    const VHACDParameters& params) {
-    
-    std::vector<ConvexHull> convexHulls;
-    
-    if (vertices.empty() || indices.empty()) {
-        std::cerr << "Cannot compute convex decomposition: Empty mesh data." << std::endl;
-        return convexHulls;
-    }
-    
-    // 메시 데이터를 VHACD 형식으로 변환
-    std::vector<float> vhacdPoints;
-    std::vector<unsigned int> vhacdTriangles;
-    
-    // 정점 데이터 변환
-    vhacdPoints.reserve(vertices.size() * 3);
-    for (const auto& vertex : vertices) {
-        vhacdPoints.push_back(vertex.x);
-        vhacdPoints.push_back(vertex.y);
-        vhacdPoints.push_back(vertex.z);
-    }
-    
-    // 인덱스 데이터 변환
-    vhacdTriangles.reserve(indices.size());
-    for (const auto& index : indices) {
-        vhacdTriangles.push_back(static_cast<unsigned int>(index));
-    }
-    
-    // VHACD 인터페이스 생성
-    VHACD::IVHACD* vhacd = VHACD::CreateVHACD();
-    
-    // 콜백 및 로그 함수 (필요하면 구현)
-    class VHACDCallback : public VHACD::IVHACD::IUserCallback {
-    public:
-        void Update(const double overallProgress, const double stageProgress, 
-                   const double operationProgress, const char* const stage,
-                   const char* const operation) override {
-            // 필요하면 진행 상황 출력 구현
-            std::cout << "Progress: " << static_cast<int>(overallProgress * 100.0) << "% - " 
-                     << stage << " - " << operation << std::endl;
-        }
-    };
-    
-    class VHACDLogger : public VHACD::IVHACD::IUserLogger {
-    public:
-        void Log(const char* const msg) override {
-            // 필요하면 로그 출력 구현
-            std::cout << "VHACD: " << msg << std::endl;
-        }
-    };
-    
-    VHACDCallback callback;
-    VHACDLogger logger;
-    
-    // VHACD 파라미터 설정
-    VHACD::IVHACD::Parameters vhacdParams;
-    vhacdParams.m_callback = &callback;
-    vhacdParams.m_logger = &logger;
-
-    // 파라미터 매핑 - 정확한 변수명 사용
-    vhacdParams.m_maxConvexHulls = params.maxConvexHulls;
-    vhacdParams.m_resolution = params.resolution;
-    vhacdParams.m_minimumVolumePercentErrorAllowed = params.minimumVolumePercentErrorAllowed;
-    vhacdParams.m_maxRecursionDepth = params.maxRecursionDepth;
-    vhacdParams.m_planeDownsampling = params.planeDownsampling;
-    vhacdParams.m_convexhullDownsampling = params.convexhullDownsampling;
-    vhacdParams.m_pca = params.pca;
-    vhacdParams.m_mode = params.mode;
-    vhacdParams.m_maxNumVerticesPerCH = params.maxNumVerticesPerCH;
-    vhacdParams.m_concavity = params.concavity;
-    vhacdParams.m_alpha = params.alpha;
-    vhacdParams.m_beta = params.beta;
-    vhacdParams.m_gamma = params.gamma;
-    vhacdParams.m_projectHullVertices = params.projectHullVertices;
-    vhacdParams.m_oclAcceleration = params.oclAcceleration;
-    
-    // V-HACD 분해 실행
-    bool success = vhacd->Compute(vhacdPoints.data(), static_cast<uint32_t>(vertices.size()), 
-                                 vhacdTriangles.data(), static_cast<uint32_t>(indices.size() / 3), 
-                                 vhacdParams);
-    
-    if (!success) {
-        std::cerr << "V-HACD computation failed." << std::endl;
-        vhacd->Release();
-        return convexHulls;
-    }
-    
-    // 각 볼록 껍질 결과 처리
-    uint32_t numHulls = vhacd->GetNConvexHulls();
-    convexHulls.resize(numHulls);
-    
-    for (uint32_t i = 0; i < numHulls; ++i) {
-        VHACD::IVHACD::ConvexHull hull;
-        vhacd->GetConvexHull(i, hull);
-        
-        // ConvexHull 객체에 데이터 저장
-        ConvexHull& convexHull = convexHulls[i];
-        
-        // 정점 복사
-        convexHull.vertices.resize(hull.m_nPoints);
-        for (uint32_t v = 0; v < hull.m_nPoints; ++v) {
-            float x = hull.m_points[v * 3];
-            float y = hull.m_points[v * 3 + 1];
-            float z = hull.m_points[v * 3 + 2];
-            convexHull.vertices[v] = Vector3(x, y, z);
-        }
-        
-        // 인덱스 복사
-        convexHull.indices.resize(hull.m_nTriangles * 3);
-        for (uint32_t t = 0; t < hull.m_nTriangles * 3; ++t) {
-            convexHull.indices[t] = static_cast<int>(hull.m_triangles[t]);
-        }
-    }
-    
-    // V-HACD 인스턴스 해제
-    vhacd->Release();
-    
-    return convexHulls;
-}
-
-
-
-bool ConvexDecomposition::ParseObjFile(const std::string& objPath, 
-                                      std::vector<Vector3>& outVertices, 
-                                      std::vector<std::vector<int>>& outFaces) {
+// OBJ 파일에서 정점과 면 정보 추출
+bool ConvexDecomposition::ParseObjFile(
+    const std::string& objPath, 
+    std::vector<Vector3>& outVertices, 
+    std::vector<std::vector<int>>& outFaces
+) {
     std::ifstream file(objPath);
     if (!file.is_open()) {
+        std::cerr << "Failed to open file: " << objPath << std::endl;
         return false;
     }
     
@@ -248,23 +133,51 @@ bool ConvexDecomposition::ParseObjFile(const std::string& objPath,
     return !outVertices.empty() && !outFaces.empty();
 }
 
-bool ConvexDecomposition::ExecuteVHACDProcess(const std::string& inputPath, 
-                                            const std::string& outputPath,
-                                            const VHACDParameters& params) {
+// 외부 V-HACD 실행 파일 호출
+bool ConvexDecomposition::ExecuteVHACDProcess(
+    const std::string& inputPath, 
+    const std::string& outputPath,
+    const VHACDParameters& params
+) {
     // 외부 V-HACD 실행 파일 호출 (TestVHACD 또는 다른 V-HACD 구현체)
-    std::string command = "TestVHACD " + inputPath + 
+    std::string command = "./TestVHACD " + inputPath + 
                         " -h " + std::to_string(params.maxConvexHulls) +
                         " -r " + std::to_string(params.resolution) +
                         " -e " + std::to_string(params.minVolumePerCH) +
                         " -d " + std::to_string(params.maxRecursionDepth) +
-                        " -v " + std::to_string(params.maxNumVerticesPerCH) +
-                        " -o obj" +
-                        " > " + outputPath;
+                        " -v " + std::to_string(params.maxNumVerticesPerCH);
     
     // 실제 환경에서는 시스템 명령 대신 라이브러리 API를 직접 호출하는 것이 더 좋습니다
     // 또한 이 구현은 V-HACD 명령줄 도구의 특정 구현에 의존합니다
     int result = system(command.c_str());
+
+    // 성공하면 파일 이름 변경
+    if (result == 0) {
+        // C++17 파일 시스템 사용
+        #if __cplusplus >= 201703L
+            std::filesystem::rename("decomp.obj", outputPath);
+            
+            // MTL 파일도 이름 변경 (있는 경우)
+            std::string mtlOutput = outputPath.substr(0, outputPath.find_last_of(".")) + ".mtl";
+            if (std::filesystem::exists("decomp.mtl")) {
+                std::filesystem::rename("decomp.mtl", mtlOutput);
+            }
+        // C++17 이전 버전
+        #else
+            // 파일 이름 변경
+            std::rename("decomp.obj", outputPath.c_str());
+            
+            // MTL 파일도 이름 변경 (있는 경우)
+            std::string mtlOutput = outputPath.substr(0, outputPath.find_last_of(".")) + ".mtl";
+            std::ifstream testMtl("decomp.mtl");
+            if (testMtl.good()) {
+                testMtl.close();
+                std::rename("decomp.mtl", mtlOutput.c_str());
+            }
+        #endif
+        
+        return true;
+    }
     
-    return result == 0;
-}
+    return false;
 }

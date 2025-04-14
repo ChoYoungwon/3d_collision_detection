@@ -1,6 +1,10 @@
 #include "GJK.h"
 #include <cmath>
 #include <algorithm>
+#include <iostream>
+#include <set>
+#include <tuple>
+#include <functional>
 
 namespace Collision {
 
@@ -17,22 +21,99 @@ namespace Collision {
         // 초기 방향: (1, 0, 0)
         Vector3 direction(1, 0, 0);
         std::vector<Vector3> simplex;
-        simplex.push_back(Support(shapeA, shapeB, direction));
+        
+        // 빈 ConvexHull 체크
+        if (shapeA.vertices.empty() || shapeB.vertices.empty()) {
+            return false;
+        }
+        
+        Vector3 initialPoint = Support(shapeA, shapeB, direction);
+        simplex.push_back(initialPoint);
+        
         // 새로운 검색 방향: 원점 반대 방향
         direction = -simplex[0];
-
-        // 반복적으로 단순체(simplex)를 확장하면서 원점을 포함하는지 검사합니다.
-        while (true) {
+        
+        // 방향 벡터 정규화
+        float dirMag = direction.magnitude();
+        if (dirMag < 1e-10f) {
+            return false;  // 방향 벡터가 너무 작으면 종료
+        }
+        direction = direction / dirMag;
+    
+        // 이전 지원점들의 중복 여부를 확인하기 위한 집합
+        std::set<std::pair<int, int>> visitedPairs;
+        std::set<std::tuple<int, int, int>> visitedTriples;
+        
+        int iterationCount = 0;
+        const int MAX_ITERATIONS = 30;  // 더 작은 값으로 설정
+        const float EPSILON = 1e-6f;    // 수치 오차 허용 값
+        
+        while (iterationCount < MAX_ITERATIONS) {
+            iterationCount++;
+            
             Vector3 newPoint = Support(shapeA, shapeB, direction);
-            // 새 점이 현재 방향으로 원점을 향하지 않는다면 충돌이 없음
-            if (newPoint.dot(direction) <= 0) {
+            
+            // 내적이 매우 작으면 원점이 객체 외부에 있음
+            float dotProduct = newPoint.dot(direction);
+            if (dotProduct < EPSILON) {
                 return false;
             }
-            simplex.push_back(newPoint);
-            if (HandleSimplex(simplex, direction)) {
-                return true;
+            
+            // 새 점이 이미 심플렉스에 있는지 확인 (중복 지원점 감지)
+            bool duplicate = false;
+            for (const auto& existingPoint : simplex) {
+                if ((newPoint - existingPoint).magnitudeSquared() < EPSILON) {
+                    duplicate = true;
+                    break;
+                }
             }
+            
+            if (duplicate) {
+                return false;  // 중복 지원점이 발견되면 종료
+            }
+            
+            simplex.push_back(newPoint);
+            
+            // 심플렉스에 기반한 순환 패턴 감지
+            if (simplex.size() == 2) {
+                int hash1 = std::hash<float>{}(simplex[0].x + simplex[0].y + simplex[0].z);
+                int hash2 = std::hash<float>{}(simplex[1].x + simplex[1].y + simplex[1].z);
+                std::pair<int, int> pair = std::minmax(hash1, hash2);
+                
+                if (visitedPairs.find(pair) != visitedPairs.end()) {
+                    return false;  // 동일한 쌍이 이미 방문됨
+                }
+                visitedPairs.insert(pair);
+            }
+            else if (simplex.size() == 3) {
+                int hash1 = std::hash<float>{}(simplex[0].x + simplex[0].y + simplex[0].z);
+                int hash2 = std::hash<float>{}(simplex[1].x + simplex[1].y + simplex[1].z);
+                int hash3 = std::hash<float>{}(simplex[2].x + simplex[2].y + simplex[2].z);
+                std::tuple<int, int, int> triple = std::make_tuple(
+                    std::min({hash1, hash2, hash3}),
+                    std::max({hash1, hash2, hash3}),
+                    hash1 + hash2 + hash3 - std::min({hash1, hash2, hash3}) - std::max({hash1, hash2, hash3})
+                );
+                
+                if (visitedTriples.find(triple) != visitedTriples.end()) {
+                    return false;  // 동일한 삼중체가 이미 방문됨
+                }
+                visitedTriples.insert(triple);
+            }
+            
+            if (HandleSimplex(simplex, direction)) {
+                return true;  // 원점이 심플렉스 내부에 있음
+            }
+            
+            // 방향 벡터 정규화
+            dirMag = direction.magnitude();
+            if (dirMag < EPSILON) {
+                return false;  // 방향 벡터가 너무 작으면 종료
+            }
+            direction = direction / dirMag;
         }
+        
+        return false;  // 최대 반복 횟수 도달
     }
 
     // HandleSimplex 함수: 현재 단순체의 모양(line, triangle, tetrahedron)에 따라
@@ -126,7 +207,7 @@ namespace Collision {
                 direction = ADB;
                 return false;
             }
-            // 모든 면에 대해 원점이 내부에 있다면 두 물체는 충돌 중입니다.
+            // 모든 면에 대해 원점이 내부에 있다면 두 물체는 충돌 중
             return true;
         }
         return false;

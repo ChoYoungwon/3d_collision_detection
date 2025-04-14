@@ -38,6 +38,8 @@ public:
 
     // 벡터 연산
     float dot(const Vector3& other) const;
+
+    // 외적 계산
     Vector3 cross(const Vector3& other) const;
     float magnitudeSquared() const;
     float magnitude() const;
