@@ -1,0 +1,3 @@
+/home/youngwon/3d_collision_detection/build/CMakeFiles/collision_test.dir
+/home/youngwon/3d_collision_detection/build/CMakeFiles/edit_cache.dir
+/home/youngwon/3d_collision_detection/build/CMakeFiles/rebuild_cache.dir

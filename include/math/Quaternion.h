@@ -5,16 +5,19 @@
 #include "Matrix3x3.h"
 #include <string>
 
+
+// 쿼터니언 : 3D 회전을 표현
 class Quaternion {
 public:
+    // w는 스칼라 부분
     float w, x, y, z;
 
-    // Constructors
+    // 생성자 
     Quaternion();
     Quaternion(float w, float x, float y, float z);
     Quaternion(const Quaternion& other);
 
-    // Operator overloading
+    // 연산자 오버로딩 
     Quaternion operator+(const Quaternion& other) const;
     Quaternion operator-(const Quaternion& other) const;
     Quaternion operator*(const Quaternion& other) const;
@@ -23,31 +26,31 @@ public:
     bool operator==(const Quaternion& other) const;
     bool operator!=(const Quaternion& other) const;
 
-    // Normalization
+    // 정규화 관련 함수
     float magnitudeSquared() const;
     float magnitude() const;
     Quaternion normalized() const;
     void normalize();
 
-    // Conjugate and inverse
+    // 켤레와 역 
     Quaternion conjugate() const;
     Quaternion inverse() const;
 
-    // Rotation
+    // 회전 관련 함수
     Vector3 rotate(const Vector3& v) const;
     Quaternion rotateBy(const Quaternion& rotation) const;
 
-    // Transformations
+    // 변환 함수
     Matrix3x3 toRotationMatrix() const;
     Vector3 toEulerAngles() const;
 
-    // Utility functions
+    // 유틸리티 함수
     float dot(const Quaternion& other) const;
     float angle() const;
     Vector3 axis() const;
     std::string toString() const;
 
-    // Static methods
+    // 정적 메서드
     static Quaternion identity();
     static Quaternion fromAxisAngle(const Vector3& axis, float angle);
     static Quaternion fromEulerAngles(float x, float y, float z);
