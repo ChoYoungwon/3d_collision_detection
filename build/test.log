@@ -8,17 +8,17 @@ Maximum hull vertices set to: 64
 [CREATE_RAYCAST_MESH                     ] : 20% : 0% : Building RaycastMesh[CREATE_RAYCAST_MESH                     ] : 20% : 100% : RaycastMesh completed
 [VOXELIZING_INPUT_MESH                   ] : 30% : 0% : Voxelizing Input Mesh[VOXELIZING_INPUT_MESH                   ] : 30% : 100% : Voxelization complete
 [BUILD_INITIAL_CONVEX_HULL               ] : 40% : 0% : Build initial ConvexHull[BUILD_INITIAL_CONVEX_HULL               ] : 40% : 100% : Initial ConvexHull complete
-[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 1% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 2% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 3% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 6% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 12% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 24% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 46% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 85% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 144% : Performing recursive decomposition of convex hulls
+[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 1% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 2% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 3% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 6% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 12% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 24% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 85% : Performing recursive decomposition of convex hulls
 [INITIALIZING_CONVEX_HULLS_FOR_MERGING   ] : 60% : 0% : Initializing ConvexHulls[INITIALIZING_CONVEX_HULLS_FOR_MERGING   ] : 60% : 100% : ConvexHull initialization complete
 [COMPUTING_COST_MATRIX                   ] : 70% : 0% : Computing Hull Merge Cost Matrix[COMPUTING_COST_MATRIX                   ] : 70% : 100% : Finished cost matrix
-[MERGING_CONVEX_HULLS                    ] : 80% : 6% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 12% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 19% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 25% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 32% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 38% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 45% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 52% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 60% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 67% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 75% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 82% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 88% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 93% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 97% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls
+[MERGING_CONVEX_HULLS                    ] : 80% : 7% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 14% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 21% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 27% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 35% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 44% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 54% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 64% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 74% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 80% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 87% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 93% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 98% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls
 [FINALIZING_RESULTS                      ] : 90% : 0% : Finalizing results[FINALIZING_RESULTS                      ] : 90% : 100% : Finalized results complete
 Skipped 22 degenerate triangles
-Convex Decomposition took 2.17167 seconds
-Merging Convex Hulls took 1.74008 seconds
-Computing the Cost Matrix took 1.93799 seconds
+Convex Decomposition took 1.70047 seconds
+Merging Convex Hulls took 1.44390 seconds
+Computing the Cost Matrix took 1.60819 seconds
 VHACD::Complete
-Computing Convex Decomposition took 4.56467 seconds
+Computing Convex Decomposition took 3.64973 seconds
 Saving Convex Decomposition results of 8 convex hulls to 'decomp.obj'
 Saving convex hull results to a single file 'decomp.stl'
 Object1 decomposed successfully
@@ -35,13 +35,13 @@ Maximum hull vertices set to: 64
 [PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 1% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 2% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 3% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 6% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 12% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 24% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 47% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 92% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 172% : Performing recursive decomposition of convex hulls
 [INITIALIZING_CONVEX_HULLS_FOR_MERGING   ] : 60% : 0% : Initializing ConvexHulls[INITIALIZING_CONVEX_HULLS_FOR_MERGING   ] : 60% : 100% : ConvexHull initialization complete
 [COMPUTING_COST_MATRIX                   ] : 70% : 0% : Computing Hull Merge Cost Matrix[COMPUTING_COST_MATRIX                   ] : 70% : 100% : Finished cost matrix
-[MERGING_CONVEX_HULLS                    ] : 80% : 4% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 9% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 14% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 19% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 23% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 28% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 33% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 38% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 44% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 50% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 56% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 61% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 67% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 72% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 78% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 84% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 91% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 97% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls
+[MERGING_CONVEX_HULLS                    ] : 80% : 5% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 10% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 16% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 21% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 26% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 31% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 37% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 44% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 50% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 56% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 63% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 69% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 76% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 83% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 91% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 97% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls
 [FINALIZING_RESULTS                      ] : 90% : 0% : Finalizing results[FINALIZING_RESULTS                      ] : 90% : 100% : Finalized results complete
-Convex Decomposition took 4.76446 seconds
-Merging Convex Hulls took 2.32423 seconds
-Computing the Cost Matrix took 2.67553 seconds
+Convex Decomposition took 3.89031 seconds
+Merging Convex Hulls took 1.93698 seconds
+Computing the Cost Matrix took 2.21411 seconds
 VHACD::Complete
-Computing Convex Decomposition took 8.70076 seconds
+Computing Convex Decomposition took 6.95905 seconds
 Saving Convex Decomposition results of 8 convex hulls to 'decomp.obj'
 Saving convex hull results to a single file 'decomp.stl'
 Object2 decomposed successfully
@@ -56,18 +56,8 @@ CollisionManager::update() - 시작 (프레임 0)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -78,7 +68,7 @@ Object2 colliding: No
 --- Frame 1 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.950000, 0.000000, 0.000000)
+Object2 position: (29.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 1)
@@ -87,18 +77,8 @@ CollisionManager::update() - 시작 (프레임 1)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -109,7 +89,7 @@ Object2 colliding: No
 --- Frame 2 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.900000, 0.000000, 0.000000)
+Object2 position: (29.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 2)
@@ -118,18 +98,8 @@ CollisionManager::update() - 시작 (프레임 2)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -140,7 +110,7 @@ Object2 colliding: No
 --- Frame 3 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.850000, 0.000000, 0.000000)
+Object2 position: (28.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 3)
@@ -149,18 +119,8 @@ CollisionManager::update() - 시작 (프레임 3)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -171,7 +131,7 @@ Object2 colliding: No
 --- Frame 4 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.800000, 0.000000, 0.000000)
+Object2 position: (28.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 4)
@@ -180,18 +140,8 @@ CollisionManager::update() - 시작 (프레임 4)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -202,7 +152,7 @@ Object2 colliding: No
 --- Frame 5 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.750000, 0.000000, 0.000000)
+Object2 position: (27.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 5)
@@ -211,18 +161,8 @@ CollisionManager::update() - 시작 (프레임 5)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -233,7 +173,7 @@ Object2 colliding: No
 --- Frame 6 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.700000, 0.000000, 0.000000)
+Object2 position: (27.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 6)
@@ -242,18 +182,8 @@ CollisionManager::update() - 시작 (프레임 6)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -264,7 +194,7 @@ Object2 colliding: No
 --- Frame 7 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.650000, 0.000000, 0.000000)
+Object2 position: (26.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 7)
@@ -273,18 +203,8 @@ CollisionManager::update() - 시작 (프레임 7)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -295,7 +215,7 @@ Object2 colliding: No
 --- Frame 8 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.600000, 0.000000, 0.000000)
+Object2 position: (26.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 8)
@@ -304,18 +224,8 @@ CollisionManager::update() - 시작 (프레임 8)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -326,7 +236,7 @@ Object2 colliding: No
 --- Frame 9 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.550000, 0.000000, 0.000000)
+Object2 position: (25.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 9)
@@ -335,18 +245,8 @@ CollisionManager::update() - 시작 (프레임 9)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -357,7 +257,7 @@ Object2 colliding: No
 --- Frame 10 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.500000, 0.000000, 0.000000)
+Object2 position: (25.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 10)
@@ -366,18 +266,8 @@ CollisionManager::update() - 시작 (프레임 10)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -388,7 +278,7 @@ Object2 colliding: No
 --- Frame 11 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.450001, 0.000000, 0.000000)
+Object2 position: (24.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 11)
@@ -397,18 +287,8 @@ CollisionManager::update() - 시작 (프레임 11)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -419,7 +299,7 @@ Object2 colliding: No
 --- Frame 12 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.400001, 0.000000, 0.000000)
+Object2 position: (24.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 12)
@@ -428,18 +308,8 @@ CollisionManager::update() - 시작 (프레임 12)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -450,7 +320,7 @@ Object2 colliding: No
 --- Frame 13 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.350001, 0.000000, 0.000000)
+Object2 position: (23.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 13)
@@ -459,18 +329,8 @@ CollisionManager::update() - 시작 (프레임 13)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -481,7 +341,7 @@ Object2 colliding: No
 --- Frame 14 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.300001, 0.000000, 0.000000)
+Object2 position: (23.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 14)
@@ -490,18 +350,8 @@ CollisionManager::update() - 시작 (프레임 14)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -512,7 +362,7 @@ Object2 colliding: No
 --- Frame 15 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.250001, 0.000000, 0.000000)
+Object2 position: (22.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 15)
@@ -521,18 +371,8 @@ CollisionManager::update() - 시작 (프레임 15)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -543,7 +383,7 @@ Object2 colliding: No
 --- Frame 16 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.200001, 0.000000, 0.000000)
+Object2 position: (22.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 16)
@@ -552,18 +392,8 @@ CollisionManager::update() - 시작 (프레임 16)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -574,7 +404,7 @@ Object2 colliding: No
 --- Frame 17 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.150001, 0.000000, 0.000000)
+Object2 position: (21.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 17)
@@ -583,18 +413,8 @@ CollisionManager::update() - 시작 (프레임 17)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -605,7 +425,7 @@ Object2 colliding: No
 --- Frame 18 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.100001, 0.000000, 0.000000)
+Object2 position: (21.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 18)
@@ -614,18 +434,8 @@ CollisionManager::update() - 시작 (프레임 18)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -636,7 +446,7 @@ Object2 colliding: No
 --- Frame 19 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.050001, 0.000000, 0.000000)
+Object2 position: (20.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 19)
@@ -645,18 +455,8 @@ CollisionManager::update() - 시작 (프레임 19)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -667,7 +467,7 @@ Object2 colliding: No
 --- Frame 20 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (1.000001, 0.000000, 0.000000)
+Object2 position: (20.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 20)
@@ -676,18 +476,8 @@ CollisionManager::update() - 시작 (프레임 20)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -698,7 +488,7 @@ Object2 colliding: No
 --- Frame 21 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.950001, 0.000000, 0.000000)
+Object2 position: (19.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 21)
@@ -707,18 +497,8 @@ CollisionManager::update() - 시작 (프레임 21)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -729,7 +509,7 @@ Object2 colliding: No
 --- Frame 22 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.900001, 0.000000, 0.000000)
+Object2 position: (19.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 22)
@@ -738,18 +518,8 @@ CollisionManager::update() - 시작 (프레임 22)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -760,7 +530,7 @@ Object2 colliding: No
 --- Frame 23 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.850001, 0.000000, 0.000000)
+Object2 position: (18.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 23)
@@ -769,18 +539,8 @@ CollisionManager::update() - 시작 (프레임 23)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -791,7 +551,7 @@ Object2 colliding: No
 --- Frame 24 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.800001, 0.000000, 0.000000)
+Object2 position: (18.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 24)
@@ -800,18 +560,8 @@ CollisionManager::update() - 시작 (프레임 24)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -822,7 +572,7 @@ Object2 colliding: No
 --- Frame 25 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.750001, 0.000000, 0.000000)
+Object2 position: (17.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 25)
@@ -831,18 +581,8 @@ CollisionManager::update() - 시작 (프레임 25)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -853,7 +593,7 @@ Object2 colliding: No
 --- Frame 26 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.700001, 0.000000, 0.000000)
+Object2 position: (17.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 26)
@@ -867,6 +607,7 @@ CollisionManager::update() - 시작 (프레임 26)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((17.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
@@ -884,7 +625,7 @@ Object2 colliding: No
 --- Frame 27 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.650001, 0.000000, 0.000000)
+Object2 position: (16.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 27)
@@ -898,6 +639,7 @@ CollisionManager::update() - 시작 (프레임 27)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((16.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
@@ -915,7 +657,7 @@ Object2 colliding: No
 --- Frame 28 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.600001, 0.000000, 0.000000)
+Object2 position: (16.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 28)
@@ -929,6 +671,7 @@ CollisionManager::update() - 시작 (프레임 28)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((16.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
@@ -946,7 +689,7 @@ Object2 colliding: No
 --- Frame 29 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.550001, 0.000000, 0.000000)
+Object2 position: (15.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 29)
@@ -960,6 +703,7 @@ CollisionManager::update() - 시작 (프레임 29)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((15.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
@@ -977,7 +721,7 @@ Object2 colliding: No
 --- Frame 30 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.500001, 0.000000, 0.000000)
+Object2 position: (15.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 30)
@@ -991,6 +735,7 @@ CollisionManager::update() - 시작 (프레임 30)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((15.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
@@ -1008,7 +753,7 @@ Object2 colliding: No
 --- Frame 31 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.450001, 0.000000, 0.000000)
+Object2 position: (14.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 31)
@@ -1022,24 +767,32 @@ CollisionManager::update() - 시작 (프레임 31)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((14.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+Object1 collision enter with Object2
+Contact point: (7.250000, 0.000000, 0.000000)
+Contact normal: (1.000000, 0.000000, 0.000000)
+Penetration depth: 0.1
+Object2 collision enter with Object1
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 32 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.400001, 0.000000, 0.000000)
+Object2 position: (14.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 32)
@@ -1053,24 +806,27 @@ CollisionManager::update() - 시작 (프레임 32)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((14.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 33 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.350001, 0.000000, 0.000000)
+Object2 position: (13.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 33)
@@ -1084,24 +840,27 @@ CollisionManager::update() - 시작 (프레임 33)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((13.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 34 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.300001, 0.000000, 0.000000)
+Object2 position: (13.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 34)
@@ -1115,24 +874,27 @@ CollisionManager::update() - 시작 (프레임 34)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((13.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 35 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.250001, 0.000000, 0.000000)
+Object2 position: (12.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 35)
@@ -1146,24 +908,27 @@ CollisionManager::update() - 시작 (프레임 35)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((12.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 36 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.200001, 0.000000, 0.000000)
+Object2 position: (12.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 36)
@@ -1177,24 +942,27 @@ CollisionManager::update() - 시작 (프레임 36)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((12.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 37 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.150001, 0.000000, 0.000000)
+Object2 position: (11.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 37)
@@ -1208,24 +976,27 @@ CollisionManager::update() - 시작 (프레임 37)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((11.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 38 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.100001, 0.000000, 0.000000)
+Object2 position: (11.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 38)
@@ -1239,24 +1010,27 @@ CollisionManager::update() - 시작 (프레임 38)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((11.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 39 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.050001, 0.000000, 0.000000)
+Object2 position: (10.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 39)
@@ -1270,24 +1044,27 @@ CollisionManager::update() - 시작 (프레임 39)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((10.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 40 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (0.000001, 0.000000, 0.000000)
+Object2 position: (10.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 40)
@@ -1301,24 +1078,27 @@ CollisionManager::update() - 시작 (프레임 40)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((10.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 41 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.049999, 0.000000, 0.000000)
+Object2 position: (9.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 41)
@@ -1332,24 +1112,27 @@ CollisionManager::update() - 시작 (프레임 41)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((9.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 42 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.099999, 0.000000, 0.000000)
+Object2 position: (9.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 42)
@@ -1363,24 +1146,27 @@ CollisionManager::update() - 시작 (프레임 42)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((9.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 43 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.149999, 0.000000, 0.000000)
+Object2 position: (8.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 43)
@@ -1394,24 +1180,27 @@ CollisionManager::update() - 시작 (프레임 43)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((8.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 44 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.199999, 0.000000, 0.000000)
+Object2 position: (8.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 44)
@@ -1425,24 +1214,27 @@ CollisionManager::update() - 시작 (프레임 44)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((8.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 45 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.249999, 0.000000, 0.000000)
+Object2 position: (7.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 45)
@@ -1456,24 +1248,27 @@ CollisionManager::update() - 시작 (프레임 45)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((7.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 46 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.299999, 0.000000, 0.000000)
+Object2 position: (7.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 46)
@@ -1487,24 +1282,27 @@ CollisionManager::update() - 시작 (프레임 46)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((7.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 47 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.349999, 0.000000, 0.000000)
+Object2 position: (6.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 47)
@@ -1518,24 +1316,27 @@ CollisionManager::update() - 시작 (프레임 47)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((6.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 48 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.399999, 0.000000, 0.000000)
+Object2 position: (6.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 48)
@@ -1549,24 +1350,27 @@ CollisionManager::update() - 시작 (프레임 48)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((6.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 49 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.449999, 0.000000, 0.000000)
+Object2 position: (5.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 49)
@@ -1580,24 +1384,27 @@ CollisionManager::update() - 시작 (프레임 49)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((5.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 50 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.499999, 0.000000, 0.000000)
+Object2 position: (5.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 50)
@@ -1611,24 +1418,27 @@ CollisionManager::update() - 시작 (프레임 50)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((5.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 51 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.549999, 0.000000, 0.000000)
+Object2 position: (4.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 51)
@@ -1642,24 +1452,27 @@ CollisionManager::update() - 시작 (프레임 51)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((4.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 52 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.599999, 0.000000, 0.000000)
+Object2 position: (4.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 52)
@@ -1673,24 +1486,27 @@ CollisionManager::update() - 시작 (프레임 52)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((4.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 53 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.649999, 0.000000, 0.000000)
+Object2 position: (3.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 53)
@@ -1704,24 +1520,27 @@ CollisionManager::update() - 시작 (프레임 53)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((3.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 54 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.699999, 0.000000, 0.000000)
+Object2 position: (3.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 54)
@@ -1735,24 +1554,27 @@ CollisionManager::update() - 시작 (프레임 54)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((3.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 55 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.749999, 0.000000, 0.000000)
+Object2 position: (2.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 55)
@@ -1766,24 +1588,27 @@ CollisionManager::update() - 시작 (프레임 55)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((2.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 56 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.799999, 0.000000, 0.000000)
+Object2 position: (2.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 56)
@@ -1797,24 +1622,27 @@ CollisionManager::update() - 시작 (프레임 56)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((2.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 57 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.849999, 0.000000, 0.000000)
+Object2 position: (1.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 57)
@@ -1828,24 +1656,27 @@ CollisionManager::update() - 시작 (프레임 57)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((1.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 58 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.899999, 0.000000, 0.000000)
+Object2 position: (1.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 58)
@@ -1859,24 +1690,27 @@ CollisionManager::update() - 시작 (프레임 58)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((1.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 59 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.949999, 0.000000, 0.000000)
+Object2 position: (0.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 59)
@@ -1890,24 +1724,27 @@ CollisionManager::update() - 시작 (프레임 59)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((0.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 60 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-0.999999, 0.000000, 0.000000)
+Object2 position: (0.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 60)
@@ -1921,24 +1758,27 @@ CollisionManager::update() - 시작 (프레임 60)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((0.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 61 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.049999, 0.000000, 0.000000)
+Object2 position: (-0.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 61)
@@ -1952,24 +1792,27 @@ CollisionManager::update() - 시작 (프레임 61)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-0.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 62 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.099999, 0.000000, 0.000000)
+Object2 position: (-1.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 62)
@@ -1983,24 +1826,27 @@ CollisionManager::update() - 시작 (프레임 62)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-1.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 63 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.149999, 0.000000, 0.000000)
+Object2 position: (-1.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 63)
@@ -2014,24 +1860,27 @@ CollisionManager::update() - 시작 (프레임 63)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-1.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 64 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.199999, 0.000000, 0.000000)
+Object2 position: (-2.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 64)
@@ -2045,24 +1894,27 @@ CollisionManager::update() - 시작 (프레임 64)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-2.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 65 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.249999, 0.000000, 0.000000)
+Object2 position: (-2.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 65)
@@ -2076,24 +1928,27 @@ CollisionManager::update() - 시작 (프레임 65)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-2.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 66 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.299999, 0.000000, 0.000000)
+Object2 position: (-3.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 66)
@@ -2107,24 +1962,27 @@ CollisionManager::update() - 시작 (프레임 66)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-3.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 67 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.349999, 0.000000, 0.000000)
+Object2 position: (-3.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 67)
@@ -2138,24 +1996,27 @@ CollisionManager::update() - 시작 (프레임 67)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-3.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 68 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.399999, 0.000000, 0.000000)
+Object2 position: (-4.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 68)
@@ -2169,24 +2030,27 @@ CollisionManager::update() - 시작 (프레임 68)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-4.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 69 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.449999, 0.000000, 0.000000)
+Object2 position: (-4.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 69)
@@ -2200,24 +2064,27 @@ CollisionManager::update() - 시작 (프레임 69)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-4.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 70 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.499999, 0.000000, 0.000000)
+Object2 position: (-5.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 70)
@@ -2231,24 +2098,27 @@ CollisionManager::update() - 시작 (프레임 70)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-5.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 71 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.549999, 0.000000, 0.000000)
+Object2 position: (-5.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 71)
@@ -2262,24 +2132,27 @@ CollisionManager::update() - 시작 (프레임 71)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-5.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 72 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.599999, 0.000000, 0.000000)
+Object2 position: (-6.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 72)
@@ -2293,24 +2166,27 @@ CollisionManager::update() - 시작 (프레임 72)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-6.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 73 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.649999, 0.000000, 0.000000)
+Object2 position: (-6.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 73)
@@ -2324,24 +2200,27 @@ CollisionManager::update() - 시작 (프레임 73)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-6.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 74 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.699999, 0.000000, 0.000000)
+Object2 position: (-7.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 74)
@@ -2355,24 +2234,27 @@ CollisionManager::update() - 시작 (프레임 74)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-7.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 75 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.749999, 0.000000, 0.000000)
+Object2 position: (-7.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 75)
@@ -2386,24 +2268,27 @@ CollisionManager::update() - 시작 (프레임 75)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-7.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 76 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.799999, 0.000000, 0.000000)
+Object2 position: (-8.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 76)
@@ -2417,24 +2302,27 @@ CollisionManager::update() - 시작 (프레임 76)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-8.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 77 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.849999, 0.000000, 0.000000)
+Object2 position: (-8.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 77)
@@ -2448,24 +2336,27 @@ CollisionManager::update() - 시작 (프레임 77)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-8.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 78 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.899999, 0.000000, 0.000000)
+Object2 position: (-9.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 78)
@@ -2479,24 +2370,27 @@ CollisionManager::update() - 시작 (프레임 78)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-9.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 79 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.949998, 0.000000, 0.000000)
+Object2 position: (-9.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 79)
@@ -2510,24 +2404,27 @@ CollisionManager::update() - 시작 (프레임 79)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-9.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 80 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-1.999998, 0.000000, 0.000000)
+Object2 position: (-10.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 80)
@@ -2541,24 +2438,27 @@ CollisionManager::update() - 시작 (프레임 80)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-10.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 81 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.049999, 0.000000, 0.000000)
+Object2 position: (-10.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 81)
@@ -2572,24 +2472,27 @@ CollisionManager::update() - 시작 (프레임 81)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-10.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 82 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.099998, 0.000000, 0.000000)
+Object2 position: (-11.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 82)
@@ -2603,24 +2506,27 @@ CollisionManager::update() - 시작 (프레임 82)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-11.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 83 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.149998, 0.000000, 0.000000)
+Object2 position: (-11.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 83)
@@ -2634,24 +2540,27 @@ CollisionManager::update() - 시작 (프레임 83)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-11.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 84 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.199998, 0.000000, 0.000000)
+Object2 position: (-12.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 84)
@@ -2665,24 +2574,27 @@ CollisionManager::update() - 시작 (프레임 84)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-12.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 85 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.249998, 0.000000, 0.000000)
+Object2 position: (-12.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 85)
@@ -2696,24 +2608,27 @@ CollisionManager::update() - 시작 (프레임 85)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-12.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 86 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.299998, 0.000000, 0.000000)
+Object2 position: (-13.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 86)
@@ -2727,24 +2642,27 @@ CollisionManager::update() - 시작 (프레임 86)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-13.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 87 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.349998, 0.000000, 0.000000)
+Object2 position: (-13.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 87)
@@ -2758,24 +2676,27 @@ CollisionManager::update() - 시작 (프레임 87)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-13.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 88 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.399998, 0.000000, 0.000000)
+Object2 position: (-14.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 88)
@@ -2789,24 +2710,27 @@ CollisionManager::update() - 시작 (프레임 88)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-14.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 89 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.449998, 0.000000, 0.000000)
+Object2 position: (-14.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 89)
@@ -2820,24 +2744,27 @@ CollisionManager::update() - 시작 (프레임 89)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-14.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 90 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.499998, 0.000000, 0.000000)
+Object2 position: (-15.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 90)
@@ -2851,24 +2778,27 @@ CollisionManager::update() - 시작 (프레임 90)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-15.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 91 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.549998, 0.000000, 0.000000)
+Object2 position: (-15.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 91)
@@ -2882,24 +2812,27 @@ CollisionManager::update() - 시작 (프레임 91)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-15.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 92 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.599998, 0.000000, 0.000000)
+Object2 position: (-16.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 92)
@@ -2913,24 +2846,27 @@ CollisionManager::update() - 시작 (프레임 92)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-16.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 93 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.649998, 0.000000, 0.000000)
+Object2 position: (-16.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 93)
@@ -2944,24 +2880,27 @@ CollisionManager::update() - 시작 (프레임 93)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-16.500000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
   GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
+  GJK 결과: 충돌
+  충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
-Object1 colliding: No
-Object2 colliding: No
+Object1 colliding: Yes
+Object2 colliding: Yes
 잠시 대기
 
 --- Frame 94 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.699998, 0.000000, 0.000000)
+Object2 position: (-17.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 94)
@@ -2975,6 +2914,7 @@ CollisionManager::update() - 시작 (프레임 94)
     쌍 1: 'Object1' 와 'Object2'
       narrowPhase 실행...
 >> checkGJKCollision 시작: Object1 vs Object2
+  객체 위치: Object1=((0.000000, 0.000000, 0.000000)), Object2=((-17.000000, 0.000000, 0.000000))
   객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
   비분해 객체 처리: 단일 ConvexHull 생성
   생성된 ConvexHull 정점 수: Object1=1598, Object2=564
@@ -2982,6 +2922,7 @@ CollisionManager::update() - 시작 (프레임 94)
   GJK 결과: 충돌 없음
   checkGJKCollision 완료: 충돌 없음
       충돌 결과: 충돌 없음
+      이전 충돌 상태 제거
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -2992,7 +2933,7 @@ Object2 colliding: No
 --- Frame 95 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.749998, 0.000000, 0.000000)
+Object2 position: (-17.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 95)
@@ -3001,18 +2942,8 @@ CollisionManager::update() - 시작 (프레임 95)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -3023,7 +2954,7 @@ Object2 colliding: No
 --- Frame 96 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.799998, 0.000000, 0.000000)
+Object2 position: (-18.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 96)
@@ -3032,18 +2963,8 @@ CollisionManager::update() - 시작 (프레임 96)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -3054,7 +2975,7 @@ Object2 colliding: No
 --- Frame 97 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.849998, 0.000000, 0.000000)
+Object2 position: (-18.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 97)
@@ -3063,18 +2984,8 @@ CollisionManager::update() - 시작 (프레임 97)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -3085,7 +2996,7 @@ Object2 colliding: No
 --- Frame 98 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.899998, 0.000000, 0.000000)
+Object2 position: (-19.000000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 98)
@@ -3094,18 +3005,8 @@ CollisionManager::update() - 시작 (프레임 98)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료
@@ -3116,7 +3017,7 @@ Object2 colliding: No
 --- Frame 99 ---
 Updating object positions...
 Object1 position: (0.000000, 0.000000, 0.000000)
-Object2 position: (-2.949998, 0.000000, 0.000000)
+Object2 position: (-19.500000, 0.000000, 0.000000)
 Updating objects...
 Running collision detection...
 CollisionManager::update() - 시작 (프레임 99)
@@ -3125,18 +3026,8 @@ CollisionManager::update() - 시작 (프레임 99)
     객체 'Object1' 업데이트
     객체 'Object2' 업데이트
   대략적 충돌 감지(Broad Phase) 중...
-    잠재적 충돌 쌍: 1개
+    잠재적 충돌 쌍: 0개
   정밀 충돌 감지(Narrow Phase) 시작...
-    쌍 1: 'Object1' 와 'Object2'
-      narrowPhase 실행...
->> checkGJKCollision 시작: Object1 vs Object2
-  객체 분해 상태: Object1=분해 안됨, Object2=분해 안됨
-  비분해 객체 처리: 단일 ConvexHull 생성
-  생성된 ConvexHull 정점 수: Object1=1598, Object2=564
-  GJK 충돌 검사 시작...
-  GJK 결과: 충돌 없음
-  checkGJKCollision 완료: 충돌 없음
-      충돌 결과: 충돌 없음
   이전 충돌 상태 정리 중...
   충돌 상태 맵 업데이트
 CollisionManager::update() - 완료

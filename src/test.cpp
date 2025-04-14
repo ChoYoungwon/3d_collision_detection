@@ -46,7 +46,7 @@ int main() {
     
     // 4. 객체 위치 설정 (충돌 시나리오 생성)
     object1->setPosition(Vector3(0, 0, 0));
-    object2->setPosition(Vector3(2, 0, 0));  // 처음에는 멀리 배치
+    object2->setPosition(Vector3(30, 0, 0));  // 처음에는 멀리 배치
     
     // 5. 충돌 콜백 설정
     object1->setOnCollisionEnter([](const CollisionInfo& info) {
@@ -82,7 +82,7 @@ int main() {
         // 8.1. 객체 위치 업데이트 (서로 가까워지게)
         if (frame > 0) {
             Vector3 pos2 = object2->getPosition();
-            pos2.x -= 0.05f;  // 각 프레임마다 x축으로 움직임
+            pos2.x -= 0.5f;  // 각 프레임마다 x축으로 움직임
             object2->setPosition(pos2);
             
             std::cout << "Object1 position: " << object1->getPosition().toString() << std::endl;

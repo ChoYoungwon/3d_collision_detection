@@ -10,6 +10,8 @@ CMakeFiles/collision_test.dir/src/collision/GJK.cpp.o
  /home/youngwon/3d_collision_detection/include/decomposition/ConvexHull.h
  /home/youngwon/3d_collision_detection/include/math/Vector3.h
  /home/youngwon/3d_collision_detection/include/collision/GJK.h
+ /home/youngwon/3d_collision_detection/include/math/Matrix3x3.h
+ /home/youngwon/3d_collision_detection/include/math/Quaternion.h
  /home/youngwon/3d_collision_detection/include/math/Vector3.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h

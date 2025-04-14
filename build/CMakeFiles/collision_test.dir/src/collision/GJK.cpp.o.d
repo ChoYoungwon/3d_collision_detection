@@ -169,4 +169,7 @@ CMakeFiles/collision_test.dir/src/collision/GJK.cpp.o: \
  /usr/include/c++/9/bits/erase_if.h /usr/include/c++/9/tuple \
  /usr/include/c++/9/array /usr/include/c++/9/bits/uses_allocator.h \
  /usr/include/c++/9/bits/invoke.h /usr/include/c++/9/functional \
- /usr/include/c++/9/bits/refwrap.h /usr/include/c++/9/bits/std_function.h
+ /usr/include/c++/9/bits/refwrap.h /usr/include/c++/9/bits/std_function.h \
+ /home/youngwon/3d_collision_detection/include/math/Quaternion.h \
+ /home/youngwon/3d_collision_detection/include/math/Vector3.h \
+ /home/youngwon/3d_collision_detection/include/math/Matrix3x3.h

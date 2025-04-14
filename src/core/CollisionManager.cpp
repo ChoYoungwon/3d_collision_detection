@@ -215,6 +215,14 @@ bool CollisionManager::checkAABBCollision(Object3D* objA, Object3D* objB) {
 bool CollisionManager::checkGJKCollision(Object3D* objA, Object3D* objB, CollisionInfo& collisionInfo) {
     std::cout << ">> checkGJKCollision 시작: " << objA->getName() << " vs " << objB->getName() << std::endl;
     
+    // 객체 위치 가져오기
+    Vector3 posA = objA->getPosition();
+    Vector3 posB = objB->getPosition();
+    
+    std::cout << "  객체 위치: " << objA->getName() << "=(" << posA.toString() << ")"
+            << ", " << objB->getName() << "=(" << posB.toString() << ")" << std::endl;
+
+
     // objA와 objB가 볼록 분해되어 있는지 확인
     std::cout << "  객체 분해 상태: " << objA->getName() << "=" << (objA->isDecomposed() ? "분해됨" : "분해 안됨")
               << ", " << objB->getName() << "=" << (objB->isDecomposed() ? "분해됨" : "분해 안됨") << std::endl;
@@ -243,7 +251,7 @@ bool CollisionManager::checkGJKCollision(Object3D* objA, Object3D* objB, Collisi
                 std::cout << "      GJK 충돌 검사 시작..." << std::endl;
                 bool result = false;
                 try {
-                    result = gjkSolver.Intersect(hullA, hullB);
+                    result = gjkSolver.Intersect(hullA, hullB, posA, posB);
                     std::cout << "      GJK 결과: " << (result ? "충돌" : "충돌 없음") << std::endl;
                 } catch (const std::exception& e) {
                     std::cout << "      GJK 예외 발생: " << e.what() << std::endl;
@@ -284,7 +292,7 @@ bool CollisionManager::checkGJKCollision(Object3D* objA, Object3D* objB, Collisi
         std::cout << "  GJK 충돌 검사 시작..." << std::endl;
         bool result = false;
         try {
-            result = gjkSolver.Intersect(hullA, hullB);
+            result = gjkSolver.Intersect(hullA, hullB, posA, posB);
             std::cout << "  GJK 결과: " << (result ? "충돌" : "충돌 없음") << std::endl;
         } catch (const std::exception& e) {
             std::cout << "  GJK 예외 발생: " << e.what() << std::endl;
