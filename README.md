@@ -22,7 +22,7 @@
 - **핵심**: Support Function, Minkowski Difference
 - **용도**: 복잡한 형태 정밀 검사 (Narrow Phase)
 
-## 🔧 주요 클래스
+## 주요 클래스
 
 - **Vector3**: 3D 벡터 연산 (내적, 외적 등)
 - **AABB**: 축 정렬 경계 박스
@@ -36,7 +36,7 @@
 1. **Broad Phase**: AABB로 빠른 1차 검사
 2. **Narrow Phase**: GJK/SAT로 정밀 검사
 
-## 🛠️ 요구사항
+## 요구사항
 - C++17
 - V-HACD (볼록 분해용)
 - OpenGL (시뮬레이션 용도)
