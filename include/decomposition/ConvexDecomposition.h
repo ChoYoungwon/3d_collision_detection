@@ -22,17 +22,17 @@ struct VHACDParameters {
     
     // 기본 파라미터 설정
     VHACDParameters() 
-        : maxConvexHulls(64), 
-          resolution(400000),
+        : maxConvexHulls(128), 
+          resolution(1000000),
           minimumVolumePercentErrorAllowed(1.0),
-          maxRecursionDepth(10),
+          maxRecursionDepth(15),
           shrinkWrap(true),
           fillMode(0),  // FLOOD_FILL
-          maxNumVerticesPerCH(64),
+          maxNumVerticesPerCH(128),
           asyncACD(true),
           minEdgeLength(2),
           findBestPlane(false),
-          minVolumePerCH(0.01) {}
+          minVolumePerCH(0.001) {}
 };
 
 class ConvexDecomposition {

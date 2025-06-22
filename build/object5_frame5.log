@@ -1,0 +1,315 @@
+설정 객체 수 : 5
+Maximum convex hulls set to: 128
+Voxel Resolution set to: 1000000
+Minimum volume error allowed set to: 0.00%
+Maximum recursion depth set to: 15
+Maximum hull vertices set to: 128
+
+[COMPUTE_BOUNDS_OF_INPUT_MESH            ] : 0% : 0% : ComputingBounds[COMPUTE_BOUNDS_OF_INPUT_MESH            ] : 0% : 100% : ComputingBounds
+[CREATE_RAYCAST_MESH                     ] : 20% : 0% : Building RaycastMesh[CREATE_RAYCAST_MESH                     ] : 20% : 100% : RaycastMesh completed
+[VOXELIZING_INPUT_MESH                   ] : 30% : 0% : Voxelizing Input Mesh[VOXELIZING_INPUT_MESH                   ] : 30% : 100% : Voxelization complete
+[BUILD_INITIAL_CONVEX_HULL               ] : 40% : 0% : Build initial ConvexHull[BUILD_INITIAL_CONVEX_HULL               ] : 40% : 100% : Initial ConvexHull complete
+[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 1% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 2% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 3% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 5% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 10% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 17% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 23% : Performing recursive decomposition of convex hulls
+[INITIALIZING_CONVEX_HULLS_FOR_MERGING   ] : 60% : 0% : Initializing ConvexHulls[INITIALIZING_CONVEX_HULLS_FOR_MERGING   ] : 60% : 100% : ConvexHull initialization complete
+[COMPUTING_COST_MATRIX                   ] : 70% : 0% : Computing Hull Merge Cost Matrix[COMPUTING_COST_MATRIX                   ] : 70% : 100% : Finished cost matrix
+[MERGING_CONVEX_HULLS                    ] : 80% : 1% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 1% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 2% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 3% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 3% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 4% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 5% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 5% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 6% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 7% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 7% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 8% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 8% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 9% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 10% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 10% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 11% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 12% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 12% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 13% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 13% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 14% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 15% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 15% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 16% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 16% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 17% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 18% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 18% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 19% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 20% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 20% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 21% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 22% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 22% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 23% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 24% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 25% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 25% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 26% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 27% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 28% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 28% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 29% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 29% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 30% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 31% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 31% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 32% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 33% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 34% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 34% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 35% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 36% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 37% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 38% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 38% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 39% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 40% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 41% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 42% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 43% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 43% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 44% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 45% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 45% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 46% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 47% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 48% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 49% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 49% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 50% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 51% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 51% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 52% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 53% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 53% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 54% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 55% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 56% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 56% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 57% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 58% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 59% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 59% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 60% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 61% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 62% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 63% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 64% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 65% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 66% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 67% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 68% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 69% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 70% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 71% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 72% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 73% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 74% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 76% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 77% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 78% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 79% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 80% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 81% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 82% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 83% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 84% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 86% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 87% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 88% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 89% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 90% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 91% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 92% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 93% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 94% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 95% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 96% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 97% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 97% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 98% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 98% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls
+[FINALIZING_RESULTS                      ] : 90% : 0% : Finalizing results[FINALIZING_RESULTS                      ] : 90% : 100% : Finalized results complete
+Convex Decomposition took 2.83333 seconds
+Merging Convex Hulls took 14.47388 seconds
+Computing the Cost Matrix took 19.05346 seconds
+VHACD::Complete
+Computing Convex Decomposition took 22.74261 seconds
+Saving Convex Decomposition results of 128 convex hulls to 'decomp.obj'
+Saving convex hull results to a single file 'decomp.stl'
+Object1 decomposed successfully
+템플릿 객체의 볼록 껍질 개수: 128
+Updating object positions...
+
+--- Frame 0 ---
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Running collision detection...
+CollisionManager::update() - 시작 (프레임 0)
+  객체 목록 크기: 5
+  각 객체의 AABB 업데이트 중...
+    객체 'Object1' 업데이트
+    객체 'Object2' 업데이트
+    객체 'Object3' 업데이트
+    객체 'Object4' 업데이트
+    객체 'Object5' 업데이트
+  대략적 충돌 감지(Broad Phase) 중...
+    잠재적 충돌 쌍: 1개
+  정밀 충돌 감지(Narrow Phase) 시작...
+    쌍 1: 'Object4' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object5
+  볼록 껍질 개수: Object4=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+Object4 collision enter with Object5
+Contact point: (1.500000, 2.500000, 3.000000)
+Contact normal: (0.707107, 0.707107, 0.000000)
+Penetration depth: 0.1
+Object5 collision enter with Object4
+Contact point: (1.500000, 2.500000, 3.000000)
+Contact normal: (-0.707107, -0.707107, -0.000000)
+Penetration depth: 0.1
+  이전 충돌 상태 정리 중...
+  충돌 상태 맵 업데이트
+CollisionManager::update() - 완료
+
+--- Frame 1 ---
+Object0 position: (2.198216, 1.465477, 0.732739)
+Updating objects...
+Object1 position: (2.311753, 0.770584, 2.311753)
+Updating objects...
+Object2 position: (1.105573, 0.000000, 0.552786)
+Updating objects...
+Object3 position: (0.732739, 1.465477, 2.198216)
+Updating objects...
+Object4 position: (1.573599, 2.360398, 2.360398)
+Updating objects...
+Running collision detection...
+CollisionManager::update() - 시작 (프레임 1)
+  객체 목록 크기: 5
+  각 객체의 AABB 업데이트 중...
+    객체 'Object1' 업데이트
+    객체 'Object2' 업데이트
+    객체 'Object3' 업데이트
+    객체 'Object4' 업데이트
+    객체 'Object5' 업데이트
+  대략적 충돌 감지(Broad Phase) 중...
+    잠재적 충돌 쌍: 4개
+  정밀 충돌 감지(Narrow Phase) 시작...
+    쌍 1: 'Object1' 와 'Object3'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object3
+  볼록 껍질 개수: Object1=128, Object3=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 2: 'Object2' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object4
+  볼록 껍질 개수: Object2=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+Object2 collision enter with Object4
+Contact point: (1.522246, 1.118031, 2.254985)
+Contact normal: (-0.913312, 0.401931, -0.065670)
+Penetration depth: 0.1
+    쌍 3: 'Object2' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object5
+  볼록 껍질 개수: Object2=128, Object5=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 4: 'Object4' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object5
+  볼록 껍질 개수: Object4=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+  이전 충돌 상태 정리 중...
+  충돌 상태 맵 업데이트
+CollisionManager::update() - 완료
+
+--- Frame 2 ---
+Object0 position: (1.396433, 0.930955, 0.465477)
+Updating objects...
+Object1 position: (1.623506, 0.541169, 1.623506)
+Updating objects...
+Object2 position: (0.211146, 0.000000, 0.105573)
+Updating objects...
+Object3 position: (0.465477, 0.930955, 1.396433)
+Updating objects...
+Object4 position: (1.147197, 1.720796, 1.720796)
+Updating objects...
+Running collision detection...
+CollisionManager::update() - 시작 (프레임 2)
+  객체 목록 크기: 5
+  각 객체의 AABB 업데이트 중...
+    객체 'Object1' 업데이트
+    객체 'Object2' 업데이트
+    객체 'Object3' 업데이트
+    객체 'Object4' 업데이트
+    객체 'Object5' 업데이트
+  대략적 충돌 감지(Broad Phase) 중...
+    잠재적 충돌 쌍: 8개
+  정밀 충돌 감지(Narrow Phase) 시작...
+    쌍 1: 'Object1' 와 'Object2'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object2
+  볼록 껍질 개수: Object1=128, Object2=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 2: 'Object1' 와 'Object3'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object3
+  볼록 껍질 개수: Object1=128, Object3=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 3: 'Object1' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object4
+  볼록 껍질 개수: Object1=128, Object4=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 4: 'Object1' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object5
+  볼록 껍질 개수: Object1=128, Object5=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 5: 'Object2' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object4
+  볼록 껍질 개수: Object2=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+    쌍 6: 'Object2' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object5
+  볼록 껍질 개수: Object2=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+    쌍 7: 'Object3' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object4
+  볼록 껍질 개수: Object3=128, Object4=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 8: 'Object4' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object5
+  볼록 껍질 개수: Object4=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+  이전 충돌 상태 정리 중...
+  충돌 상태 맵 업데이트
+CollisionManager::update() - 완료
+
+--- Frame 3 ---
+Object0 position: (0.594649, 0.396433, 0.198216)
+Updating objects...
+Object1 position: (0.935258, 0.311753, 0.935258)
+Updating objects...
+Object2 position: (-0.683281, 0.000000, -0.341641)
+Updating objects...
+Object3 position: (0.198216, 0.396433, 0.594649)
+Updating objects...
+Object4 position: (0.720796, 1.081193, 1.081193)
+Updating objects...
+Running collision detection...
+CollisionManager::update() - 시작 (프레임 3)
+  객체 목록 크기: 5
+  각 객체의 AABB 업데이트 중...
+    객체 'Object1' 업데이트
+    객체 'Object2' 업데이트
+    객체 'Object3' 업데이트
+    객체 'Object4' 업데이트
+    객체 'Object5' 업데이트
+  대략적 충돌 감지(Broad Phase) 중...
+    잠재적 충돌 쌍: 9개
+  정밀 충돌 감지(Narrow Phase) 시작...
+    쌍 1: 'Object1' 와 'Object2'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object2
+  볼록 껍질 개수: Object1=128, Object2=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+Object1 collision enter with Object2
+Contact point: (0.764954, 0.354093, 0.566737)
+Contact normal: (0.417238, -0.103731, 0.902858)
+Penetration depth: 0.1
+    쌍 2: 'Object1' 와 'Object3'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object3
+  볼록 껍질 개수: Object1=128, Object3=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 3: 'Object1' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object4
+  볼록 껍질 개수: Object1=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+    쌍 4: 'Object1' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object5
+  볼록 껍질 개수: Object1=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+    쌍 5: 'Object2' 와 'Object3'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object3
+  볼록 껍질 개수: Object2=128, Object3=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 6: 'Object2' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object4
+  볼록 껍질 개수: Object2=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+    쌍 7: 'Object2' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object5
+  볼록 껍질 개수: Object2=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+    쌍 8: 'Object3' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object4
+  볼록 껍질 개수: Object3=128, Object4=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 9: 'Object4' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object5
+  볼록 껍질 개수: Object4=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+  이전 충돌 상태 정리 중...
+  충돌 상태 맵 업데이트
+CollisionManager::update() - 완료
+
+*	 DS_timer Report 	*
+* The number of timer = 8, counter = 8
+**** Timer report ****
+[전체 시뮬레이션 시간] : 313.88400 ms (313.88400 ms)
+[충돌 감지 시간] : 313.65200 ms (313.65200 ms)
+[AABB 탐색 시간] : 0.07300 ms (0.07300 ms)
+[GJK 탐색 시간] : 313.53200 ms (313.53200 ms)
+[프레임0] : 1.44500 ms (1.44500 ms)
+[프레임1] : 62.48800 ms (62.48800 ms)
+[프레임2] : 151.84400 ms (151.84400 ms)
+[프레임3] : 98.05200 ms (98.05200 ms)
+**** Counter report ****
+*	 End of the report 	*

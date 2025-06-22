@@ -1,0 +1,3941 @@
+설정 객체 수 : 20
+Maximum convex hulls set to: 128
+Voxel Resolution set to: 1000000
+Minimum volume error allowed set to: 0.00%
+Maximum recursion depth set to: 15
+Maximum hull vertices set to: 128
+
+[COMPUTE_BOUNDS_OF_INPUT_MESH            ] : 0% : 0% : ComputingBounds[COMPUTE_BOUNDS_OF_INPUT_MESH            ] : 0% : 100% : ComputingBounds
+[CREATE_RAYCAST_MESH                     ] : 20% : 0% : Building RaycastMesh[CREATE_RAYCAST_MESH                     ] : 20% : 100% : RaycastMesh completed
+[VOXELIZING_INPUT_MESH                   ] : 30% : 0% : Voxelizing Input Mesh[VOXELIZING_INPUT_MESH                   ] : 30% : 100% : Voxelization complete
+[BUILD_INITIAL_CONVEX_HULL               ] : 40% : 0% : Build initial ConvexHull[BUILD_INITIAL_CONVEX_HULL               ] : 40% : 100% : Initial ConvexHull complete
+[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 0% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 1% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 2% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 5% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 10% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 17% : Performing recursive decomposition of convex hulls[PERFORMING_DECOMPOSITION                ] : 50% : 23% : Performing recursive decomposition of convex hulls
+[INITIALIZING_CONVEX_HULLS_FOR_MERGING   ] : 60% : 0% : Initializing ConvexHulls[INITIALIZING_CONVEX_HULLS_FOR_MERGING   ] : 60% : 100% : ConvexHull initialization complete
+[COMPUTING_COST_MATRIX                   ] : 70% : 0% : Computing Hull Merge Cost Matrix[COMPUTING_COST_MATRIX                   ] : 70% : 100% : Finished cost matrix
+[MERGING_CONVEX_HULLS                    ] : 80% : 1% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 1% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 2% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 3% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 3% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 4% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 5% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 5% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 6% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 7% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 7% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 8% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 9% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 9% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 10% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 10% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 11% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 12% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 12% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 13% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 14% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 14% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 15% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 15% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 16% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 16% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 17% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 18% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 18% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 19% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 20% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 20% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 21% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 22% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 22% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 23% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 23% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 24% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 25% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 25% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 26% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 27% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 27% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 28% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 28% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 29% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 30% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 30% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 31% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 32% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 33% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 34% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 34% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 35% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 36% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 36% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 37% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 38% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 38% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 39% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 39% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 40% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 41% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 42% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 43% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 43% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 44% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 45% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 45% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 46% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 47% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 47% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 48% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 49% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 49% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 50% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 51% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 51% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 52% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 53% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 54% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 55% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 55% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 56% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 57% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 58% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 58% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 59% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 60% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 61% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 61% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 62% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 63% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 64% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 65% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 66% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 66% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 67% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 68% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 69% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 71% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 72% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 73% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 74% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 76% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 77% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 78% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 79% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 80% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 81% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 82% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 83% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 84% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 85% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 86% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 87% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 89% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 90% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 91% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 92% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 93% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 94% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 95% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 96% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 96% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 97% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 98% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 98% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 98% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 99% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls[MERGING_CONVEX_HULLS                    ] : 80% : 100% : Merging Convex Hulls
+[FINALIZING_RESULTS                      ] : 90% : 0% : Finalizing results[FINALIZING_RESULTS                      ] : 90% : 100% : Finalized results complete
+Convex Decomposition took 3.07044 seconds
+Merging Convex Hulls took 15.58748 seconds
+Computing the Cost Matrix took 22.19563 seconds
+VHACD::Complete
+Computing Convex Decomposition took 26.11319 seconds
+Saving Convex Decomposition results of 128 convex hulls to 'decomp.obj'
+Saving convex hull results to a single file 'decomp.stl'
+Object1 decomposed successfully
+템플릿 객체의 볼록 껍질 개수: 128
+Updating object positions...
+
+--- Frame 0 ---
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Updating objects...
+Running collision detection...
+CollisionManager::update() - 시작 (프레임 0)
+  객체 목록 크기: 20
+  각 객체의 AABB 업데이트 중...
+    객체 'Object1' 업데이트
+    객체 'Object2' 업데이트
+    객체 'Object3' 업데이트
+    객체 'Object4' 업데이트
+    객체 'Object5' 업데이트
+    객체 'Object6' 업데이트
+    객체 'Object7' 업데이트
+    객체 'Object8' 업데이트
+    객체 'Object9' 업데이트
+    객체 'Object10' 업데이트
+    객체 'Object11' 업데이트
+    객체 'Object12' 업데이트
+    객체 'Object13' 업데이트
+    객체 'Object14' 업데이트
+    객체 'Object15' 업데이트
+    객체 'Object16' 업데이트
+    객체 'Object17' 업데이트
+    객체 'Object18' 업데이트
+    객체 'Object19' 업데이트
+    객체 'Object20' 업데이트
+  대략적 충돌 감지(Broad Phase) 중...
+    잠재적 충돌 쌍: 28개
+  정밀 충돌 감지(Narrow Phase) 시작...
+    쌍 1: 'Object1' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object7
+    쌍   볼록 껍질 개수: Object1=128, Object7=1288
+: 'Object4' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object20
+  볼록 껍질 개수: Object4=128, Object20=128
+    쌍 15: 'Object7' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object9
+  볼록 껍질 개수: Object7=128, Object9=128
+    쌍 22: 'Object11' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object13
+  볼록 껍질 개수: Object11=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 16: 'Object7' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object10
+  볼록 껍질 개수: Object7=128, Object10=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 2: 'Object1' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object9
+  볼록 껍질 개수: Object1=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 3: 'Object1' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object11
+  볼록 껍질 개수: Object1=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 4: 'Object1' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object13
+  볼록 껍질 개수: Object1=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 9: 'Object5' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object15
+  볼록 껍질 개수: Object5=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 5: 'Object3' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object16
+  볼록 껍질 개수: Object3=128, Object16=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 23: 'Object12' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object14
+  볼록 껍질 개수: Object12=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 6: 'Object4' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object7
+  볼록 껍질 개수: Object4=128, Object7=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 17: 'Object7' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object13
+  볼록 껍질 개수: Object7=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 18: 'Object7' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object18
+  볼록 껍질 개수: Object7=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 10: 'Object5' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object19
+  볼록 껍질 개수: Object5=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 24: 'Object14' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object15
+  볼록 껍질 개수: Object14=128, Object15=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 7: 'Object4' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object19
+  볼록 껍질 개수: Object4=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 19: 'Object8' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object16
+  볼록 껍질 개수: Object8=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 20: 'Object9' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object13
+  볼록 껍질 개수: Object9=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 11: 'Object6' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object7
+  볼록 껍질 개수: Object6=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 12: 'Object6' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object9
+  볼록 껍질 개수: Object6=128, Object9=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 25: 'Object14' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object16
+  볼록 껍질 개수: Object14=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 26: 'Object14' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object19
+  볼록 껍질 개수: Object14=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 21: 'Object10' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object13
+  볼록 껍질 개수: Object10=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 13: 'Object6' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object18
+  볼록 껍질 개수: Object6=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 27: 'Object15' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object15 vs Object16
+  볼록 껍질 개수: Object15=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 28: 'Object18' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object18 vs Object20
+  볼록 껍질 개수: Object18=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 14: 'Object6' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object20
+  볼록 껍질 개수: Object6=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+      충돌 정보 객체에 추가
+Object1 collision enter with Object9
+Contact point: (2.500000, 0.500000, 2.000000)
+Contact normal: (-0.707107, -0.707107, 0.000000)
+Penetration depth: 0.1
+Object9 collision enter with Object1
+Contact point: (2.500000, 0.500000, 2.000000)
+Contact normal: (0.707107, 0.707107, -0.000000)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object11 collision enter with Object1
+Contact point: (3.500000, 1.500000, 2.000000)
+Contact normal: (-0.707107, -0.707107, -0.000000)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object13 collision enter with Object1
+Contact point: (3.000000, 1.000000, 1.500000)
+Contact normal: (-0.000000, -0.000000, 1.000000)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object3 collision enter with Object16
+Contact point: (1.500000, 2.500000, 4.000000)
+Contact normal: (0.707107, 0.707107, 0.000000)
+Penetration depth: 0.1
+Object16 collision enter with Object3
+Contact point: (1.500000, 2.500000, 4.000000)
+Contact normal: (-0.707107, -0.707107, -0.000000)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object4 collision enter with Object19
+Contact point: (1.000000, 2.500000, 2.000000)
+Contact normal: (0.000000, 1.000000, 0.000000)
+Penetration depth: 0.1
+Object19 collision enter with Object4
+Contact point: (1.000000, 2.500000, 2.000000)
+Contact normal: (-0.000000, -1.000000, -0.000000)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object6 collision enter with Object7
+Contact point: (1.500000, 0.500000, 1.000000)
+Contact normal: (0.707107, 0.707107, 0.000000)
+Penetration depth: 0.1
+Object7 collision enter with Object6
+Contact point: (1.500000, 0.500000, 1.000000)
+Contact normal: (-0.707107, -0.707107, -0.000000)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object18 collision enter with Object6
+Contact point: (1.000000, 0.500000, 0.500000)
+Contact normal: (-0.000000, -0.707107, 0.707107)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object20 collision enter with Object6
+Contact point: (0.500000, 0.500000, 1.000000)
+Contact normal: (0.707107, -0.707107, -0.000000)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+Object8 collision enter with Object16
+Contact point: (2.500000, 2.500000, 4.000000)
+Contact normal: (-0.707107, 0.707107, 0.000000)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object10 collision enter with Object13
+Contact point: (3.000000, 1.500000, 0.500000)
+Contact normal: (0.000000, -0.707107, 0.707107)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object14 collision enter with Object16
+Contact point: (2.000000, 3.500000, 3.500000)
+Contact normal: (0.000000, -0.707107, 0.707107)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+Object15 collision enter with Object16
+Contact point: (1.500000, 3.500000, 4.000000)
+Contact normal: (0.707107, -0.707107, 0.000000)
+Penetration depth: 0.1
+  이전 충돌 상태 정리 중...
+  충돌 상태 맵 업데이트
+CollisionManager::update() - 완료
+
+--- Frame 1 ---
+Object0 position: (2.198216, 0.732739, 1.465477)
+Updating objects...
+Object1 position: (0.000000, 2.000000, 0.000000)
+Updating objects...
+Object2 position: (0.781782, 1.563564, 3.127129)
+Updating objects...
+Object3 position: (0.666667, 1.333333, 1.333333)
+Updating objects...
+Object4 position: (0.000000, 3.200000, 2.400000)
+Updating objects...
+Object5 position: (0.292893, 0.000000, 0.292893)
+Updating objects...
+Object6 position: (1.183503, 0.591752, 0.591752)
+Updating objects...
+Object7 position: (2.442914, 1.628609, 3.257219)
+Updating objects...
+Object8 position: (1.292893, 0.000000, 1.292893)
+Updating objects...
+Object9 position: (2.167950, 1.445300, 0.000000)
+Updating objects...
+Object10 position: (3.183503, 1.591752, 1.591752)
+Updating objects...
+Object11 position: (2.442914, 3.257219, 1.628609)
+Updating objects...
+Object12 position: (2.095466, 0.698489, 0.698489)
+Updating objects...
+Object13 position: (1.628609, 3.257219, 2.442914)
+Updating objects...
+Object14 position: (0.825922, 3.303689, 3.303689)
+Updating objects...
+Object15 position: (1.628609, 2.442914, 3.257219)
+Updating objects...
+Object16 position: (0.000000, 0.000000, 2.000000)
+Updating objects...
+Object17 position: (0.292893, 0.292893, 0.000000)
+Updating objects...
+Object18 position: (0.732739, 2.198216, 1.465477)
+Updating objects...
+Object19 position: (0.000000, 0.292893, 0.292893)
+Updating objects...
+Running collision detection...
+CollisionManager::update() - 시작 (프레임 1)
+  객체 목록 크기: 20
+  각 객체의 AABB 업데이트 중...
+    객체 'Object1' 업데이트
+    객체 'Object2' 업데이트
+    객체 'Object3' 업데이트
+    객체 'Object4' 업데이트
+    객체 'Object5' 업데이트
+    객체 'Object6' 업데이트
+    객체 'Object7' 업데이트
+    객체 'Object8' 업데이트
+    객체 'Object9' 업데이트
+    객체 'Object10' 업데이트
+    객체 'Object11' 업데이트
+    객체 'Object12' 업데이트
+    객체 'Object13' 업데이트
+    객체 'Object14' 업데이트
+    객체 'Object15' 업데이트
+    객체 'Object16' 업데이트
+    객체 'Object17' 업데이트
+    객체 'Object18' 업데이트
+    객체 'Object19' 업데이트
+    객체 'Object20' 업데이트
+  대략적 충돌 감지(Broad Phase) 중...
+    잠재적 충돌 쌍: 51개
+  정밀 충돌 감지(Narrow Phase) 시작...
+    쌍 40: 'Object9' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object20
+    쌍   볼록 껍질 개수: 14: 'Object4' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object9
+  볼록 껍질 개수: Object4=128, Object9=128
+    쌍 27: 'Object7' 와 'Object9'
+      narrowPhase 실행...
+    쌍 1>> checkGJKCollision 시작: : 'Object7Object1' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object4
+  볼록 껍질 개수: Object1= vs 128, Object4=128Object9
+
+  볼록 껍질 개수: Object7=128, Object9=128
+Object9=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 2: 'Object1' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object7
+  볼록 껍질 개수: Object1=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 28: 'Object7' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object10
+  볼록 껍질 개수: Object7=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 15: 'Object4' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object13
+  볼록 껍질 개수: Object4=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 29: 'Object7' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object13
+  볼록 껍질 개수: Object7=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 30: 'Object7' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object18
+  볼록 껍질 개수: Object7=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 31: 'Object7' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object19
+  볼록 껍질 개수: Object7=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 41: 'Object10' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object13
+  볼록 껍질 개수: Object10=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 42: 'Object11' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object12
+  볼록 껍질 개수: Object11=128, Object12=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 32: 'Object7' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object20
+  볼록 껍질 개수: Object7=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 33: 'Object8' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object14
+  볼록 껍질 개수: Object8=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 3: 'Object1' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object9
+  볼록 껍질 개수: Object1=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 4: 'Object1' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object11
+  볼록 껍질 개수: Object1=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 5: 'Object1' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object13
+  볼록 껍질 개수: Object1=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 6: 'Object1' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object19
+  볼록 껍질 개수: Object1=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 16: 'Object4' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object17
+  볼록 껍질 개수: Object4=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 34: 'Object8' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object15
+  볼록 껍질 개수: Object8=128, Object15=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 7: 'Object2' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object7
+  볼록 껍질 개수: Object2=128, Object7=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 43: 'Object11' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object13
+  볼록 껍질 개수: Object11=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 8: 'Object3' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object5
+  볼록 껍질 개수: Object3=128, Object5=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 17: 'Object4' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object19
+  볼록 껍질 개수: Object4=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 18: 'Object4' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object20
+  볼록 껍질 개수: Object4=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 44: 'Object11' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object14
+  볼록 껍질 개수: Object11=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 35: 'Object8' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object16
+  볼록 껍질 개수: Object8=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 36: 'Object9' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object10
+  볼록 껍질 개수: Object9=128, Object10=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 19: 'Object5' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object14
+  볼록 껍질 개수: Object5=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 9: 'Object3' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object8
+  볼록 껍질 개수: Object3=128, Object8=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 37: 'Object9' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object13
+  볼록 껍질 개수: Object9=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 38: 'Object9' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object17
+  볼록 껍질 개수: Object9=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 45: 'Object12' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object14
+  볼록 껍질 개수: Object12=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 20: 'Object5' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object15
+  볼록 껍질 개수: Object5=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 46: 'Object13' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object19
+  볼록 껍질 개수: Object13=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 10: 'Object3' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object16
+  볼록 껍질 개수: Object3=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 11: 'Object3' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object17
+  볼록 껍질 개수: Object3=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 21: 'Object5' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object16
+  볼록 껍질 개수: Object5=128, Object16=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 39: 'Object9' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object18
+  볼록 껍질 개수: Object9=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 47: 'Object14' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object15
+  볼록 껍질 개수: Object14=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 48: 'Object14' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object16
+  볼록 껍질 개수: Object14=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 49: 'Object14' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object19
+  볼록 껍질 개수: Object14=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 12: 'Object4' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object6
+  볼록 껍질 개수: Object4=128, Object6=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 22: 'Object5' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object19
+  볼록 껍질 개수: Object5=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 50: 'Object15' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object15 vs Object16
+  볼록 껍질 개수: Object15=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 51: 'Object18' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object18 vs Object20
+  볼록 껍질 개수: Object18=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 13: 'Object4' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object7
+  볼록 껍질 개수: Object4=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 23: 'Object6' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object7
+  볼록 껍질 개수: Object6=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 24: 'Object6' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object9
+  볼록 껍질 개수: Object6=128, Object9=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 25: 'Object6' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object18
+  볼록 껍질 개수: Object6=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 26: 'Object6' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object20
+  볼록 껍질 개수: Object6=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+Object2 collision enter with Object7
+Contact point: (0.591752, 1.295876, 0.295876)
+Contact normal: (0.612465, -0.728771, 0.306233)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+Object12 collision enter with Object14
+Contact point: (2.035762, 3.257219, 2.035762)
+Contact normal: (-0.707107, 0.000000, 0.707107)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+  이전 충돌 상태 정리 중...
+  충돌 상태 맵 업데이트
+CollisionManager::update() - 완료
+
+--- Frame 2 ---
+Object0 position: (1.396433, 0.465477, 0.930955)
+Updating objects...
+Object1 position: (0.000000, 1.000000, 0.000000)
+Updating objects...
+Object2 position: (0.563564, 1.127129, 2.254257)
+Updating objects...
+Object3 position: (0.333333, 0.666667, 0.666667)
+Updating objects...
+Object4 position: (0.000000, 2.400000, 1.800000)
+Updating objects...
+Object5 position: (-0.414214, 0.000000, -0.414214)
+Updating objects...
+Object6 position: (0.367007, 0.183503, 0.183503)
+Updating objects...
+Object7 position: (1.885828, 1.257219, 2.514437)
+Updating objects...
+Object8 position: (0.585786, 0.000000, 0.585786)
+Updating objects...
+Object9 position: (1.335899, 0.890600, 0.000000)
+Updating objects...
+Object10 position: (2.367007, 1.183503, 1.183503)
+Updating objects...
+Object11 position: (1.885828, 2.514437, 1.257219)
+Updating objects...
+Object12 position: (1.190932, 0.396977, 0.396977)
+Updating objects...
+Object13 position: (1.257219, 2.514437, 1.885828)
+Updating objects...
+Object14 position: (0.651845, 2.607379, 2.607379)
+Updating objects...
+Object15 position: (1.257219, 1.885828, 2.514437)
+Updating objects...
+Object16 position: (0.000000, 0.000000, 1.000000)
+Updating objects...
+Object17 position: (-0.414214, -0.414214, 0.000000)
+Updating objects...
+Object18 position: (0.465477, 1.396433, 0.930955)
+Updating objects...
+Object19 position: (0.000000, -0.414214, -0.414214)
+Updating objects...
+Running collision detection...
+CollisionManager::update() - 시작 (프레임 2)
+  객체 목록 크기: 20
+  각 객체의 AABB 업데이트 중...
+    객체 'Object1' 업데이트
+    객체 'Object2' 업데이트
+    객체 'Object3' 업데이트
+    객체 'Object4' 업데이트
+    객체 'Object5' 업데이트
+    객체 'Object6' 업데이트
+    객체 'Object7' 업데이트
+    객체 'Object8' 업데이트
+    객체 'Object9' 업데이트
+    객체 'Object10' 업데이트
+    객체 'Object11' 업데이트
+    객체 'Object12' 업데이트
+    객체 'Object13' 업데이트
+    객체 'Object14' 업데이트
+    객체 'Object15' 업데이트
+    객체 'Object16' 업데이트
+    객체 'Object17' 업데이트
+    객체 'Object18' 업데이트
+    객체 'Object19' 업데이트
+    객체 'Object20' 업데이트
+  대략적 충돌 감지(Broad Phase) 중...
+    잠재적 충돌 쌍: 84개
+  정밀 충돌 감지(Narrow Phase) 시작...
+    쌍 22: 'Object3' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object12
+    쌍 64: 'Object10' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object13
+  볼록 껍질 개수: Object3=128, Object12=128
+  볼록 껍질 개수: Object10=128, Object13=128
+    쌍 43: 'Object6' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작:     쌍 Object61: 'Object1 vs ' 와 'Object18
+  볼록 껍질 개수: Object6=128, Object18=128
+Object2'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object2
+  볼록 껍질 개수: Object1=128, Object2=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 44: 'Object6' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object20
+  볼록 껍질 개수: Object6=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 45: 'Object7' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object9
+  볼록 껍질 개수: Object7=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 46: 'Object7' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object10
+  볼록 껍질 개수: Object7=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 65: 'Object10' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object17
+  볼록 껍질 개수: Object10=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 47: 'Object7' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object13
+  볼록 껍질 개수: Object7=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 48: 'Object7' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object17
+  볼록 껍질 개수: Object7=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 49: 'Object7' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object18
+  볼록 껍질 개수: Object7=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 50: 'Object7' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object19
+  볼록 껍질 개수: Object7=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 23: 'Object3' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object14
+  볼록 껍질 개수: Object3=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 51: 'Object7' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object20
+  볼록 껍질 개수: Object7=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 52: 'Object8' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object12
+  볼록 껍질 개수: Object8=128, Object12=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 2: 'Object1' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object4
+  볼록 껍질 개수: Object1=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 3: 'Object1' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object7
+  볼록 껍질 개수: Object1=128, Object7=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 66: 'Object10' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object19
+  볼록 껍질 개수: Object10=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 67: 'Object10' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object20
+  볼록 껍질 개수: Object10=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 24: 'Object3' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object15
+  볼록 껍질 개수: Object3=128, Object15=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 53: 'Object8' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object14
+  볼록 껍질 개수: Object8=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 68: 'Object11' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object12
+  볼록 껍질 개수: Object11=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 69: 'Object11' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object13
+  볼록 껍질 개수: Object11=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 54: 'Object8' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object15
+  볼록 껍질 개수: Object8=128, Object15=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 4: 'Object1' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object9
+  볼록 껍질 개수: Object1=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 5: 'Object1' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object10
+  볼록 껍질 개수: Object1=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 6: 'Object1' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object11
+  볼록 껍질 개수: Object1=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 7: 'Object1' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object13
+  볼록 껍질 개수: Object1=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 8: 'Object1' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object17
+  볼록 껍질 개수: Object1=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 25: 'Object3' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object16
+  볼록 껍질 개수: Object3=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 26: 'Object3' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object17
+  볼록 껍질 개수: Object3=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 55: 'Object8' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object16
+  볼록 껍질 개수: Object8=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 56: 'Object9' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object10
+  볼록 껍질 개수: Object9=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 57: 'Object9' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object13
+  볼록 껍질 개수: Object9=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 58: 'Object9' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object17
+  볼록 껍질 개수: Object9=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 59: 'Object9' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object18
+  볼록 껍질 개수: Object9=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 70: 'Object11' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object14
+  볼록 껍질 개수: Object11=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 60: 'Object9' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object19
+  볼록 껍질 개수: Object9=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 61: 'Object9' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object20
+  볼록 껍질 개수: Object9=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 9: 'Object1' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object19
+  볼록 껍질 개수: Object1=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 10: 'Object2' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object4
+  볼록 껍질 개수: Object2=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 11: 'Object2' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object6
+  볼록 껍질 개수: Object2=128, Object6=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 12: 'Object2' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object7
+  볼록 껍질 개수: Object2=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 13: 'Object2' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object9
+  볼록 껍질 개수: Object2=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 14: 'Object2' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object10
+  볼록 껍질 개수: Object2=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 15: 'Object2' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object13
+  볼록 껍질 개수: Object2=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 16: 'Object2' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object17
+  볼록 껍질 개수: Object2=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 27: 'Object4' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object6
+  볼록 껍질 개수: Object4=128, Object6=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 17: 'Object2' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object18
+  볼록 껍질 개수: Object2=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 18: 'Object2' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object19
+  볼록 껍질 개수: Object2=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 62: 'Object10' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object11
+  볼록 껍질 개수: Object10=128, Object11=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 71: 'Object12' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object14
+  볼록 껍질 개수: Object12=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 72: 'Object12' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object16
+  볼록 껍질 개수: Object12=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 19: 'Object2' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object20
+  볼록 껍질 개수: Object2=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 28: 'Object4' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object7
+  볼록 껍질 개수: Object4=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 29: 'Object4' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object9
+  볼록 껍질 개수: Object4=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 30: 'Object4' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object10
+  볼록 껍질 개수: Object4=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 31: 'Object4' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object13
+  볼록 껍질 개수: Object4=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 32: 'Object4' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object17
+  볼록 껍질 개수: Object4=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 33: 'Object4' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object18
+  볼록 껍질 개수: Object4=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 73: 'Object12' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object19
+  볼록 껍질 개수: Object12=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 20: 'Object3' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object5
+  볼록 껍질 개수: Object3=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 21: 'Object3' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object8
+  볼록 껍질 개수: Object3=128, Object8=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 63: 'Object10' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object12
+  볼록 껍질 개수: Object10=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 34: 'Object4' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object19
+  볼록 껍질 개수: Object4=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 35: 'Object4' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object20
+  볼록 껍질 개수: Object4=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 74: 'Object13' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object17
+  볼록 껍질 개수: Object13=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 36: 'Object5' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object14
+  볼록 껍질 개수: Object5=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 37: 'Object5' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object15
+  볼록 껍질 개수: Object5=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 38: 'Object5' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object16
+  볼록 껍질 개수: Object5=128, Object16=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 75: 'Object13' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object18
+  볼록 껍질 개수: Object13=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 39: 'Object5' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object19
+  볼록 껍질 개수: Object5=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 40: 'Object6' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object7
+  볼록 껍질 개수: Object6=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 41: 'Object6' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object9
+  볼록 껍질 개수: Object6=128, Object9=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 76: 'Object13' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object19
+  볼록 껍질 개수: Object13=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 77: 'Object13' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object20
+  볼록 껍질 개수: Object13=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 42: 'Object6' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object13
+  볼록 껍질 개수: Object6=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 78: 'Object14' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object15
+  볼록 껍질 개수: Object14=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 79: 'Object14' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object16
+  볼록 껍질 개수: Object14=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 80: 'Object14' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object19
+  볼록 껍질 개수: Object14=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 81: 'Object15' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object15 vs Object16
+  볼록 껍질 개수: Object15=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 82: 'Object17' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object17 vs Object18
+  볼록 껍질 개수: Object17=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 83: 'Object17' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object17 vs Object19
+  볼록 껍질 개수: Object17=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 84: 'Object18' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object18 vs Object20
+  볼록 껍질 개수: Object18=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+Object17 collision enter with Object2
+Contact point: (0.000000, 0.500000, 0.500000)
+Contact normal: (-0.000000, 0.707107, -0.707107)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+Object5 collision enter with Object3
+Contact point: (0.281782, 1.763564, 2.027129)
+Contact normal: (0.384871, -0.869273, 0.310223)
+Penetration depth: 0.1
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+  이전 충돌 상태 정리 중...
+  충돌 상태 맵 업데이트
+CollisionManager::update() - 완료
+
+--- Frame 3 ---
+Object0 position: (0.594649, 0.198216, 0.396433)
+Updating objects...
+Object1 position: (0.000000, 0.000000, 0.000000)
+Updating objects...
+Object2 position: (0.345346, 0.690693, 1.381386)
+Updating objects...
+Object3 position: (-0.000000, -0.000000, -0.000000)
+Updating objects...
+Object4 position: (0.000000, 1.600000, 1.200000)
+Updating objects...
+Object5 position: (0.292893, 0.000000, 0.292893)
+Updating objects...
+Object6 position: (-0.449490, -0.224745, -0.224745)
+Updating objects...
+Object7 position: (1.328742, 0.885828, 1.771656)
+Updating objects...
+Object8 position: (-0.121320, 0.000000, -0.121320)
+Updating objects...
+Object9 position: (0.503849, 0.335899, 0.000000)
+Updating objects...
+Object10 position: (1.550510, 0.775255, 0.775255)
+Updating objects...
+Object11 position: (1.328742, 1.771656, 0.885828)
+Updating objects...
+Object12 position: (0.286398, 0.095466, 0.095466)
+Updating objects...
+Object13 position: (0.885828, 1.771656, 1.328742)
+Updating objects...
+Object14 position: (0.477767, 1.911068, 1.911068)
+Updating objects...
+Object15 position: (0.885828, 1.328742, 1.771656)
+Updating objects...
+Object16 position: (0.000000, 0.000000, 0.000000)
+Updating objects...
+Object17 position: (0.292893, 0.292893, 0.000000)
+Updating objects...
+Object18 position: (0.198216, 0.594649, 0.396433)
+Updating objects...
+Object19 position: (0.000000, 0.292893, 0.292893)
+Updating objects...
+Running collision detection...
+CollisionManager::update() - 시작 (프레임 3)
+  객체 목록 크기: 20
+  각 객체의 AABB 업데이트 중...
+    객체 'Object1' 업데이트
+    객체 'Object2' 업데이트
+    객체 'Object3' 업데이트
+    객체 'Object4' 업데이트
+    객체 'Object5' 업데이트
+    객체 'Object6' 업데이트
+    객체 'Object7' 업데이트
+    객체 'Object8' 업데이트
+    객체 'Object9' 업데이트
+    객체 'Object10' 업데이트
+    객체 'Object11' 업데이트
+    객체 'Object12' 업데이트
+    객체 'Object13' 업데이트
+    객체 'Object14' 업데이트
+    객체 'Object15' 업데이트
+    객체 'Object16' 업데이트
+    객체 'Object17' 업데이트
+    객체 'Object18' 업데이트
+    객체 'Object19' 업데이트
+    객체 'Object20' 업데이트
+  대략적 충돌 감지(Broad Phase) 중...
+    잠재적 충돌 쌍: 131개
+  정밀 충돌 감지(Narrow Phase) 시작...
+    쌍 100: 'Object11' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object12    쌍 
+1  볼록 껍질 개수: Object11=128, Object12=128
+: 'Object1' 와 'Object2'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object2
+  볼록 껍질 개수: Object1=128, Object2=128
+    쌍 67: 'Object6' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object10
+    쌍   볼록 껍질 개수: Object6=34128: ', Object10=128
+Object3' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object13
+  볼록 껍질 개수: Object3=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 68: 'Object6' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object11
+  볼록 껍질 개수: Object6=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 101: 'Object11' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object13
+  볼록 껍질 개수: Object11=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 2: 'Object1' 와 'Object3'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object3
+  볼록 껍질 개수: Object1=128, Object3=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 69: 'Object6' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object13
+  볼록 껍질 개수: Object6=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 70: 'Object6' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object17
+  볼록 껍질 개수: Object6=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 71: 'Object6' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object18
+  볼록 껍질 개수: Object6=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 72: 'Object6' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object19
+  볼록 껍질 개수: Object6=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 73: 'Object6' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object20
+  볼록 껍질 개수: Object6=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 74: 'Object7' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object9
+  볼록 껍질 개수: Object7=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 75: 'Object7' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object10
+  볼록 껍질 개수: Object7=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 76: 'Object7' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object13
+  볼록 껍질 개수: Object7=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 77: 'Object7' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object17
+  볼록 껍질 개수: Object7=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 78: 'Object7' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object18
+  볼록 껍질 개수: Object7=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 79: 'Object7' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object19
+  볼록 껍질 개수: Object7=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 3: 'Object1' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object4
+  볼록 껍질 개수: Object1=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 80: 'Object7' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object20
+  볼록 껍질 개수: Object7=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 81: 'Object8' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object11
+  볼록 껍질 개수: Object8=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 4: 'Object1' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object5
+  볼록 껍질 개수: Object1=128, Object5=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 35: 'Object3' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object14
+  볼록 껍질 개수: Object3=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 82: 'Object8' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object12
+  볼록 껍질 개수: Object8=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 36: 'Object3' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object15
+  볼록 껍질 개수: Object3=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 83: 'Object8' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object14
+  볼록 껍질 개수: Object8=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 102: 'Object11' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object14
+  볼록 껍질 개수: Object11=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 103: 'Object11' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object15
+  볼록 껍질 개수: Object11=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 84: 'Object8' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object15
+  볼록 껍질 개수: Object8=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 85: 'Object8' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object16
+  볼록 껍질 개수: Object8=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 86: 'Object9' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object10
+  볼록 껍질 개수: Object9=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 87: 'Object9' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object11
+  볼록 껍질 개수: Object9=128, Object11=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 104: 'Object11' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object16
+  볼록 껍질 개수: Object11=128, Object16=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 37: 'Object3' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object16
+  볼록 껍질 개수: Object3=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 38: 'Object3' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object19
+  볼록 껍질 개수: Object3=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 105: 'Object11' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object17
+  볼록 껍질 개수: Object11=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 88: 'Object9' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object13
+  볼록 껍질 개수: Object9=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 89: 'Object9' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object17
+  볼록 껍질 개수: Object9=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 90: 'Object9' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object18
+  볼록 껍질 개수: Object9=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 91: 'Object9' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object19
+  볼록 껍질 개수: Object9=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 92: 'Object9' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object20
+  볼록 껍질 개수: Object9=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 93: 'Object10' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object11
+  볼록 껍질 개수: Object10=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 39: 'Object3' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object20
+  볼록 껍질 개수: Object3=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 5: 'Object1' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object6
+  볼록 껍질 개수: Object1=128, Object6=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 6: 'Object1' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object7
+  볼록 껍질 개수: Object1=128, Object7=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 106: 'Object11' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object18
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음  볼록 껍질 개수: Object11=
+      충돌 결과: 충돌 없음
+    쌍 40: 'Object4' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object5
+  볼록 껍질 개수: Object4=128, Object5=128
+128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 7: 'Object1' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object9
+  볼록 껍질 개수: Object1=128, Object9=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 94: 'Object10' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object12
+  볼록 껍질 개수: Object10=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 8: 'Object1' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object10
+  볼록 껍질 개수: Object1=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 9: 'Object1' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object11
+  볼록 껍질 개수: Object1=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 10: 'Object1' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object12
+  볼록 껍질 개수: Object1=128, Object12=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 107: 'Object11' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object19
+  볼록 껍질 개수: Object11=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 95: 'Object10' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object13
+  볼록 껍질 개수: Object10=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 41: 'Object4' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object6
+  볼록 껍질 개수: Object4=128, Object6=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 96: 'Object10' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object17
+  볼록 껍질 개수: Object10=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 42: 'Object4' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object7
+  볼록 껍질 개수: Object4=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 97: 'Object10' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object18
+  볼록 껍질 개수: Object10=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 98: 'Object10' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object19
+  볼록 껍질 개수: Object10=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 99: 'Object10' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object20
+  볼록 껍질 개수: Object10=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 43: 'Object4' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object9
+  볼록 껍질 개수: Object4=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 44: 'Object4' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object10
+  볼록 껍질 개수: Object4=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 45: 'Object4' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object11
+  볼록 껍질 개수: Object4=128, Object11=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 11: 'Object1' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object13
+  볼록 껍질 개수: Object1=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 12: 'Object1' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object14
+  볼록 껍질 개수: Object1=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 108: 'Object11' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object20
+  볼록 껍질 개수: Object11=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 46: 'Object4' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object13
+  볼록 껍질 개수: Object4=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 47: 'Object4' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object17
+  볼록 껍질 개수: Object4=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 48: 'Object4' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object18
+  볼록 껍질 개수: Object4=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 49: 'Object4' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object19
+  볼록 껍질 개수: Object4=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 50: 'Object4' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object20
+  볼록 껍질 개수: Object4=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 51: 'Object5' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object6
+  볼록 껍질 개수: Object5=128, Object6=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 13: 'Object1' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object17
+  볼록 껍질 개수: Object1=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 14: 'Object1' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object18
+  볼록 껍질 개수: Object1=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 15: 'Object1' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object19
+  볼록 껍질 개수: Object1=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 16: 'Object1' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object20
+  볼록 껍질 개수: Object1=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 17: 'Object2' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object4
+  볼록 껍질 개수: Object2=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 18: 'Object2' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object5
+  볼록 껍질 개수: Object2=128, Object5=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 109: 'Object12' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object13
+  볼록 껍질 개수: Object12=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 19: 'Object2' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object6
+  볼록 껍질 개수: Object2=128, Object6=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 52: 'Object5' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object8
+  볼록 껍질 개수: Object5=128, Object8=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 20: 'Object2' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object7
+  볼록 껍질 개수: Object2=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 21: 'Object2' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object9
+  볼록 껍질 개수: Object2=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 22: 'Object2' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object10
+  볼록 껍질 개수: Object2=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 23: 'Object2' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object11
+  볼록 껍질 개수: Object2=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 53: 'Object5' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object9
+  볼록 껍질 개수: Object5=128, Object9=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 110: 'Object12' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object14
+  볼록 껍질 개수: Object12=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 111: 'Object12' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object15
+  볼록 껍질 개수: Object12=128, Object15=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 54: 'Object5' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object10
+  볼록 껍질 개수: Object5=128, Object10=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 24: 'Object2' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object13
+  볼록 껍질 개수: Object2=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 25: 'Object2' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object17
+  볼록 껍질 개수: Object2=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 26: 'Object2' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object18
+  볼록 껍질 개수: Object2=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 27: 'Object2' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object19
+  볼록 껍질 개수: Object2=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 28: 'Object2' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object20
+  볼록 껍질 개수: Object2=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 29: 'Object3' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object5
+  볼록 껍질 개수: Object3=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 30: 'Object3' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object6
+  볼록 껍질 개수: Object3=128, Object6=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 112: 'Object12' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object16
+  볼록 껍질 개수: Object12=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 113: 'Object12' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object18
+  볼록 껍질 개수: Object12=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 55: 'Object5' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object11
+  볼록 껍질 개수: Object5=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 56: 'Object5' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object12
+  볼록 껍질 개수: Object5=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 57: 'Object5' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object13
+  볼록 껍질 개수: Object5=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 31: 'Object3' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object8
+  볼록 껍질 개수: Object3=128, Object8=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 114: 'Object12' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object19
+  볼록 껍질 개수: Object12=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 32: 'Object3' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object11
+  볼록 껍질 개수: Object3=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 33: 'Object3' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object12
+  볼록 껍질 개수: Object3=128, Object12=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 58: 'Object5' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object14
+  볼록 껍질 개수: Object5=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 59: 'Object5' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object15
+  볼록 껍질 개수: Object5=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 60: 'Object5' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object16
+  볼록 껍질 개수: Object5=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 61: 'Object5' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object17
+  볼록 껍질 개수: Object5=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 115: 'Object12' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object20
+  볼록 껍질 개수: Object12=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 62: 'Object5' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object18
+  볼록 껍질 개수: Object5=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 116: 'Object13' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object14
+  볼록 껍질 개수: Object13=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 63: 'Object5' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object19
+  볼록 껍질 개수: Object5=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 64: 'Object5' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object20
+  볼록 껍질 개수: Object5=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 117: 'Object13' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object17
+  볼록 껍질 개수: Object13=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 118: 'Object13' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object18
+  볼록 껍질 개수: Object13=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 119: 'Object13' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object19
+  볼록 껍질 개수: Object13=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 120: 'Object13' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object20
+  볼록 껍질 개수: Object13=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 121: 'Object14' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object15
+  볼록 껍질 개수: Object14=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 122: 'Object14' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object16
+  볼록 껍질 개수: Object14=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 123: 'Object14' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object19
+  볼록 껍질 개수: Object14=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 65: 'Object6' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object7
+  볼록 껍질 개수: Object6=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 66: 'Object6' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object9
+  볼록 껍질 개수: Object6=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 124: 'Object14' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object20
+  볼록 껍질 개수: Object14=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 125: 'Object15' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object15 vs Object16
+  볼록 껍질 개수: Object15=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 126: 'Object17' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object17 vs Object18
+  볼록 껍질 개수: Object17=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 127: 'Object17' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object17 vs Object19
+  볼록 껍질 개수: Object17=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 128: 'Object17' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object17 vs Object20
+  볼록 껍질 개수: Object17=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 129: 'Object18' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object18 vs Object19
+  볼록 껍질 개수: Object18=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 130: 'Object18' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object18 vs Object20
+  볼록 껍질 개수: Object18=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 131: 'Object19' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object19 vs Object20
+  볼록 껍질 개수: Object19=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+  이전 충돌 상태 정리 중...
+  충돌 상태 맵 업데이트
+CollisionManager::update() - 완료
+
+--- Frame 4 ---
+Object0 position: (-0.207135, -0.069045, -0.138090)
+Updating objects...
+Object1 position: (0.000000, 0.000000, 0.000000)
+Updating objects...
+Object2 position: (0.127129, 0.254257, 0.508514)
+Updating objects...
+Object3 position: (-0.000000, -0.000000, -0.000000)
+Updating objects...
+Object4 position: (0.000000, 0.800000, 0.600000)
+Updating objects...
+Object5 position: (-0.414214, 0.000000, -0.414214)
+Updating objects...
+Object6 position: (0.367007, 0.183503, 0.183503)
+Updating objects...
+Object7 position: (0.771656, 0.514437, 1.028874)
+Updating objects...
+Object8 position: (0.585786, 0.000000, 0.585786)
+Updating objects...
+Object9 position: (-0.328201, -0.218801, 0.000000)
+Updating objects...
+Object10 position: (0.734014, 0.367007, 0.367007)
+Updating objects...
+Object11 position: (0.771656, 1.028874, 0.514437)
+Updating objects...
+Object12 position: (-0.618136, -0.206045, -0.206045)
+Updating objects...
+Object13 position: (0.514437, 1.028874, 0.771656)
+Updating objects...
+Object14 position: (0.303689, 1.214758, 1.214758)
+Updating objects...
+Object15 position: (0.514437, 0.771656, 1.028874)
+Updating objects...
+Object16 position: (0.000000, 0.000000, 0.000000)
+Updating objects...
+Object17 position: (-0.414214, -0.414214, 0.000000)
+Updating objects...
+Object18 position: (-0.069045, -0.207135, -0.138090)
+Updating objects...
+Object19 position: (0.000000, -0.414214, -0.414214)
+Updating objects...
+Running collision detection...
+CollisionManager::update() - 시작 (프레임 4)
+  객체 목록 크기: 20
+  각 객체의 AABB 업데이트 중...
+    객체 'Object1' 업데이트
+    객체 'Object2' 업데이트
+    객체 'Object3' 업데이트
+    객체 'Object4' 업데이트
+    객체 'Object5' 업데이트
+    객체 'Object6' 업데이트
+    객체 'Object7' 업데이트
+    객체 'Object8' 업데이트
+    객체 'Object9' 업데이트
+    객체 'Object10' 업데이트
+    객체 'Object11' 업데이트
+    객체 'Object12' 업데이트
+    객체 'Object13' 업데이트
+    객체 'Object14' 업데이트
+    객체 'Object15' 업데이트
+    객체 'Object16' 업데이트
+    객체 'Object17' 업데이트
+    객체 'Object18' 업데이트
+    객체 'Object19' 업데이트
+    객체 'Object20' 업데이트
+  대략적 충돌 감지(Broad Phase) 중...
+    잠재적 충돌 쌍: 181개
+  정밀 충돌 감지(Narrow Phase) 시작...
+    쌍 47: 'Object3' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object14
+  볼록 껍질 개수: Object3=128, Object14=128
+    쌍 1: 'Object1' 와 'Object2'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object2
+  볼록 껍질 개수: Object1=128, Object2=128
+    쌍 92: 'Object6' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object17
+  볼록 껍질 개수: Object6=128, Object17=128
+    쌍       충돌 감지됨! 충돌 정보 설정 중...
+137  checkGJKCollision 완료: 충돌 감지
+: 'Object10' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10      충돌 결과:  vs 충돌함Object17
+    쌍 2: 'Object1' 와 'Object3'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object3
+
+  볼록 껍질 개수: Object10=128, Object17=128
+  볼록 껍질 개수: Object1=128, Object3=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 결과: 충돌함
+    쌍 3: 'Object1' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작:     쌍 Object1 vs Object4138: '
+Object10  볼록 껍질 개수: Object1=128, Object4=128
+' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object18
+  볼록 껍질 개수: Object10=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 4: 'Object1' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object5
+  볼록 껍질 개수: Object1=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 93: 'Object6' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object18
+  볼록 껍질 개수: Object6=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 139: 'Object10' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object19
+  볼록 껍질 개수: Object10=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 94: 'Object6' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object19
+  볼록 껍질 개수: Object6=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 95: 'Object6' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object20
+  볼록 껍질 개수: Object6=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 140: 'Object10' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object20
+  볼록 껍질 개수: Object10=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 96: 'Object7' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object8
+  볼록 껍질 개수: Object7=128, Object8=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 97: 'Object7' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object9
+  볼록 껍질 개수: Object7=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 48: 'Object3' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object15
+  볼록 껍질 개수: Object3=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 98: 'Object7' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object10
+  볼록 껍질 개수: Object7=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 141: 'Object11' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object12
+  볼록 껍질 개수: Object11=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 142: 'Object11' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object13
+  볼록 껍질 개수: Object11=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 99: 'Object7' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object11
+  볼록 껍질 개수: Object7=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 100: 'Object7' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object12
+  볼록 껍질 개수: Object7=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 101: 'Object7' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object13
+  볼록 껍질 개수: Object7=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 102: 'Object7' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object14
+  볼록 껍질 개수: Object7=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 5: 'Object1' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object6
+  볼록 껍질 개수: Object1=128, Object6=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 49: 'Object3' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object16
+  볼록 껍질 개수: Object3=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 50: 'Object3' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object17
+  볼록 껍질 개수: Object3=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 6: 'Object1' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object7
+  볼록 껍질 개수: Object1=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 7: 'Object1' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object8
+  볼록 껍질 개수: Object1=128, Object8=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 51: 'Object3' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object18
+  볼록 껍질 개수: Object3=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 52: 'Object3' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object19
+  볼록 껍질 개수: Object3=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 53: 'Object3' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object20
+  볼록 껍질 개수: Object3=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 54: 'Object4' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object5
+  볼록 껍질 개수: Object4=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 103: 'Object7' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object15
+  볼록 껍질 개수: Object7=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 55: 'Object4' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object6
+  볼록 껍질 개수: Object4=128, Object6=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 56: 'Object4' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object7
+  볼록 껍질 개수: Object4=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 57: 'Object4' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object8
+  볼록 껍질 개수: Object4=128, Object8=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 143: 'Object11' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object14
+  볼록 껍질 개수: Object11=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 144: 'Object11' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object15
+  볼록 껍질 개수: Object11=128, Object15=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 8: 'Object1' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object9
+  볼록 껍질 개수: Object1=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 9: 'Object1' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object10
+  볼록 껍질 개수: Object1=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 10: 'Object1' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object11
+  볼록 껍질 개수: Object1=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 11: 'Object1' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object12
+  볼록 껍질 개수: Object1=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 145: 'Object11' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object16
+  볼록 껍질 개수: Object11=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 146: 'Object11' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object17
+  볼록 껍질 개수: Object11=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 147: 'Object11' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object18
+  볼록 껍질 개수: Object11=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 148: 'Object11' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object19
+  볼록 껍질 개수: Object11=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 149: 'Object11' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object11 vs Object20
+  볼록 껍질 개수: Object11=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 104: 'Object7' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object16
+  볼록 껍질 개수: Object7=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 105: 'Object7' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object17
+  볼록 껍질 개수: Object7=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 106: 'Object7' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object18
+  볼록 껍질 개수: Object7=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 107: 'Object7' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object19
+  볼록 껍질 개수: Object7=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 58: 'Object4' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object9
+  볼록 껍질 개수: Object4=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 59: 'Object4' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object10
+  볼록 껍질 개수: Object4=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 60: 'Object4' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object11
+  볼록 껍질 개수: Object4=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 61: 'Object4' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object12
+  볼록 껍질 개수: Object4=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 108: 'Object7' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object7 vs Object20
+  볼록 껍질 개수: Object7=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 109: 'Object8' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object9
+  볼록 껍질 개수: Object8=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 110: 'Object8' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object10
+  볼록 껍질 개수: Object8=128, Object10=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 12: 'Object1' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object13
+  볼록 껍질 개수: Object1=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 13: 'Object1' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object14
+  볼록 껍질 개수: Object1=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 150: 'Object12' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object13
+  볼록 껍질 개수: Object12=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 62: 'Object4' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object13
+  볼록 껍질 개수: Object4=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 63: 'Object4' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object14
+  볼록 껍질 개수: Object4=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 111: 'Object8' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object11
+  볼록 껍질 개수: Object8=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 112: 'Object8' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object12
+  볼록 껍질 개수: Object8=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 113: 'Object8' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object13
+  볼록 껍질 개수: Object8=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 14: 'Object1' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object16
+  볼록 껍질 개수: Object1=128, Object16=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 151: 'Object12' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object14
+  볼록 껍질 개수: Object12=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 152: 'Object12' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object15
+  볼록 껍질 개수: Object12=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 153: 'Object12' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object16
+  볼록 껍질 개수: Object12=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 154: 'Object12' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object17
+  볼록 껍질 개수: Object12=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 64: 'Object4' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object15
+  볼록 껍질 개수: Object4=128, Object15=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 114: 'Object8' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object14
+  볼록 껍질 개수: Object8=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 115: 'Object8' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object15
+  볼록 껍질 개수: Object8=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 116: 'Object8' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object16
+  볼록 껍질 개수: Object8=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 117: 'Object8' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object17
+  볼록 껍질 개수: Object8=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 15: 'Object1' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object17
+  볼록 껍질 개수: Object1=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 16: 'Object1' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object18
+  볼록 껍질 개수: Object1=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 17: 'Object1' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object19
+  볼록 껍질 개수: Object1=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 18: 'Object1' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object1 vs Object20
+  볼록 껍질 개수: Object1=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 19: 'Object2' 와 'Object3'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object3
+  볼록 껍질 개수: Object2=128, Object3=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 20: 'Object2' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object4
+  볼록 껍질 개수: Object2=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 21: 'Object2' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object5
+  볼록 껍질 개수: Object2=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 22: 'Object2' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object6
+  볼록 껍질 개수: Object2=128, Object6=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 155: 'Object12' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object18
+  볼록 껍질 개수: Object12=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 23: 'Object2' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object7
+  볼록 껍질 개수: Object2=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 24: 'Object2' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object8
+  볼록 껍질 개수: Object2=128, Object8=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 65: 'Object4' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object16
+  볼록 껍질 개수: Object4=128, Object16=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 118: 'Object8' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object18
+  볼록 껍질 개수: Object8=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 25: 'Object2' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object9
+  볼록 껍질 개수: Object2=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 26: 'Object2' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object10
+  볼록 껍질 개수: Object2=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 27: 'Object2' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object11
+  볼록 껍질 개수: Object2=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 28: 'Object2' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object12
+  볼록 껍질 개수: Object2=128, Object12=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 156: 'Object12' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object19
+  볼록 껍질 개수: Object12=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 66: 'Object4' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object17
+  볼록 껍질 개수: Object4=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 67: 'Object4' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object18
+  볼록 껍질 개수: Object4=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 68: 'Object4' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object19
+  볼록 껍질 개수: Object4=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 69: 'Object4' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object4 vs Object20
+  볼록 껍질 개수: Object4=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 70: 'Object5' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object6
+  볼록 껍질 개수: Object5=128, Object6=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 119: 'Object8' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object8 vs Object19
+  볼록 껍질 개수: Object8=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 29: 'Object2' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object13
+  볼록 껍질 개수: Object2=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 157: 'Object12' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object12 vs Object20
+  볼록 껍질 개수: Object12=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 30: 'Object2' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object14
+  볼록 껍질 개수: Object2=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 120: 'Object9' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object10
+  볼록 껍질 개수: Object9=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 121: 'Object9' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object11
+  볼록 껍질 개수: Object9=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 122: 'Object9' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object12
+  볼록 껍질 개수: Object9=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 123: 'Object9' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object13
+  볼록 껍질 개수: Object9=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 71: 'Object5' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object7
+  볼록 껍질 개수: Object5=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 72: 'Object5' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object8
+  볼록 껍질 개수: Object5=128, Object8=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 73: 'Object5' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object9
+  볼록 껍질 개수: Object5=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 74: 'Object5' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object10
+  볼록 껍질 개수: Object5=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 75: 'Object5' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object11
+  볼록 껍질 개수: Object5=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 76: 'Object5' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object12
+  볼록 껍질 개수: Object5=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 77: 'Object5' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object13
+  볼록 껍질 개수: Object5=128, Object13=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 158: 'Object13' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object14
+  볼록 껍질 개수: Object13=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 31: 'Object2' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object15
+  볼록 껍질 개수: Object2=128, Object15=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 124: 'Object9' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object14
+  볼록 껍질 개수: Object9=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 125: 'Object9' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object15
+  볼록 껍질 개수: Object9=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 126: 'Object9' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object16
+  볼록 껍질 개수: Object9=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 127: 'Object9' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object17
+  볼록 껍질 개수: Object9=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 128: 'Object9' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object18
+  볼록 껍질 개수: Object9=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 78: 'Object5' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object14
+  볼록 껍질 개수: Object5=128, Object14=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 129: '      충돌 감지됨! 충돌 정보 설정 중...Object9
+' 와 '  checkGJKCollision 완료: 충돌 감지
+Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9      충돌 결과:  vs Object19
+  볼록 껍질 개수: Object9=128, Object19=128
+충돌함
+    쌍 79: 'Object5' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object15
+  볼록 껍질 개수: Object5=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 80: 'Object5' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object16
+  볼록 껍질 개수: Object5=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 81: 'Object5' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object17
+  볼록 껍질 개수: Object5=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 130: 'Object9' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object9 vs Object20
+  볼록 껍질 개수: Object9=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 82: 'Object5' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object18
+  볼록 껍질 개수: Object5=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 159: 'Object13' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object16
+  볼록 껍질 개수: Object13=128, Object16=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 32: 'Object2' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object16
+  볼록 껍질 개수: Object2=128, Object16=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 131: 'Object10' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object11
+  볼록 껍질 개수: Object10=128, Object11=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 83: 'Object5' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object19
+  볼록 껍질 개수: Object5=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 132: 'Object10' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object12
+  볼록 껍질 개수: Object10=128, Object12=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 160: 'Object13' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object17
+  볼록 껍질 개수: Object13=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 161: 'Object13' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object18
+  볼록 껍질 개수: Object13=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 162: 'Object13' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object19
+  볼록 껍질 개수: Object13=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 163: 'Object13' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object13 vs Object20
+  볼록 껍질 개수: Object13=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 164: 'Object14' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object15
+  볼록 껍질 개수: Object14=128, Object15=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 165: 'Object14' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object16
+  볼록 껍질 개수: Object14=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 166: 'Object14' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object17
+  볼록 껍질 개수: Object14=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 33: 'Object2' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object17
+  볼록 껍질 개수: Object2=128, Object17=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 34: 'Object2' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object18
+  볼록 껍질 개수: Object2=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 35: 'Object2' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object19
+  볼록 껍질 개수: Object2=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 36: 'Object2' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object2 vs Object20
+  볼록 껍질 개수: Object2=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 37: 'Object3' 와 'Object4'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object4
+  볼록 껍질 개수: Object3=128, Object4=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 38: 'Object3' 와 'Object5'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object5
+  볼록 껍질 개수: Object3=128, Object5=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 39: 'Object3' 와 'Object6'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object6
+  볼록 껍질 개수: Object3=128, Object6=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 40: 'Object3' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object7
+  볼록 껍질 개수: Object3=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 41: 'Object3' 와 'Object8'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object8
+  볼록 껍질 개수: Object3=128, Object8=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 42: 'Object3' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object9
+  볼록 껍질 개수: Object3=128, Object9=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 43: 'Object3' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object10
+  볼록 껍질 개수: Object3=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 44: 'Object3' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object11
+  볼록 껍질 개수: Object3=128, Object11=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 45: 'Object3' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object12
+  볼록 껍질 개수: Object3=128, Object12=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 46: 'Object3' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object3 vs Object13
+  볼록 껍질 개수: Object3=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 167: 'Object14' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object18
+  볼록 껍질 개수: Object14=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 133: 'Object10' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object13
+  볼록 껍질 개수: Object10=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 134: 'Object10' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object14
+  볼록 껍질 개수: Object10=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 84: 'Object5' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object5 vs Object20
+  볼록 껍질 개수: Object5=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 168: 'Object14' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object19
+  볼록 껍질 개수: Object14=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 135: 'Object10' 와 'Object15'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object15
+  볼록 껍질 개수: Object10=128, Object15=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 85: 'Object6' 와 'Object7'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object7
+  볼록 껍질 개수: Object6=128, Object7=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 86: 'Object6' 와 'Object9'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object9
+  볼록 껍질 개수: Object6=128, Object9=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 136: 'Object10' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object10 vs Object16
+  볼록 껍질 개수: Object10=128, Object16=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 169: 'Object14' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object14 vs Object20
+  볼록 껍질 개수: Object14=128, Object20=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 87: 'Object6' 와 'Object10'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object10
+  볼록 껍질 개수: Object6=128, Object10=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 88: 'Object6' 와 'Object11'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object11
+  볼록 껍질 개수: Object6=128, Object11=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 170: 'Object15' 와 'Object16'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object15 vs Object16
+  볼록 껍질 개수: Object15=128, Object16=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 171: 'Object15' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object15 vs Object17
+  볼록 껍질 개수: Object15=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 89: 'Object6' 와 'Object12'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object12
+  볼록 껍질 개수: Object6=128, Object12=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 172: 'Object15' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object15 vs Object18
+  볼록 껍질 개수: Object15=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 90: 'Object6' 와 'Object13'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object13
+  볼록 껍질 개수: Object6=128, Object13=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 91: 'Object6' 와 'Object14'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object6 vs Object14
+  볼록 껍질 개수: Object6=128, Object14=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 173: 'Object16' 와 'Object17'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object16 vs Object17
+  볼록 껍질 개수: Object16=128, Object17=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 174: 'Object16' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object16 vs Object18
+  볼록 껍질 개수: Object16=128, Object18=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 175: 'Object16' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object16 vs Object19
+  볼록 껍질 개수: Object16=128, Object19=128
+  모든 볼록 껍질 쌍 검사 완료, 충돌 없음
+      충돌 결과: 충돌 없음
+    쌍 176: 'Object17' 와 'Object18'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object17 vs Object18
+  볼록 껍질 개수: Object17=128, Object18=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 177: 'Object17' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object17 vs Object19
+  볼록 껍질 개수: Object17=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 178: 'Object17' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object17 vs Object20
+  볼록 껍질 개수: Object17=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 179: 'Object18' 와 'Object19'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object18 vs Object19
+  볼록 껍질 개수: Object18=128, Object19=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 180: 'Object18' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object18 vs Object20
+  볼록 껍질 개수: Object18=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+    쌍 181: 'Object19' 와 'Object20'
+      narrowPhase 실행...
+>> checkGJKCollision 시작: Object19 vs Object20
+  볼록 껍질 개수: Object19=128, Object20=128
+      충돌 감지됨! 충돌 정보 설정 중...
+  checkGJKCollision 완료: 충돌 감지
+      충돌 결과: 충돌함
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      이전 충돌 상태 제거
+      충돌 정보 객체에 추가
+      이전 충돌 상태 제거
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      이전 충돌 상태 제거
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      이전 충돌 상태 제거
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+      충돌 정보 객체에 추가
+  이전 충돌 상태 정리 중...
+  충돌 상태 맵 업데이트
+CollisionManager::update() - 완료
+
+*	 DS_timer Report 	*
+* The number of timer = 9, counter = 9
+**** Timer report ****
+[전체 시뮬레이션 시간] : 2693.59800 ms (2693.59800 ms)
+[충돌 감지 시간] : 2692.64300 ms (2692.64300 ms)
+[AABB 탐색 시간] : 0.41300 ms (0.41300 ms)
+[GJK 탐색 시간] : 2692.07300 ms (2692.07300 ms)
+[프레임0] : 224.90200 ms (224.90200 ms)
+[프레임1] : 462.96800 ms (462.96800 ms)
+[프레임2] : 489.76100 ms (489.76100 ms)
+[프레임3] : 626.54900 ms (626.54900 ms)
+[프레임4] : 889.34600 ms (889.34600 ms)
+**** Counter report ****
+*	 End of the report 	*

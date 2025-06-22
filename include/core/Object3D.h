@@ -67,6 +67,9 @@ class Object3D {
         // 생성자 및 소멸자
         Object3D(const std::string& _name = "Object");
         virtual ~Object3D() = default;
+        
+        // Object 복사
+        void copyMeshData(const Object3D& source);
     
         // 위치 관련 메서드
         const Vector3& getPosition() const;

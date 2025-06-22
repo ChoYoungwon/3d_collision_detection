@@ -8,6 +8,8 @@
 #include "GJK.h"
 #include "SAT.h"
 #include "OBB.h"
+#include "DS_timer.h"
+#include "DS_definitions.h"
 
 // 충돌 감지 알고리즘 열거형
 enum class CollisionAlgorithm {
@@ -56,7 +58,7 @@ public:
     void setCollisionCheckInterval(int interval);
 
     // 충돌 감지 및 해결
-    void update();
+    void update(DS_timer* timer);
 
 private:
     // 충돌 감지 단계

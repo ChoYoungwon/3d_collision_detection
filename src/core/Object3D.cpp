@@ -31,6 +31,18 @@ Object3D::Object3D(const std::string& _name)
     updateWorldAABB();
 }
 
+void Object3D::copyMeshData(const Object3D& source) {
+    this -> vertices = source.vertices;
+    this -> normals = source.normals;
+    this -> indices = source.indices;
+
+    this -> convexHulls = source.convexHulls;
+    this -> isConvexDecomposed = source.isConvexDecomposed;
+
+    this -> localAABB = source.localAABB;
+    this -> aabbDirty = source.aabbDirty;
+}
+
 // 현재 월드 위치를 반환
 const Vector3& Object3D::getPosition() const {
     return position;

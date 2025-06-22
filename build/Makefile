@@ -441,6 +441,30 @@ src/test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/collision_test.dir/build.make CMakeFiles/collision_test.dir/src/test.cpp.s
 .PHONY : src/test.cpp.s
 
+src/timer/DS_timer.o: src/timer/DS_timer.cpp.o
+.PHONY : src/timer/DS_timer.o
+
+# target to build an object file
+src/timer/DS_timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/collision_test.dir/build.make CMakeFiles/collision_test.dir/src/timer/DS_timer.cpp.o
+.PHONY : src/timer/DS_timer.cpp.o
+
+src/timer/DS_timer.i: src/timer/DS_timer.cpp.i
+.PHONY : src/timer/DS_timer.i
+
+# target to preprocess a source file
+src/timer/DS_timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/collision_test.dir/build.make CMakeFiles/collision_test.dir/src/timer/DS_timer.cpp.i
+.PHONY : src/timer/DS_timer.cpp.i
+
+src/timer/DS_timer.s: src/timer/DS_timer.cpp.s
+.PHONY : src/timer/DS_timer.s
+
+# target to generate assembly for a file
+src/timer/DS_timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/collision_test.dir/build.make CMakeFiles/collision_test.dir/src/timer/DS_timer.cpp.s
+.PHONY : src/timer/DS_timer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -489,6 +513,9 @@ help:
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"
+	@echo "... src/timer/DS_timer.o"
+	@echo "... src/timer/DS_timer.i"
+	@echo "... src/timer/DS_timer.s"
 .PHONY : help
 
 

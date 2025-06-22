@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/youngwon/3d_collision_detection/include -I/home/youngwon/3d_collision_detection/include/core -I/home/youngwon/3d_collision_detection/include/math -I/home/youngwon/3d_collision_detection/include/geometry -I/home/youngwon/3d_collision_detection/include/collision -I/home/youngwon/3d_collision_detection/include/decomposition
+CXX_INCLUDES = -I/home/youngwon/3d_collision_detection/include -I/home/youngwon/3d_collision_detection/include/core -I/home/youngwon/3d_collision_detection/include/math -I/home/youngwon/3d_collision_detection/include/geometry -I/home/youngwon/3d_collision_detection/include/collision -I/home/youngwon/3d_collision_detection/include/decomposition -I/home/youngwon/3d_collision_detection/include/timer
 
 CXX_FLAGS = -std=gnu++11 -fopenmp
 

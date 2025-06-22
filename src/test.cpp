@@ -3,114 +3,135 @@
 #include <vector>
 #include "Object3D.h"
 #include "CollisionManager.h"
+#include "DS_timer.h"
+#include "DS_definitions.h"
 #include <thread>
 #include <chrono>
 
-int main() {
-    // 1. 두 개의 3D 객체 생성
-    Object3D* object1 = new Object3D("Object1");
-    Object3D* object2 = new Object3D("Object2");
-    
-    // 2. OBJ 파일에서 메시 데이터 로드
-    if (!object1->loadFromObjFile("teddy.obj")) {
-        std::cerr << "Failed to load model1.obj" << std::endl;
-        delete object1;
-        delete object2;
-        return 1;
+int main(int argc, char* argv[]) {
+    if (argc > 2) {
+        std::cout << "[usage]" << std::endl;
+        std::cout << "./collision_test [object_num]" << std::endl;
+        return -1;
     }
-    
-    if (!object2->loadFromObjFile("cup.obj")) {
-        std::cerr << "Failed to load model2.obj" << std::endl;
-        delete object1;
-        delete object2;
+
+    int numObjects = (argc > 1) ? std::stoi(argv[1]) : 10; 
+    std::cout << "설정 객체 수 : " << numObjects << std::endl;
+
+
+    Object3D* templateObject = new Object3D("Object");
+    // 2. OBJ 파일에서 메시 데이터 로드
+    if (!templateObject->loadFromObjFile("bunny.obj")) {
+        std::cerr << "Failed to load bunny.obj" << std::endl;
+        delete templateObject;
         return 1;
     }
     
     // 3. (선택적) 볼록 분해 적용
     // 복잡한 모델의 경우 충돌 감지 성능 향상을 위해
     VHACDParameters params;
-    params.maxConvexHulls = 8;  // 적절한 값으로 조정
+    params.maxConvexHulls = 128;  // 적절한 값으로 조정
     
-    std::string temp1 = "teddy.obj";
-    std::string temp2 = "cup.obj";
+    std::string inputFile = "bunny.obj";
+    std::string outputFile = "bunny_decomposed.obj";
     
-    if (object1->computeConvexDecomposition(temp1, "teddy_decomposed.obj", params)) {
+    if (templateObject->computeConvexDecomposition(inputFile, outputFile, params)) {
         std::cout << "Object1 decomposed successfully" << std::endl;
-        object1->loadConvexDecomposition("model1_decomposed.obj");
+        templateObject->loadConvexDecomposition(outputFile);
+    } else {
+        std::cerr << "Failed to decompose template object" << std::endl;
+        delete templateObject;
+        return 1;
     }
-    
-    if (object2->computeConvexDecomposition(temp2, "cup_decomposed.obj", params)) {
-        std::cout << "Object2 decomposed successfully" << std::endl;
-        object2->loadConvexDecomposition("model2_decomposed.obj");
-    }
-    
-    // 4. 객체 위치 설정 (충돌 시나리오 생성)
-    object1->setPosition(Vector3(0, 0, 0));
-    object2->setPosition(Vector3(30, 0, 0));  // 처음에는 멀리 배치
-    
-    // 5. 충돌 콜백 설정
-    object1->setOnCollisionEnter([](const CollisionInfo& info) {
-        std::cout << "Object1 collision enter with " << info.otherObject->getName() << std::endl;
-        std::cout << "Contact point: " << info.contactPoint.toString() << std::endl;
-        std::cout << "Contact normal: " << info.contactNormal.toString() << std::endl;
-        std::cout << "Penetration depth: " << info.penetrationDepth << std::endl;
-    });
-    
-    object2->setOnCollisionEnter([](const CollisionInfo& info) {
-        std::cout << "Object2 collision enter with " << info.otherObject->getName() << std::endl;
-    });
-    
-    // 6. 충돌 관리자 설정
+
+    // 템플릿 객체의 볼록 껍질 가져오기
+    const std::vector<ConvexHull>& templateHulls = templateObject->getConvexHulls();
+    std::cout << "템플릿 객체의 볼록 껍질 개수: " << templateHulls.size() << std::endl;
+
+    // 여러 객체 생성 및 템플릿 데이터 복사
+    std::vector<Object3D*> objects;
+    // 충돌 관리자 설정
     CollisionManager collisionManager;
-    collisionManager.addObject(object1);
-    collisionManager.addObject(object2);
-    
-    // 7. 선택적으로 충돌 알고리즘 설정
-    collisionManager.setNarrowPhaseAlgorithm(CollisionAlgorithm::GJK);  // GJK, SAT, AABB
+    for (int i = 0; i < numObjects; i++) {
+        Object3D* obj = new Object3D("Object" + std::to_string(i+1));
+        obj -> copyMeshData(*templateObject);
+
+        // 객체를 3D 공간에 무작위로 배치 (-20 ~ 20 사이)
+        float x = static_cast<float>(rand() % 5);
+        float y = static_cast<float>(rand() % 5);
+        float z = static_cast<float>(rand() % 5);
+        obj->setPosition(Vector3(x, y, z));
+
+        obj->setOnCollisionEnter([obj](const CollisionInfo& info) {
+            std::cout << obj->getName() << " collision enter with " << info.otherObject->getName() << std::endl;
+            std::cout << "Contact point: " << info.contactPoint.toString() << std::endl;
+            std::cout << "Contact normal: " << info.contactNormal.toString() << std::endl;
+            std::cout << "Penetration depth: " << info.penetrationDepth << std::endl;
+        });
+
+        objects.push_back(obj);
+
+        collisionManager.addObject(objects[i]);
+
+        // 선택적으로 충돌 알고리즘 설정
+        collisionManager.setNarrowPhaseAlgorithm(CollisionAlgorithm::GJK);  // GJK, SAT
+    }
+
+    delete templateObject;
     
     // 8. 시뮬레이션 루프
     bool running = true;
     int frame = 0;
-    const int maxFrames = 100;  // 테스트 프레임 수
-    
-    while (running && frame < maxFrames) {
-        std::cout << "\n--- Frame " << frame << " ---" << std::endl;
-        
-        // 디버그 출력 추가
-        std::cout << "Updating object positions..." << std::endl;
-        
-        // 8.1. 객체 위치 업데이트 (서로 가까워지게)
-        if (frame > 0) {
-            Vector3 pos2 = object2->getPosition();
-            pos2.x -= 0.5f;  // 각 프레임마다 x축으로 움직임
-            object2->setPosition(pos2);
-            
-            std::cout << "Object1 position: " << object1->getPosition().toString() << std::endl;
-            std::cout << "Object2 position: " << object2->getPosition().toString() << std::endl;
-        }
-        
-        // 8.2. 업데이트 및 충돌 감지
-        std::cout << "Updating objects..." << std::endl;
-        object1->update();
-        object2->update();
+    const int maxFrames = 5;  // 테스트 프레임 수
 
-        std::cout << "Running collision detection..." << std::endl;
-        collisionManager.update();
-        
-        // 8.3. 충돌 상태 출력
-        std::cout << "Object1 colliding: " << (object1->isColliding() ? "Yes" : "No") << std::endl;
-        std::cout << "Object2 colliding: " << (object2->isColliding() ? "Yes" : "No") << std::endl;
-        
-        frame++;
+    DS_timer timer(maxFrames + 4);
+    timer.setTimerName(0, (char*)"[전체 시뮬레이션 시간]");
+    timer.setTimerName(1, (char*)"[충돌 감지 시간]");
+    timer.setTimerName(2, (char*)"[AABB 탐색 시간]");
+    timer.setTimerName(3, (char*)"[GJK 탐색 시간]");
 
-        // 잠시 대기 (프레임 관찰용)
-        std::cout << "잠시 대기" << std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    for(int i = 4; i < maxFrames + 4; i++) {
+        std::string timerName = "[프레임" + std::to_string(i-4) + "]";
+        timer.setTimerName(i, (char*)timerName.c_str());
     }
     
+    timer.onTimer(0);
+    std::cout << "Updating object positions..." << std::endl;
+    while (running && frame < maxFrames) {
+        timer.onTimer(frame + 4);
+        std::cout << "\n--- Frame " << frame << " ---" << std::endl;
+        
+        for (int i = 0; i < numObjects; i++) {
+        // 8.1. 객체 위치 업데이트 (서로 가까워지게)
+            if (frame > 0) {
+                Vector3 center(0,0,0);
+                Vector3 pos = objects[i] -> getPosition();
+                Vector3 direction = (center - pos).normalized();
+                pos += direction * 1.0f;
+                objects[i] -> setPosition(pos);
+
+                std::cout << "Object" <<std::to_string(i) << " position: " << objects[i]->getPosition().toString() << std::endl;
+            }
+            
+            // 8.2. 업데이트 및 충돌 감지
+            std::cout << "Updating objects..." << std::endl;
+            objects[i]->update();
+        }
+
+        std::cout << "Running collision detection..." << std::endl;
+        timer.onTimer(1);
+        collisionManager.update(&timer);
+        timer.offTimer(1);
+        
+        timer.offTimer(frame + 4);
+        frame++;
+    }
+    timer.offTimer(0);
+    
+    timer.printTimer();
     // 9. 리소스 정리
-    delete object1;
-    delete object2;
+    for(int i = 0; i < numObjects; i++)
+        delete objects[i];
     
     return 0;
 }

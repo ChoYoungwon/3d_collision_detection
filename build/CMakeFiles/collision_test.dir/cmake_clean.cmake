@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/collision_test.dir/src/math/Vector3.cpp.o.d"
   "CMakeFiles/collision_test.dir/src/test.cpp.o"
   "CMakeFiles/collision_test.dir/src/test.cpp.o.d"
+  "CMakeFiles/collision_test.dir/src/timer/DS_timer.cpp.o"
+  "CMakeFiles/collision_test.dir/src/timer/DS_timer.cpp.o.d"
   "collision_test"
   "collision_test.pdb"
 )

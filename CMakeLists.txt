@@ -11,6 +11,7 @@ file(GLOB_RECURSE GEOMETRY_SOURCES "src/geometry/*.cpp")
 file(GLOB_RECURSE CORE_SOURCES "src/core/*.cpp")
 file(GLOB_RECURSE DECOMPOSITION_SOURCES "src/decomposition/*.cpp")
 file(GLOB_RECURSE COLLISION_SOURCES "src/collision/*.cpp")
+file(GLOB_RECURSE TIMER_SOURCES "src/timer/*.cpp")
 
 # 헤더 파일 포함 경로
 include_directories(
@@ -20,6 +21,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/include/geometry
     ${CMAKE_SOURCE_DIR}/include/collision
     ${CMAKE_SOURCE_DIR}/include/decomposition
+    ${CMAKE_SOURCE_DIR}/include/timer
 )
 
 # 테스트 실행 파일 대상 추가
@@ -30,6 +32,7 @@ add_executable(collision_test
     ${CORE_SOURCES}
     ${DECOMPOSITION_SOURCES}
     ${COLLISION_SOURCES}
+    ${TIMER_SOURCES}
 )
 
 # V-HACD 의존성 추가 (해당 부분은 V-HACD가 어떻게 빌드되는지에 따라 조정 필요)
